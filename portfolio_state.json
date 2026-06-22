@@ -1,0 +1,8 @@
+{
+  "base_currency": "USD",
+  "cash": 100000.0,
+  "commission_rate": 0.0008,
+  "min_commission": 1.0,
+  "positions": {},
+  "trades": []
+}

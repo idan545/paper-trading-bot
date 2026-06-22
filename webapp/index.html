@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>תיק Paper</title>
+<meta name="theme-color" content="#1a1410" />
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="תיק Paper" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#1a1410; --bg2:#221a14; --panel:#261d16;
+    --line:#3a2d22; --line-soft:#2e231b;
+    --ink:#f1eae0; --muted:#a8998a; --faint:#7a6c5d;
+    --amber:#e7b078; --amber-bright:#f3c891;
+    --gain:#84c0a0; --loss:#df8a6c;
+    --shadow:0 1px 0 rgba(255,255,255,.03) inset, 0 10px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html{background:var(--bg)}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    padding:max(16px,env(safe-area-inset-top)) 16px calc(28px + env(safe-area-inset-bottom));
+    max-width:540px; margin-inline:auto;
+    overscroll-behavior-y:none;
+  }
+  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace; font-variant-numeric:tabular-nums}
+
+  /* ---- header ---- */
+  header{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:6px 2px 18px}
+  .brand{display:flex; align-items:center; gap:9px}
+  .glyph{width:26px; height:26px; flex:none}
+  .brand .name{font-family:"Fraunces",serif; font-weight:600; font-size:17px; letter-spacing:.2px}
+  .asof{font-size:11px; color:var(--faint); text-align:start; line-height:1.5}
+  .asof b{color:var(--muted); font-weight:500}
+
+  /* ---- hero ---- */
+  .hero{padding:6px 4px 22px}
+  .hero .label{font-size:12px; color:var(--muted); letter-spacing:.06em; text-transform:uppercase}
+  .hero .value{font-family:"Fraunces",serif; font-weight:600; font-size:clamp(40px,13vw,58px); line-height:1.02; margin-top:6px; letter-spacing:-.5px}
+  .hero .changes{display:flex; align-items:baseline; gap:14px; margin-top:12px; flex-wrap:wrap}
+  .chg{font-family:"IBM Plex Mono",monospace; font-size:14px; font-weight:500; font-variant-numeric:tabular-nums}
+  .chg .cap{color:var(--faint); font-family:system-ui,sans-serif; font-size:11px; margin-inline-end:6px; text-transform:uppercase; letter-spacing:.05em}
+  .up{color:var(--gain)} .down{color:var(--loss)} .flat{color:var(--muted)}
+
+  /* ---- equity curve (signature) ---- */
+  .curve{position:relative; margin:0 -4px 22px; padding:14px 6px 8px;
+    background:linear-gradient(180deg,var(--bg2),transparent); border-radius:16px}
+  .curve svg{display:block; width:100%; height:120px; overflow:visible}
+  .curve .ends{display:flex; direction:ltr; justify-content:space-between; font-size:10.5px; color:var(--faint); padding:6px 6px 0}
+
+  /* ---- stat strip ---- */
+  .strip{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:26px}
+  .stat{background:var(--bg2); border:1px solid var(--line-soft); border-radius:13px; padding:13px 14px}
+  .stat .k{font-size:11px; color:var(--muted); letter-spacing:.04em}
+  .stat .v{font-family:"IBM Plex Mono",monospace; font-size:18px; margin-top:5px; font-variant-numeric:tabular-nums}
+
+  /* ---- sections ---- */
+  .sec-h{display:flex; align-items:baseline; justify-content:space-between; margin:0 4px 12px}
+  .sec-h h2{font-family:"Fraunces",serif; font-weight:600; font-size:15px; margin:0; letter-spacing:.2px}
+  .sec-h .count{font-size:11px; color:var(--faint)}
+
+  .rows{display:flex; flex-direction:column; gap:8px; margin-bottom:28px}
+  .row{display:grid; grid-template-columns:auto 1fr auto; gap:12px; align-items:center;
+    background:var(--bg2); border:1px solid var(--line-soft); border-radius:13px; padding:13px 14px}
+  .tkr{display:flex; align-items:center; gap:8px; min-width:0}
+  .flag{width:22px; height:22px; flex:none; border-radius:6px; display:grid; place-items:center;
+    font-size:12px; font-weight:600; background:#2f241b; color:var(--amber)}
+  .flag.us{color:#9fb6d4; background:#222a33}
+  .sym{font-family:"IBM Plex Mono",monospace; font-weight:600; font-size:14px; letter-spacing:-.2px;
+    overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+  .px{font-size:11px; color:var(--muted); font-family:"IBM Plex Mono",monospace; margin-top:3px}
+  .px .arrow{color:var(--faint); margin:0 4px}
+  .pnl{text-align:end; font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums}
+  .pnl .abs{font-size:14px; font-weight:600}
+  .pnl .pct{font-size:11px; margin-top:3px}
+
+  /* ---- trades ---- */
+  .trade{display:grid; grid-template-columns:auto 1fr auto; gap:12px; align-items:center; padding:10px 14px;
+    border-bottom:1px solid var(--line-soft)}
+  .trade:last-child{border-bottom:0}
+  .side{font-size:10.5px; font-weight:700; padding:3px 8px; border-radius:6px; letter-spacing:.04em}
+  .side.buy{color:var(--gain); background:rgba(132,192,160,.12)}
+  .side.sell{color:var(--loss); background:rgba(223,138,108,.12)}
+  .trade .tsym{font-family:"IBM Plex Mono",monospace; font-size:13px; font-weight:500}
+  .trade .det{font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--muted); margin-top:2px}
+  .trade .tdate{font-size:10.5px; color:var(--faint); text-align:end}
+
+  /* ---- footer / refresh ---- */
+  .foot{display:flex; align-items:center; justify-content:space-between; margin-top:8px; padding:0 4px}
+  button.refresh{font-family:system-ui,sans-serif; font-size:13px; color:var(--amber);
+    background:transparent; border:1px solid var(--line); border-radius:10px; padding:9px 16px; cursor:pointer}
+  button.refresh:active{background:var(--bg2)}
+  button.refresh:focus-visible{outline:2px solid var(--amber); outline-offset:2px}
+  .disclaimer{font-size:10px; color:var(--faint); max-width:60%; line-height:1.5}
+
+  /* ---- states ---- */
+  .state{padding:60px 20px; text-align:center; color:var(--muted)}
+  .state h3{font-family:"Fraunces",serif; font-weight:600; color:var(--ink); margin:0 0 8px; font-size:18px}
+  .state p{font-size:13px; line-height:1.6; margin:0 auto; max-width:300px}
+  .empty{padding:26px 16px; text-align:center; color:var(--faint); font-size:13px;
+    background:var(--bg2); border:1px dashed var(--line); border-radius:13px}
+  .skel{animation:pulse 1.4s ease-in-out infinite; background:var(--bg2); border-radius:13px}
+  @keyframes pulse{0%,100%{opacity:.5}50%{opacity:.85}}
+  @media (prefers-reduced-motion:reduce){.skel{animation:none}}
+</style>
+</head>
+<body>
+<div id="app">
+  <div class="state"><div class="skel" style="height:200px;margin-bottom:16px"></div>
+  <div class="skel" style="height:120px"></div></div>
+</div>
+
+<script>
+// מקור הנתונים. ברירת מחדל: אותו origin (webapp/dashboard.json מועלה יחד עם ה-PWA).
+// לחלופין, החלף ל-URL גולמי של GitHub כדי לנתק את ההצגה מהפריסה:
+// const DATA_URL = "https://raw.githubusercontent.com/<user>/<repo>/main/webapp/dashboard.json";
+const DATA_URL = "./dashboard.json";
+
+const app = document.getElementById("app");
+
+const fmtMoney = (n, cur) => {
+  const sym = cur === "ILS" ? "₪" : "$";
+  return sym + Number(n).toLocaleString("en-US", {maximumFractionDigits:0});
+};
+const fmtSigned = (n, cur) => (n >= 0 ? "+" : "−") + fmtMoney(Math.abs(n), cur);
+const fmtPct = (p) => (p >= 0 ? "+" : "−") + (Math.abs(p)*100).toFixed(2) + "%";
+const cls = (n) => n > 0 ? "up" : n < 0 ? "down" : "flat";
+
+function relTime(iso){
+  const d = new Date(iso);
+  const date = d.toLocaleDateString("he-IL", {day:"numeric", month:"short"});
+  const time = d.toLocaleTimeString("he-IL", {hour:"2-digit", minute:"2-digit"});
+  return `${date} · ${time}`;
+}
+
+function equitySVG(history){
+  if(!history || history.length < 2) return "";
+  const w = 100, h = 100, pad = 4;
+  const vals = history.map(p => p.value);
+  const min = Math.min(...vals), max = Math.max(...vals);
+  const span = (max - min) || 1;
+  const x = i => pad + (w - 2*pad) * (i/(history.length-1));
+  const y = v => (h - pad) - (h - 2*pad) * ((v - min)/span);
+  const rising = vals[vals.length-1] >= vals[0];
+  const stroke = rising ? "var(--gain)" : "var(--loss)";
+  let line = history.map((p,i)=>`${i?"L":"M"}${x(i).toFixed(2)},${y(p.value).toFixed(2)}`).join(" ");
+  let area = line + ` L${x(history.length-1).toFixed(2)},${h-pad} L${x(0).toFixed(2)},${h-pad} Z`;
+  const lastX = x(history.length-1), lastY = y(vals[vals.length-1]);
+  return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" role="img" aria-label="עקומת הון">
+    <defs><linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="${rising?'#84c0a0':'#df8a6c'}" stop-opacity=".28"/>
+      <stop offset="100%" stop-color="${rising?'#84c0a0':'#df8a6c'}" stop-opacity="0"/>
+    </linearGradient></defs>
+    <path d="${area}" fill="url(#g)"/>
+    <path d="${line}" fill="none" stroke="${stroke}" stroke-width="1.6"
+      stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+    <circle cx="${lastX.toFixed(2)}" cy="${lastY.toFixed(2)}" r="2.2" fill="${rising?'#84c0a0':'#df8a6c'}" vector-effect="non-scaling-stroke"/>
+  </svg>`;
+}
+
+function positionRow(p){
+  const flag = p.is_tase
+    ? `<span class="flag" title="TASE">₪</span>`
+    : `<span class="flag us" title="US">$</span>`;
+  const pnlCur = p.currency;
+  return `<div class="row">
+    <div class="tkr">${flag}
+      <div style="min-width:0">
+        <div class="sym">${p.symbol}</div>
+        <div class="px">${p.quantity} × ${Number(p.avg_price).toLocaleString()}
+          <span class="arrow">→</span>${Number(p.current_price).toLocaleString()}</div>
+      </div>
+    </div>
+    <div></div>
+    <div class="pnl ${cls(p.unrealized_pnl)}">
+      <div class="abs">${fmtSigned(p.unrealized_pnl, pnlCur)}</div>
+      <div class="pct">${fmtPct(p.unrealized_pnl_pct)}</div>
+    </div>
+  </div>`;
+}
+
+function tradeRow(t){
+  const isBuy = t.side === "BUY";
+  return `<div class="trade">
+    <span class="side ${isBuy?'buy':'sell'}">${isBuy?'קנייה':'מכירה'}</span>
+    <div><div class="tsym">${t.symbol}</div>
+      <div class="det">${t.quantity} × ${Number(t.price).toLocaleString()} ${t.currency}</div></div>
+    <div class="tdate">${new Date(t.timestamp).toLocaleDateString("he-IL",{day:"numeric",month:"short"})}</div>
+  </div>`;
+}
+
+function render(d){
+  const base = d.base_currency;
+  const dc = cls(d.day_change), tc = cls(d.total_change_pct);
+  const positions = d.positions.length
+    ? `<div class="rows">${d.positions.map(positionRow).join("")}</div>`
+    : `<div class="empty" style="margin-bottom:28px">אין פוזיציות פתוחות כרגע. הבוט ייכנס לעסקה כשיתקבל איתות.</div>`;
+  const trades = d.recent_trades.length
+    ? `<div class="rows" style="gap:0;background:var(--bg2);border:1px solid var(--line-soft);border-radius:13px;overflow:hidden">
+        ${d.recent_trades.map(tradeRow).join("")}</div>`
+    : `<div class="empty">עדיין לא בוצעו עסקאות.</div>`;
+
+  app.innerHTML = `
+    <header>
+      <div class="brand">
+        <svg class="glyph" viewBox="0 0 24 24" fill="none"><path d="M3 17 L8 11 L11 14 L15 8 L21 5"
+          stroke="var(--amber)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="21" cy="5" r="2" fill="var(--amber-bright)"/></svg>
+        <span class="name">תיק Paper</span>
+      </div>
+      <div class="asof">נכון ל־<b>${relTime(d.as_of)}</b><br>USD/ILS <b>${d.usd_ils}</b></div>
+    </header>
+
+    <div class="hero">
+      <div class="label">שווי תיק כולל</div>
+      <div class="value mono">${fmtMoney(d.total_value, base)}</div>
+      <div class="changes">
+        <span class="chg ${dc}"><span class="cap">היום</span>${fmtSigned(d.day_change, base)} · ${fmtPct(d.day_change_pct)}</span>
+        <span class="chg ${tc}"><span class="cap">מתחילת המעקב</span>${fmtPct(d.total_change_pct)}</span>
+      </div>
+    </div>
+
+    ${d.equity_history && d.equity_history.length >= 2 ? `<div class="curve">
+      ${equitySVG(d.equity_history)}
+      <div class="ends"><span>${d.equity_history[0].date}</span><span>${d.equity_history.at(-1).date}</span></div>
+    </div>` : ""}
+
+    <div class="strip">
+      <div class="stat"><div class="k">מזומן</div><div class="v">${fmtMoney(d.cash, base)}</div></div>
+      <div class="stat"><div class="k">מושקע</div><div class="v">${fmtMoney(d.invested, base)}</div></div>
+      <div class="stat"><div class="k">פוזיציות</div><div class="v">${d.num_positions}</div></div>
+    </div>
+
+    <div class="sec-h"><h2>פוזיציות פתוחות</h2><span class="count">${d.num_positions}</span></div>
+    ${positions}
+
+    <div class="sec-h"><h2>עסקאות אחרונות</h2><span class="count">${d.num_trades} סה״כ</span></div>
+    ${trades}
+
+    <div class="foot">
+      <span class="disclaimer">סימולציה בלבד — אין כאן ייעוץ השקעות. ביצועי עבר אינם מבטיחים עתיד.</span>
+      <button class="refresh" id="refreshBtn">רענון</button>
+    </div>`;
+
+  document.getElementById("refreshBtn").addEventListener("click", load);
+}
+
+function renderError(msg){
+  app.innerHTML = `<div class="state">
+    <h3>אין נתונים להצגה</h3>
+    <p>${msg}</p>
+    <p style="margin-top:18px"><button class="refresh" id="refreshBtn">נסה שוב</button></p>
+  </div>`;
+  document.getElementById("refreshBtn").addEventListener("click", load);
+}
+
+async function load(){
+  try{
+    const res = await fetch(DATA_URL, {cache:"no-store"});
+    if(!res.ok) throw new Error(`status ${res.status}`);
+    const data = await res.json();
+    render(data);
+  }catch(e){
+    renderError(`לא הצלחנו לטעון את הנתונים מ־<code>${DATA_URL}</code>. ודא שהבוט רץ לפחות פעם אחת ושהקובץ נפרס לצד האפליקציה.`);
+  }
+}
+
+load();
+
+// רישום service worker ל-PWA (מסך בית / אופליין)
+if("serviceWorker" in navigator){
+  window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch(()=>{}));
+}
+</script>
+</body>
+</html>
