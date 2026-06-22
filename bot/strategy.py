@@ -61,13 +61,13 @@ class TrendMomentumStrategy(Strategy):
         macd_df = ind.macd(close, p.macd_fast, p.macd_slow, p.macd_signal)
         trend = ind.sma(close, p.trend_sma)
 
-        macd_up = ind.crossed_above(macd_df["macd"], macd_df["signal"])
+       macd_bullish = macd_df["macd"] > macd_df["signal"]
         macd_down = ind.crossed_below(macd_df["macd"], macd_df["signal"])
 
         uptrend = close > trend
         not_overbought = rsi < p.rsi_overbought
 
-        buy = macd_up & uptrend & not_overbought
+        buy = macd_bullish & uptrend & not_overbought
         sell = macd_down | (rsi > p.rsi_overbought)
 
         # מסנן סנטימנט (אופציונלי): אם הסנטימנט שלילי מדי - מבטלים קניות
