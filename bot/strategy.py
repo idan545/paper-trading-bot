@@ -61,7 +61,7 @@ class TrendMomentumStrategy(Strategy):
         macd_df = ind.macd(close, p.macd_fast, p.macd_slow, p.macd_signal)
         trend = ind.sma(close, p.trend_sma)
 
-       macd_bullish = macd_df["macd"] > macd_df["signal"]
+        macd_bullish = macd_df["macd"] > macd_df["signal"]
         macd_down = ind.crossed_below(macd_df["macd"], macd_df["signal"])
 
         uptrend = close > trend
