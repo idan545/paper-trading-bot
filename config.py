@@ -36,7 +36,7 @@ STRATEGY_PARAMS = StrategyParams(
     rsi_window=14,
     rsi_overbought=75.0,
     rsi_oversold=30.0,
-    trend_sma=200,
+    trend_sma=50,
     use_sentiment=False,   # הפעל True כדי לסנן קניות לפי סנטימנט חדשות
     sentiment_min=-0.2,
 )
