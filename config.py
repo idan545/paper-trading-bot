@@ -17,8 +17,11 @@ UNIVERSE = [
     "NICE",   # נייס
     "ESLT",   # אלביט מערכות
     "MNDY",   # monday.com
-    "CYBR",   # סייברארק
     "WIX",    # Wix
+    "GLBE",   # Global-e (ישראלית)
+    # ארה"ב נוספות
+    "PLTR",   # Palantir
+    "CRM",    # Salesforce
 ]
 
 BASE_CURRENCY = "USD"
