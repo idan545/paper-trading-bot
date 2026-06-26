@@ -38,10 +38,16 @@ jobs:
         run: |
           git config user.name  "paper-bot[bot]"
           git config user.email "paper-bot@users.noreply.github.com"
-          git add -A portfolio_state.json equity_history.json webapp/dashboard.json
+          git add -A portfolio_state.json equity_history.json docs/dashboard.json
           if git diff --cached --quiet; then
             echo "אין שינויים לשמירה."
           else
             git commit -m "chore: עדכון תיק $(date -u +%Y-%m-%d) [skip ci]"
-            git push
+            # משוך שינויים מרוחקים לפני הדחיפה (אם הרצה קודמת כבר דחפה),
+            # ונסה לדחוף עד 3 פעמים למקרה של מירוץ.
+            for i in 1 2 3; do
+              git pull --rebase origin main && git push && break
+              echo "ניסיון דחיפה $i נכשל, מנסה שוב..."
+              sleep 3
+            done
           fi

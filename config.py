@@ -29,14 +29,14 @@ STATE_FILE = "portfolio_state.json"
 
 # קבצי פלט לדשבורד (ה-PWA). dashboard.json נכתב לתוך webapp/ כדי
 # שייקרא מאותו origin בלי CORS.
-DASHBOARD_FILE = "webapp/dashboard.json"
+DASHBOARD_FILE = "docs/dashboard.json"
 EQUITY_FILE = "equity_history.json"
 
 STRATEGY_PARAMS = StrategyParams(
     rsi_window=14,
     rsi_overbought=75.0,
     rsi_oversold=30.0,
-    trend_sma=200,
+    trend_sma=50,          # מגמה קצרה יותר (50 במקום 200) = יותר הזדמנויות
     use_sentiment=False,   # הפעל True כדי לסנן קניות לפי סנטימנט חדשות
     sentiment_min=-0.2,
 )
