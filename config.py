@@ -5,16 +5,20 @@
 from bot.strategy import StrategyParams
 from bot.risk import RiskParams
 
-# --- יוניברס: ערבוב מניות אמריקאיות ו-TASE (סיומת .TA) ---
+# --- יוניברס: מניות אמריקאיות + חברות ישראליות ברישום אמריקאי (USD) ---
+# כולן נסחרות בארה"ב ונמשכות אמין ב-yfinance (בלי סיבוכי אגורות/ת"א).
 UNIVERSE = [
-    # ארה"ב
-    "AAPL", "MSFT", "NVDA", "GOOGL", "AMZN",
-    # ישראל (TASE)
-    "TEVA.TA",   # טבע
-    "POLI.TA",   # בנק הפועלים
-    "LUMI.TA",   # בנק לאומי
-    "NICE.TA",   # נייס
-    "ESLT.TA",   # אלביט
+    # ארה"ב - טכנולוגיה גדולה
+    "AAPL", "MSFT", "NVDA", "GOOGL", "AMZN", "META", "AMD", "AVGO",
+    # ארה"ב - מגוון
+    "JPM", "V", "WMT", "COST", "NFLX",
+    # חברות ישראליות (רישום אמריקאי)
+    "TEVA",   # טבע
+    "NICE",   # נייס
+    "ESLT",   # אלביט מערכות
+    "MNDY",   # monday.com
+    "CYBR",   # סייברארק
+    "WIX",    # Wix
 ]
 
 BASE_CURRENCY = "USD"
