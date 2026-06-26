@@ -80,6 +80,9 @@
   .px{font-size:11px; color:var(--muted); font-family:"IBM Plex Mono",monospace; margin-top:3px}
   .px .arrow{color:var(--faint); margin:0 4px}
   .pnl{text-align:end; font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums}
+  .invested{text-align:center}
+  .invested .ilabel{font-size:9.5px; color:var(--faint); letter-spacing:.04em}
+  .invested .ival{font-family:"IBM Plex Mono",monospace; font-size:13px; color:var(--muted); margin-top:3px; font-variant-numeric:tabular-nums}
   .pnl .abs{font-size:14px; font-weight:600}
   .pnl .pct{font-size:11px; margin-top:3px}
 
@@ -172,6 +175,7 @@ function positionRow(p){
     ? `<span class="flag" title="TASE">₪</span>`
     : `<span class="flag us" title="US">$</span>`;
   const pnlCur = p.currency;
+  const invested = p.value_base != null ? p.value_base : (p.quantity * p.current_price);
   return `<div class="row">
     <div class="tkr">${flag}
       <div style="min-width:0">
@@ -180,7 +184,10 @@ function positionRow(p){
           <span class="arrow">→</span>${Number(p.current_price).toLocaleString()}</div>
       </div>
     </div>
-    <div></div>
+    <div class="invested">
+      <div class="ilabel">מושקע</div>
+      <div class="ival">$${Number(invested).toLocaleString(undefined,{maximumFractionDigits:0})}</div>
+    </div>
     <div class="pnl ${cls(p.unrealized_pnl)}">
       <div class="abs">${fmtSigned(p.unrealized_pnl, pnlCur)}</div>
       <div class="pct">${fmtPct(p.unrealized_pnl_pct)}</div>
