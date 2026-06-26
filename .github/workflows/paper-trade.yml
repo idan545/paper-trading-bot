@@ -1,12 +1,15 @@
 name: paper-trade
 
+# מריץ את הבוט אוטומטית כל יום מסחר, ושומר את מצב התיק והנתונים לדשבורד.
 on:
   schedule:
+    # 21:30 UTC, ימים ב'-ו' - אחרי סגירת המסחר בארה"ב (ו-TASE כבר סגורה).
+    # שים לב: ה-cron של GitHub ב-UTC ועלול להתעכב בכמה דקות.
     - cron: "30 21 * * 1-5"
-  workflow_dispatch:
+  workflow_dispatch:        # מאפשר הרצה ידנית מלשונית Actions
 
 permissions:
-  contents: write
+  contents: write           # נדרש כדי ש-Actions יוכל לדחוף את קבצי המצב
 
 concurrency:
   group: paper-trade
@@ -37,21 +40,14 @@ jobs:
           git config user.email "paper-bot@users.noreply.github.com"
           git add -A portfolio_state.json equity_history.json docs/dashboard.json
           if git diff --cached --quiet; then
-            echo "no changes"
+            echo "אין שינויים לשמירה."
           else
-<<<<<<< HEAD
             git commit -m "chore: עדכון תיק $(date -u +%Y-%m-%d) [skip ci]"
             # משוך שינויים מרוחקים לפני הדחיפה (אם הרצה קודמת כבר דחפה),
             # ונסה לדחוף עד 3 פעמים למקרה של מירוץ.
             for i in 1 2 3; do
               git pull --rebase origin main && git push && break
               echo "ניסיון דחיפה $i נכשל, מנסה שוב..."
-=======
-            git commit -m "chore: update portfolio $(date -u +%Y-%m-%d) [skip ci]"
-            for i in 1 2 3; do
-              git pull --rebase origin main && git push && break
-              echo "push attempt $i failed, retrying..."
->>>>>>> 88833c748c91e2694443d16913007584bba22ef6
               sleep 3
             done
           fi
