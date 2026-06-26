@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 63584.856687548825,
+  "cash": 54945.69077051392,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -14,6 +14,12 @@
       "symbol": "V",
       "quantity": 55.0,
       "avg_price": 337.8489990234375,
+      "currency": "USD"
+    },
+    "GLBE": {
+      "symbol": "GLBE",
+      "quantity": 238.0,
+      "avg_price": 36.27000045776367,
       "currency": "USD"
     }
   },
@@ -37,6 +43,16 @@
       "currency": "USD",
       "commission": 14.86535595703125,
       "cash_after": 63584.856687548825
+    },
+    {
+      "timestamp": "2026-06-26T18:22:04.313988+00:00",
+      "symbol": "GLBE",
+      "side": "BUY",
+      "quantity": 238,
+      "price": 36.27000045776367,
+      "currency": "USD",
+      "commission": 6.905808087158204,
+      "cash_after": 54945.69077051392
     }
   ]
 }
