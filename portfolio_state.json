@@ -1,8 +1,42 @@
 {
   "base_currency": "USD",
-  "cash": 100000.0,
+  "cash": 63584.856687548825,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
-  "positions": {},
-  "trades": []
+  "positions": {
+    "JPM": {
+      "symbol": "JPM",
+      "quantity": 54.0,
+      "avg_price": 329.7099914550781,
+      "currency": "USD"
+    },
+    "V": {
+      "symbol": "V",
+      "quantity": 55.0,
+      "avg_price": 337.8489990234375,
+      "currency": "USD"
+    }
+  },
+  "trades": [
+    {
+      "timestamp": "2026-06-26T18:14:13.088729+00:00",
+      "symbol": "JPM",
+      "side": "BUY",
+      "quantity": 54,
+      "price": 329.7099914550781,
+      "currency": "USD",
+      "commission": 14.243471630859375,
+      "cash_after": 82181.41698979492
+    },
+    {
+      "timestamp": "2026-06-26T18:14:13.093868+00:00",
+      "symbol": "V",
+      "side": "BUY",
+      "quantity": 55,
+      "price": 337.8489990234375,
+      "currency": "USD",
+      "commission": 14.86535595703125,
+      "cash_after": 63584.856687548825
+    }
+  ]
 }
