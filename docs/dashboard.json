@@ -1,17 +1,57 @@
 {
-  "as_of": "2026-06-25T22:54:42+00:00",
+  "as_of": "2026-06-26T18:14:13+00:00",
   "base_currency": "USD",
-  "usd_ils": 2.9809,
-  "total_value": 100000.0,
-  "cash": 100000.0,
-  "invested": 0.0,
-  "day_change": 0.0,
-  "day_change_pct": 0.0,
-  "total_change_pct": 0.0,
-  "num_positions": 0,
-  "num_trades": 0,
-  "positions": [],
-  "recent_trades": [],
+  "usd_ils": 2.9992,
+  "total_value": 99970.89,
+  "cash": 63584.86,
+  "invested": 36386.03,
+  "day_change": -29.11,
+  "day_change_pct": -0.0003,
+  "total_change_pct": -0.0003,
+  "num_positions": 2,
+  "num_trades": 2,
+  "positions": [
+    {
+      "symbol": "V",
+      "currency": "USD",
+      "is_tase": false,
+      "quantity": 55.0,
+      "avg_price": 337.85,
+      "current_price": 337.85,
+      "unrealized_pnl": 0.0,
+      "unrealized_pnl_pct": 0.0,
+      "value_base": 18581.69
+    },
+    {
+      "symbol": "JPM",
+      "currency": "USD",
+      "is_tase": false,
+      "quantity": 54.0,
+      "avg_price": 329.71,
+      "current_price": 329.71,
+      "unrealized_pnl": 0.0,
+      "unrealized_pnl_pct": 0.0,
+      "value_base": 17804.34
+    }
+  ],
+  "recent_trades": [
+    {
+      "timestamp": "2026-06-26T18:14:13.093868+00:00",
+      "symbol": "V",
+      "side": "BUY",
+      "quantity": 55,
+      "price": 337.85,
+      "currency": "USD"
+    },
+    {
+      "timestamp": "2026-06-26T18:14:13.088729+00:00",
+      "symbol": "JPM",
+      "side": "BUY",
+      "quantity": 54,
+      "price": 329.71,
+      "currency": "USD"
+    }
+  ],
   "equity_history": [
     {
       "date": "2026-06-22",
@@ -28,6 +68,10 @@
     {
       "date": "2026-06-25",
       "value": 100000.0
+    },
+    {
+      "date": "2026-06-26",
+      "value": 99970.89
     }
   ]
 }
