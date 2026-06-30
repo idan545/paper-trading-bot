@@ -1,13 +1,13 @@
 {
-  "as_of": "2026-06-29T22:37:52+00:00",
+  "as_of": "2026-06-30T22:50:46+00:00",
   "base_currency": "USD",
-  "usd_ils": 2.9828,
-  "total_value": 100022.48,
+  "usd_ils": 2.9712,
+  "total_value": 99757.2,
   "cash": 54945.69,
-  "invested": 45076.79,
-  "day_change": 149.86,
-  "day_change_pct": 0.0015,
-  "total_change_pct": 0.0002,
+  "invested": 44811.51,
+  "day_change": -265.28,
+  "day_change_pct": -0.0027,
+  "total_change_pct": -0.0024,
   "num_positions": 3,
   "num_trades": 3,
   "positions": [
@@ -17,10 +17,10 @@
       "is_tase": false,
       "quantity": 55.0,
       "avg_price": 337.85,
-      "current_price": 341.65,
-      "unrealized_pnl": 209.05,
-      "unrealized_pnl_pct": 0.0113,
-      "value_base": 18790.75
+      "current_price": 343.09,
+      "unrealized_pnl": 288.25,
+      "unrealized_pnl_pct": 0.0155,
+      "value_base": 18869.95
     },
     {
       "symbol": "JPM",
@@ -28,10 +28,10 @@
       "is_tase": false,
       "quantity": 54.0,
       "avg_price": 329.71,
-      "current_price": 329.39,
-      "unrealized_pnl": -17.28,
-      "unrealized_pnl_pct": -0.001,
-      "value_base": 17787.06
+      "current_price": 327.33,
+      "unrealized_pnl": -128.52,
+      "unrealized_pnl_pct": -0.0072,
+      "value_base": 17675.82
     },
     {
       "symbol": "GLBE",
@@ -39,10 +39,10 @@
       "is_tase": false,
       "quantity": 238.0,
       "avg_price": 36.27,
-      "current_price": 35.71,
-      "unrealized_pnl": -133.28,
-      "unrealized_pnl_pct": -0.0154,
-      "value_base": 8498.98
+      "current_price": 34.73,
+      "unrealized_pnl": -366.52,
+      "unrealized_pnl_pct": -0.0425,
+      "value_base": 8265.74
     }
   ],
   "recent_trades": [
@@ -95,6 +95,10 @@
     {
       "date": "2026-06-29",
       "value": 100022.48
+    },
+    {
+      "date": "2026-06-30",
+      "value": 99757.2
     }
   ]
 }
