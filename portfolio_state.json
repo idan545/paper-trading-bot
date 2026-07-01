@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 54945.69077051392,
+  "cash": 34413.89876704712,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -20,6 +20,18 @@
       "symbol": "GLBE",
       "quantity": 238.0,
       "avg_price": 36.27000045776367,
+      "currency": "USD"
+    },
+    "META": {
+      "symbol": "META",
+      "quantity": 18.0,
+      "avg_price": 612.9099731445312,
+      "currency": "USD"
+    },
+    "NICE": {
+      "symbol": "NICE",
+      "quantity": 100.0,
+      "avg_price": 94.83000183105469,
       "currency": "USD"
     }
   },
@@ -53,6 +65,26 @@
       "currency": "USD",
       "commission": 6.905808087158204,
       "cash_after": 54945.69077051392
+    },
+    {
+      "timestamp": "2026-07-01T22:48:16.426878+00:00",
+      "symbol": "META",
+      "side": "BUY",
+      "quantity": 18,
+      "price": 612.9099731445312,
+      "currency": "USD",
+      "commission": 8.82590361328125,
+      "cash_after": 43904.48535029907
+    },
+    {
+      "timestamp": "2026-07-01T22:48:16.458377+00:00",
+      "symbol": "NICE",
+      "side": "BUY",
+      "quantity": 100,
+      "price": 94.83000183105469,
+      "currency": "USD",
+      "commission": 7.586400146484375,
+      "cash_after": 34413.89876704712
     }
   ]
 }
