@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 34413.89876704712,
+  "cash": 21360.58305109253,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -8,12 +8,6 @@
       "symbol": "JPM",
       "quantity": 54.0,
       "avg_price": 329.7099914550781,
-      "currency": "USD"
-    },
-    "V": {
-      "symbol": "V",
-      "quantity": 55.0,
-      "avg_price": 337.8489990234375,
       "currency": "USD"
     },
     "GLBE": {
@@ -32,6 +26,24 @@
       "symbol": "NICE",
       "quantity": 100.0,
       "avg_price": 94.83000183105469,
+      "currency": "USD"
+    },
+    "AAPL": {
+      "symbol": "AAPL",
+      "quantity": 45.0,
+      "avg_price": 308.6300048828125,
+      "currency": "USD"
+    },
+    "TEVA": {
+      "symbol": "TEVA",
+      "quantity": 347.0,
+      "avg_price": 34.63999938964844,
+      "currency": "USD"
+    },
+    "MNDY": {
+      "symbol": "MNDY",
+      "quantity": 88.0,
+      "avg_price": 79.7699966430664,
       "currency": "USD"
     }
   },
@@ -85,6 +97,46 @@
       "currency": "USD",
       "commission": 7.586400146484375,
       "cash_after": 34413.89876704712
+    },
+    {
+      "timestamp": "2026-07-02T22:37:50.611617+00:00",
+      "symbol": "AAPL",
+      "side": "BUY",
+      "quantity": 45,
+      "price": 308.6300048828125,
+      "currency": "USD",
+      "commission": 11.110680175781251,
+      "cash_after": 20514.437867144774
+    },
+    {
+      "timestamp": "2026-07-02T22:37:50.644275+00:00",
+      "symbol": "V",
+      "side": "SELL",
+      "quantity": 55.0,
+      "price": 362.1300048828125,
+      "currency": "USD",
+      "commission": 15.933720214843751,
+      "cash_after": 40415.65441548462
+    },
+    {
+      "timestamp": "2026-07-02T22:37:50.659877+00:00",
+      "symbol": "TEVA",
+      "side": "BUY",
+      "quantity": 347,
+      "price": 34.63999938964844,
+      "currency": "USD",
+      "commission": 9.616063830566407,
+      "cash_after": 28385.958563446045
+    },
+    {
+      "timestamp": "2026-07-02T22:37:50.671912+00:00",
+      "symbol": "MNDY",
+      "side": "BUY",
+      "quantity": 88,
+      "price": 79.7699966430664,
+      "currency": "USD",
+      "commission": 5.615807763671875,
+      "cash_after": 21360.58305109253
     }
   ]
 }
