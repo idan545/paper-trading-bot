@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 21360.58305109253,
+  "cash": 4198.864651092528,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -44,6 +44,12 @@
       "symbol": "MNDY",
       "quantity": 88.0,
       "avg_price": 79.7699966430664,
+      "currency": "USD"
+    },
+    "V": {
+      "symbol": "V",
+      "quantity": 48.0,
+      "avg_price": 357.25,
       "currency": "USD"
     }
   },
@@ -137,6 +143,16 @@
       "currency": "USD",
       "commission": 5.615807763671875,
       "cash_after": 21360.58305109253
+    },
+    {
+      "timestamp": "2026-07-06T22:46:04.555901+00:00",
+      "symbol": "V",
+      "side": "BUY",
+      "quantity": 48,
+      "price": 357.25,
+      "currency": "USD",
+      "commission": 13.7184,
+      "cash_after": 4198.864651092528
     }
   ]
 }
