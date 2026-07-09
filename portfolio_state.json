@@ -1,15 +1,9 @@
 {
   "base_currency": "USD",
-  "cash": 4198.864651092528,
+  "cash": 22299.75241295776,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
-    "JPM": {
-      "symbol": "JPM",
-      "quantity": 54.0,
-      "avg_price": 329.7099914550781,
-      "currency": "USD"
-    },
     "GLBE": {
       "symbol": "GLBE",
       "quantity": 238.0,
@@ -153,6 +147,16 @@
       "currency": "USD",
       "commission": 13.7184,
       "cash_after": 4198.864651092528
+    },
+    {
+      "timestamp": "2026-07-09T22:50:50.916245+00:00",
+      "symbol": "JPM",
+      "side": "SELL",
+      "quantity": 54.0,
+      "price": 335.4700012207031,
+      "currency": "USD",
+      "commission": 14.492304052734376,
+      "cash_after": 22299.75241295776
     }
   ]
 }

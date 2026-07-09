@@ -1,37 +1,26 @@
 {
-  "as_of": "2026-07-08T22:33:58+00:00",
+  "as_of": "2026-07-09T22:50:50+00:00",
   "base_currency": "USD",
-  "usd_ils": 3.0367,
-  "total_value": 100599.78,
-  "cash": 4198.86,
-  "invested": 96400.91,
-  "day_change": -1957.02,
-  "day_change_pct": -0.0191,
-  "total_change_pct": 0.006,
-  "num_positions": 8,
-  "num_trades": 10,
+  "usd_ils": 3.0144,
+  "total_value": 102248.71,
+  "cash": 22299.75,
+  "invested": 79948.96,
+  "day_change": 1648.93,
+  "day_change_pct": 0.0164,
+  "total_change_pct": 0.0225,
+  "num_positions": 7,
+  "num_trades": 11,
   "positions": [
-    {
-      "symbol": "JPM",
-      "currency": "USD",
-      "is_tase": false,
-      "quantity": 54.0,
-      "avg_price": 329.71,
-      "current_price": 330.62,
-      "unrealized_pnl": 49.14,
-      "unrealized_pnl_pct": 0.0028,
-      "value_base": 17853.48
-    },
     {
       "symbol": "V",
       "currency": "USD",
       "is_tase": false,
       "quantity": 48.0,
       "avg_price": 357.25,
-      "current_price": 347.53,
-      "unrealized_pnl": -466.56,
-      "unrealized_pnl_pct": -0.0272,
-      "value_base": 16681.44
+      "current_price": 348.2,
+      "unrealized_pnl": -434.4,
+      "unrealized_pnl_pct": -0.0253,
+      "value_base": 16713.6
     },
     {
       "symbol": "AAPL",
@@ -39,10 +28,10 @@
       "is_tase": false,
       "quantity": 45.0,
       "avg_price": 308.63,
-      "current_price": 313.39,
-      "unrealized_pnl": 214.2,
-      "unrealized_pnl_pct": 0.0154,
-      "value_base": 14102.55
+      "current_price": 316.22,
+      "unrealized_pnl": 341.55,
+      "unrealized_pnl_pct": 0.0246,
+      "value_base": 14229.9
     },
     {
       "symbol": "TEVA",
@@ -50,10 +39,10 @@
       "is_tase": false,
       "quantity": 347.0,
       "avg_price": 34.64,
-      "current_price": 33.24,
-      "unrealized_pnl": -485.8,
-      "unrealized_pnl_pct": -0.0404,
-      "value_base": 11534.28
+      "current_price": 33.1,
+      "unrealized_pnl": -534.38,
+      "unrealized_pnl_pct": -0.0445,
+      "value_base": 11485.7
     },
     {
       "symbol": "META",
@@ -61,10 +50,10 @@
       "is_tase": false,
       "quantity": 18.0,
       "avg_price": 612.91,
-      "current_price": 603.12,
-      "unrealized_pnl": -176.22,
-      "unrealized_pnl_pct": -0.016,
-      "value_base": 10856.16
+      "current_price": 631.48,
+      "unrealized_pnl": 334.26,
+      "unrealized_pnl_pct": 0.0303,
+      "value_base": 11366.64
     },
     {
       "symbol": "NICE",
@@ -72,10 +61,10 @@
       "is_tase": false,
       "quantity": 100.0,
       "avg_price": 94.83,
-      "current_price": 96.8,
-      "unrealized_pnl": 197.0,
-      "unrealized_pnl_pct": 0.0208,
-      "value_base": 9680.0
+      "current_price": 97.86,
+      "unrealized_pnl": 303.0,
+      "unrealized_pnl_pct": 0.032,
+      "value_base": 9786.0
     },
     {
       "symbol": "GLBE",
@@ -83,10 +72,10 @@
       "is_tase": false,
       "quantity": 238.0,
       "avg_price": 36.27,
-      "current_price": 35.98,
-      "unrealized_pnl": -69.02,
-      "unrealized_pnl_pct": -0.008,
-      "value_base": 8563.24
+      "current_price": 37.84,
+      "unrealized_pnl": 373.66,
+      "unrealized_pnl_pct": 0.0433,
+      "value_base": 9005.92
     },
     {
       "symbol": "MNDY",
@@ -94,13 +83,21 @@
       "is_tase": false,
       "quantity": 88.0,
       "avg_price": 79.77,
-      "current_price": 81.02,
-      "unrealized_pnl": 110.0,
-      "unrealized_pnl_pct": 0.0157,
-      "value_base": 7129.76
+      "current_price": 83.65,
+      "unrealized_pnl": 341.44,
+      "unrealized_pnl_pct": 0.0486,
+      "value_base": 7361.2
     }
   ],
   "recent_trades": [
+    {
+      "timestamp": "2026-07-09T22:50:50.916245+00:00",
+      "symbol": "JPM",
+      "side": "SELL",
+      "quantity": 54.0,
+      "price": 335.47,
+      "currency": "USD"
+    },
     {
       "timestamp": "2026-07-06T22:46:04.555901+00:00",
       "symbol": "V",
@@ -238,6 +235,10 @@
     {
       "date": "2026-07-08",
       "value": 100599.78
+    },
+    {
+      "date": "2026-07-09",
+      "value": 102248.71
     }
   ]
 }
