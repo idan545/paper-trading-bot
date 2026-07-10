@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 22299.75241295776,
+  "cash": 21901.044373208617,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -28,12 +28,6 @@
       "avg_price": 308.6300048828125,
       "currency": "USD"
     },
-    "TEVA": {
-      "symbol": "TEVA",
-      "quantity": 347.0,
-      "avg_price": 34.63999938964844,
-      "currency": "USD"
-    },
     "MNDY": {
       "symbol": "MNDY",
       "quantity": 88.0,
@@ -44,6 +38,12 @@
       "symbol": "V",
       "quantity": 48.0,
       "avg_price": 357.25,
+      "currency": "USD"
+    },
+    "NVDA": {
+      "symbol": "NVDA",
+      "quantity": 56.0,
+      "avg_price": 210.9600067138672,
       "currency": "USD"
     }
   },
@@ -157,6 +157,26 @@
       "currency": "USD",
       "commission": 14.492304052734376,
       "cash_after": 22299.75241295776
+    },
+    {
+      "timestamp": "2026-07-10T22:32:46.726028+00:00",
+      "symbol": "NVDA",
+      "side": "BUY",
+      "quantity": 56,
+      "price": 210.9600067138672,
+      "currency": "USD",
+      "commission": 9.45100830078125,
+      "cash_after": 10476.541028680418
+    },
+    {
+      "timestamp": "2026-07-10T22:32:46.766051+00:00",
+      "symbol": "TEVA",
+      "side": "SELL",
+      "quantity": 347.0,
+      "price": 32.95000076293945,
+      "currency": "USD",
+      "commission": 9.146920211791993,
+      "cash_after": 21901.044373208617
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
-  "as_of": "2026-07-09T22:50:50+00:00",
+  "as_of": "2026-07-10T22:32:46+00:00",
   "base_currency": "USD",
-  "usd_ils": 3.0144,
-  "total_value": 102248.71,
-  "cash": 22299.75,
-  "invested": 79948.96,
-  "day_change": 1648.93,
-  "day_change_pct": 0.0164,
-  "total_change_pct": 0.0225,
+  "usd_ils": 3.0026,
+  "total_value": 103090.15,
+  "cash": 21901.04,
+  "invested": 81189.1,
+  "day_change": 841.44,
+  "day_change_pct": 0.0082,
+  "total_change_pct": 0.0309,
   "num_positions": 7,
-  "num_trades": 11,
+  "num_trades": 13,
   "positions": [
     {
       "symbol": "V",
@@ -17,10 +17,10 @@
       "is_tase": false,
       "quantity": 48.0,
       "avg_price": 357.25,
-      "current_price": 348.2,
-      "unrealized_pnl": -434.4,
-      "unrealized_pnl_pct": -0.0253,
-      "value_base": 16713.6
+      "current_price": 348.97,
+      "unrealized_pnl": -397.44,
+      "unrealized_pnl_pct": -0.0232,
+      "value_base": 16750.56
     },
     {
       "symbol": "AAPL",
@@ -28,21 +28,10 @@
       "is_tase": false,
       "quantity": 45.0,
       "avg_price": 308.63,
-      "current_price": 316.22,
-      "unrealized_pnl": 341.55,
-      "unrealized_pnl_pct": 0.0246,
-      "value_base": 14229.9
-    },
-    {
-      "symbol": "TEVA",
-      "currency": "USD",
-      "is_tase": false,
-      "quantity": 347.0,
-      "avg_price": 34.64,
-      "current_price": 33.1,
-      "unrealized_pnl": -534.38,
-      "unrealized_pnl_pct": -0.0445,
-      "value_base": 11485.7
+      "current_price": 315.32,
+      "unrealized_pnl": 301.05,
+      "unrealized_pnl_pct": 0.0217,
+      "value_base": 14189.4
     },
     {
       "symbol": "META",
@@ -50,10 +39,21 @@
       "is_tase": false,
       "quantity": 18.0,
       "avg_price": 612.91,
-      "current_price": 631.48,
-      "unrealized_pnl": 334.26,
-      "unrealized_pnl_pct": 0.0303,
-      "value_base": 11366.64
+      "current_price": 669.21,
+      "unrealized_pnl": 1013.4,
+      "unrealized_pnl_pct": 0.0919,
+      "value_base": 12045.78
+    },
+    {
+      "symbol": "NVDA",
+      "currency": "USD",
+      "is_tase": false,
+      "quantity": 56.0,
+      "avg_price": 210.96,
+      "current_price": 210.96,
+      "unrealized_pnl": 0.0,
+      "unrealized_pnl_pct": 0.0,
+      "value_base": 11813.76
     },
     {
       "symbol": "NICE",
@@ -61,10 +61,10 @@
       "is_tase": false,
       "quantity": 100.0,
       "avg_price": 94.83,
-      "current_price": 97.86,
-      "unrealized_pnl": 303.0,
-      "unrealized_pnl_pct": 0.032,
-      "value_base": 9786.0
+      "current_price": 99.74,
+      "unrealized_pnl": 491.0,
+      "unrealized_pnl_pct": 0.0518,
+      "value_base": 9974.0
     },
     {
       "symbol": "GLBE",
@@ -72,10 +72,10 @@
       "is_tase": false,
       "quantity": 238.0,
       "avg_price": 36.27,
-      "current_price": 37.84,
-      "unrealized_pnl": 373.66,
-      "unrealized_pnl_pct": 0.0433,
-      "value_base": 9005.92
+      "current_price": 38.48,
+      "unrealized_pnl": 525.98,
+      "unrealized_pnl_pct": 0.0609,
+      "value_base": 9158.24
     },
     {
       "symbol": "MNDY",
@@ -83,13 +83,29 @@
       "is_tase": false,
       "quantity": 88.0,
       "avg_price": 79.77,
-      "current_price": 83.65,
-      "unrealized_pnl": 341.44,
-      "unrealized_pnl_pct": 0.0486,
-      "value_base": 7361.2
+      "current_price": 82.47,
+      "unrealized_pnl": 237.6,
+      "unrealized_pnl_pct": 0.0338,
+      "value_base": 7257.36
     }
   ],
   "recent_trades": [
+    {
+      "timestamp": "2026-07-10T22:32:46.766051+00:00",
+      "symbol": "TEVA",
+      "side": "SELL",
+      "quantity": 347.0,
+      "price": 32.95,
+      "currency": "USD"
+    },
+    {
+      "timestamp": "2026-07-10T22:32:46.726028+00:00",
+      "symbol": "NVDA",
+      "side": "BUY",
+      "quantity": 56,
+      "price": 210.96,
+      "currency": "USD"
+    },
     {
       "timestamp": "2026-07-09T22:50:50.916245+00:00",
       "symbol": "JPM",
@@ -169,14 +185,6 @@
       "quantity": 55,
       "price": 337.85,
       "currency": "USD"
-    },
-    {
-      "timestamp": "2026-06-26T18:14:13.088729+00:00",
-      "symbol": "JPM",
-      "side": "BUY",
-      "quantity": 54,
-      "price": 329.71,
-      "currency": "USD"
     }
   ],
   "equity_history": [
@@ -239,6 +247,10 @@
     {
       "date": "2026-07-09",
       "value": 102248.71
+    },
+    {
+      "date": "2026-07-10",
+      "value": 103090.15
     }
   ]
 }
