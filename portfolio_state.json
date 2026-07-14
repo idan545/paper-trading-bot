@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 21901.044373208617,
+  "cash": 14272.906671572875,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -44,6 +44,12 @@
       "symbol": "NVDA",
       "quantity": 56.0,
       "avg_price": 210.9600067138672,
+      "currency": "USD"
+    },
+    "PLTR": {
+      "symbol": "PLTR",
+      "quantity": 57.0,
+      "avg_price": 133.72000122070312,
       "currency": "USD"
     }
   },
@@ -177,6 +183,16 @@
       "currency": "USD",
       "commission": 9.146920211791993,
       "cash_after": 21901.044373208617
+    },
+    {
+      "timestamp": "2026-07-14T22:31:13.236519+00:00",
+      "symbol": "PLTR",
+      "side": "BUY",
+      "quantity": 57,
+      "price": 133.72000122070312,
+      "currency": "USD",
+      "commission": 6.097632055664063,
+      "cash_after": 14272.906671572875
     }
   ]
 }
