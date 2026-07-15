@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 14272.906671572875,
+  "cash": 494.05203673400865,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -50,6 +50,12 @@
       "symbol": "PLTR",
       "quantity": 57.0,
       "avg_price": 133.72000122070312,
+      "currency": "USD"
+    },
+    "AMZN": {
+      "symbol": "AMZN",
+      "quantity": 54.0,
+      "avg_price": 254.9600067138672,
       "currency": "USD"
     }
   },
@@ -193,6 +199,16 @@
       "currency": "USD",
       "commission": 6.097632055664063,
       "cash_after": 14272.906671572875
+    },
+    {
+      "timestamp": "2026-07-15T22:30:59.562377+00:00",
+      "symbol": "AMZN",
+      "side": "BUY",
+      "quantity": 54,
+      "price": 254.9600067138672,
+      "currency": "USD",
+      "commission": 11.014272290039063,
+      "cash_after": 494.05203673400865
     }
   ]
 }
