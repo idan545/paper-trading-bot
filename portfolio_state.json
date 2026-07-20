@@ -1,15 +1,9 @@
 {
   "base_currency": "USD",
-  "cash": 494.05203673400865,
+  "cash": 8892.569543545533,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
-    "GLBE": {
-      "symbol": "GLBE",
-      "quantity": 238.0,
-      "avg_price": 36.27000045776367,
-      "currency": "USD"
-    },
     "META": {
       "symbol": "META",
       "quantity": 18.0,
@@ -26,12 +20,6 @@
       "symbol": "AAPL",
       "quantity": 45.0,
       "avg_price": 308.6300048828125,
-      "currency": "USD"
-    },
-    "MNDY": {
-      "symbol": "MNDY",
-      "quantity": 88.0,
-      "avg_price": 79.7699966430664,
       "currency": "USD"
     },
     "V": {
@@ -56,6 +44,12 @@
       "symbol": "AMZN",
       "quantity": 54.0,
       "avg_price": 254.9600067138672,
+      "currency": "USD"
+    },
+    "WIX": {
+      "symbol": "WIX",
+      "quantity": 132.0,
+      "avg_price": 53.36000061035156,
       "currency": "USD"
     }
   },
@@ -209,6 +203,36 @@
       "currency": "USD",
       "commission": 11.014272290039063,
       "cash_after": 494.05203673400865
+    },
+    {
+      "timestamp": "2026-07-20T22:31:23.596255+00:00",
+      "symbol": "MNDY",
+      "side": "SELL",
+      "quantity": 88.0,
+      "price": 76.75,
+      "currency": "USD",
+      "commission": 5.4032,
+      "cash_after": 7242.648836734009
+    },
+    {
+      "timestamp": "2026-07-20T22:31:23.601215+00:00",
+      "symbol": "WIX",
+      "side": "BUY",
+      "quantity": 132,
+      "price": 53.36000061035156,
+      "currency": "USD",
+      "commission": 5.634816064453125,
+      "cash_after": 193.49394010314973
+    },
+    {
+      "timestamp": "2026-07-20T22:31:23.604909+00:00",
+      "symbol": "GLBE",
+      "side": "SELL",
+      "quantity": 238.0,
+      "price": 36.58000183105469,
+      "currency": "USD",
+      "commission": 6.964832348632813,
+      "cash_after": 8892.569543545533
     }
   ]
 }

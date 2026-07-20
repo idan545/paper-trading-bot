@@ -1,15 +1,15 @@
 {
-  "as_of": "2026-07-17T22:23:24+00:00",
+  "as_of": "2026-07-20T22:31:23+00:00",
   "base_currency": "USD",
-  "usd_ils": 3.0388,
-  "total_value": 102617.13,
-  "cash": 494.05,
-  "invested": 102123.08,
-  "day_change": -1308.54,
-  "day_change_pct": -0.0126,
-  "total_change_pct": 0.0262,
-  "num_positions": 9,
-  "num_trades": 15,
+  "usd_ils": 3.0525,
+  "total_value": 102268.89,
+  "cash": 8892.57,
+  "invested": 93376.32,
+  "day_change": -348.24,
+  "day_change_pct": -0.0034,
+  "total_change_pct": 0.0227,
+  "num_positions": 8,
+  "num_trades": 18,
   "positions": [
     {
       "symbol": "V",
@@ -17,10 +17,10 @@
       "is_tase": false,
       "quantity": 48.0,
       "avg_price": 357.25,
-      "current_price": 358.56,
-      "unrealized_pnl": 62.88,
-      "unrealized_pnl_pct": 0.0037,
-      "value_base": 17210.88
+      "current_price": 360.57,
+      "unrealized_pnl": 159.36,
+      "unrealized_pnl_pct": 0.0093,
+      "value_base": 17307.36
     },
     {
       "symbol": "AAPL",
@@ -28,10 +28,10 @@
       "is_tase": false,
       "quantity": 45.0,
       "avg_price": 308.63,
-      "current_price": 333.74,
-      "unrealized_pnl": 1129.95,
-      "unrealized_pnl_pct": 0.0814,
-      "value_base": 15018.3
+      "current_price": 326.59,
+      "unrealized_pnl": 808.2,
+      "unrealized_pnl_pct": 0.0582,
+      "value_base": 14696.55
     },
     {
       "symbol": "AMZN",
@@ -39,10 +39,10 @@
       "is_tase": false,
       "quantity": 54.0,
       "avg_price": 254.96,
-      "current_price": 247.23,
-      "unrealized_pnl": -417.42,
-      "unrealized_pnl_pct": -0.0303,
-      "value_base": 13350.42
+      "current_price": 249.99,
+      "unrealized_pnl": -268.38,
+      "unrealized_pnl_pct": -0.0195,
+      "value_base": 13499.46
     },
     {
       "symbol": "META",
@@ -50,10 +50,10 @@
       "is_tase": false,
       "quantity": 18.0,
       "avg_price": 612.91,
-      "current_price": 646.01,
-      "unrealized_pnl": 595.8,
-      "unrealized_pnl_pct": 0.054,
-      "value_base": 11628.18
+      "current_price": 645.85,
+      "unrealized_pnl": 592.92,
+      "unrealized_pnl_pct": 0.0537,
+      "value_base": 11625.3
     },
     {
       "symbol": "NVDA",
@@ -61,10 +61,10 @@
       "is_tase": false,
       "quantity": 56.0,
       "avg_price": 210.96,
-      "current_price": 202.81,
-      "unrealized_pnl": -456.4,
-      "unrealized_pnl_pct": -0.0386,
-      "value_base": 11357.36
+      "current_price": 203.28,
+      "unrealized_pnl": -430.08,
+      "unrealized_pnl_pct": -0.0364,
+      "value_base": 11383.68
     },
     {
       "symbol": "NICE",
@@ -72,21 +72,10 @@
       "is_tase": false,
       "quantity": 100.0,
       "avg_price": 94.83,
-      "current_price": 100.15,
-      "unrealized_pnl": 532.0,
-      "unrealized_pnl_pct": 0.0561,
-      "value_base": 10015.0
-    },
-    {
-      "symbol": "GLBE",
-      "currency": "USD",
-      "is_tase": false,
-      "quantity": 238.0,
-      "avg_price": 36.27,
-      "current_price": 38.12,
-      "unrealized_pnl": 440.3,
-      "unrealized_pnl_pct": 0.051,
-      "value_base": 9072.56
+      "current_price": 101.34,
+      "unrealized_pnl": 651.0,
+      "unrealized_pnl_pct": 0.0686,
+      "value_base": 10134.0
     },
     {
       "symbol": "PLTR",
@@ -94,24 +83,48 @@
       "is_tase": false,
       "quantity": 57.0,
       "avg_price": 133.72,
-      "current_price": 132.38,
-      "unrealized_pnl": -76.38,
-      "unrealized_pnl_pct": -0.01,
-      "value_base": 7545.66
+      "current_price": 134.85,
+      "unrealized_pnl": 64.41,
+      "unrealized_pnl_pct": 0.0085,
+      "value_base": 7686.45
     },
     {
-      "symbol": "MNDY",
+      "symbol": "WIX",
       "currency": "USD",
       "is_tase": false,
-      "quantity": 88.0,
-      "avg_price": 79.77,
-      "current_price": 78.69,
-      "unrealized_pnl": -95.04,
-      "unrealized_pnl_pct": -0.0135,
-      "value_base": 6924.72
+      "quantity": 132.0,
+      "avg_price": 53.36,
+      "current_price": 53.36,
+      "unrealized_pnl": 0.0,
+      "unrealized_pnl_pct": 0.0,
+      "value_base": 7043.52
     }
   ],
   "recent_trades": [
+    {
+      "timestamp": "2026-07-20T22:31:23.604909+00:00",
+      "symbol": "GLBE",
+      "side": "SELL",
+      "quantity": 238.0,
+      "price": 36.58,
+      "currency": "USD"
+    },
+    {
+      "timestamp": "2026-07-20T22:31:23.601215+00:00",
+      "symbol": "WIX",
+      "side": "BUY",
+      "quantity": 132,
+      "price": 53.36,
+      "currency": "USD"
+    },
+    {
+      "timestamp": "2026-07-20T22:31:23.596255+00:00",
+      "symbol": "MNDY",
+      "side": "SELL",
+      "quantity": 88.0,
+      "price": 76.75,
+      "currency": "USD"
+    },
     {
       "timestamp": "2026-07-15T22:30:59.562377+00:00",
       "symbol": "AMZN",
@@ -182,30 +195,6 @@
       "side": "SELL",
       "quantity": 55.0,
       "price": 362.13,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-07-02T22:37:50.611617+00:00",
-      "symbol": "AAPL",
-      "side": "BUY",
-      "quantity": 45,
-      "price": 308.63,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-07-01T22:48:16.458377+00:00",
-      "symbol": "NICE",
-      "side": "BUY",
-      "quantity": 100,
-      "price": 94.83,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-07-01T22:48:16.426878+00:00",
-      "symbol": "META",
-      "side": "BUY",
-      "quantity": 18,
-      "price": 612.91,
       "currency": "USD"
     }
   ],
@@ -293,6 +282,10 @@
     {
       "date": "2026-07-17",
       "value": 102617.13
+    },
+    {
+      "date": "2026-07-20",
+      "value": 102268.89
     }
   ]
 }
