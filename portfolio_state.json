@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 8892.569543545533,
+  "cash": 22788.21460748597,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -10,22 +10,10 @@
       "avg_price": 612.9099731445312,
       "currency": "USD"
     },
-    "NICE": {
-      "symbol": "NICE",
-      "quantity": 100.0,
-      "avg_price": 94.83000183105469,
-      "currency": "USD"
-    },
     "AAPL": {
       "symbol": "AAPL",
       "quantity": 45.0,
       "avg_price": 308.6300048828125,
-      "currency": "USD"
-    },
-    "V": {
-      "symbol": "V",
-      "quantity": 48.0,
-      "avg_price": 357.25,
       "currency": "USD"
     },
     "NVDA": {
@@ -50,6 +38,12 @@
       "symbol": "WIX",
       "quantity": 132.0,
       "avg_price": 53.36000061035156,
+      "currency": "USD"
+    },
+    "ESLT": {
+      "symbol": "ESLT",
+      "quantity": 15.0,
+      "avg_price": 792.6900024414062,
       "currency": "USD"
     }
   },
@@ -233,6 +227,36 @@
       "currency": "USD",
       "commission": 6.964832348632813,
       "cash_after": 8892.569543545533
+    },
+    {
+      "timestamp": "2026-07-22T22:34:02.624539+00:00",
+      "symbol": "V",
+      "side": "SELL",
+      "quantity": 48.0,
+      "price": 353.4200134277344,
+      "currency": "USD",
+      "commission": 13.571328515625,
+      "cash_after": 25843.15885956116
+    },
+    {
+      "timestamp": "2026-07-22T22:34:02.642987+00:00",
+      "symbol": "NICE",
+      "side": "SELL",
+      "quantity": 100.0,
+      "price": 88.5199966430664,
+      "currency": "USD",
+      "commission": 7.081599731445313,
+      "cash_after": 34688.07692413636
+    },
+    {
+      "timestamp": "2026-07-22T22:34:02.647965+00:00",
+      "symbol": "ESLT",
+      "side": "BUY",
+      "quantity": 15,
+      "price": 792.6900024414062,
+      "currency": "USD",
+      "commission": 9.512280029296875,
+      "cash_after": 22788.21460748597
     }
   ]
 }
