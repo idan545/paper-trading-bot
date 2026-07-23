@@ -1,15 +1,9 @@
 {
   "base_currency": "USD",
-  "cash": 22788.21460748597,
+  "cash": 35113.94137604675,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
-    "META": {
-      "symbol": "META",
-      "quantity": 18.0,
-      "avg_price": 612.9099731445312,
-      "currency": "USD"
-    },
     "AAPL": {
       "symbol": "AAPL",
       "quantity": 45.0,
@@ -22,18 +16,6 @@
       "avg_price": 210.9600067138672,
       "currency": "USD"
     },
-    "PLTR": {
-      "symbol": "PLTR",
-      "quantity": 57.0,
-      "avg_price": 133.72000122070312,
-      "currency": "USD"
-    },
-    "AMZN": {
-      "symbol": "AMZN",
-      "quantity": 54.0,
-      "avg_price": 254.9600067138672,
-      "currency": "USD"
-    },
     "WIX": {
       "symbol": "WIX",
       "quantity": 132.0,
@@ -44,6 +26,12 @@
       "symbol": "ESLT",
       "quantity": 15.0,
       "avg_price": 792.6900024414062,
+      "currency": "USD"
+    },
+    "JPM": {
+      "symbol": "JPM",
+      "quantity": 52.0,
+      "avg_price": 349.8999938964844,
       "currency": "USD"
     }
   },
@@ -257,6 +245,46 @@
       "currency": "USD",
       "commission": 9.512280029296875,
       "cash_after": 22788.21460748597
+    },
+    {
+      "timestamp": "2026-07-23T22:31:51.673901+00:00",
+      "symbol": "AMZN",
+      "side": "SELL",
+      "quantity": 54.0,
+      "price": 233.66000366210938,
+      "currency": "USD",
+      "commission": 10.094112158203126,
+      "cash_after": 35395.76069308167
+    },
+    {
+      "timestamp": "2026-07-23T22:31:51.677158+00:00",
+      "symbol": "META",
+      "side": "SELL",
+      "quantity": 18.0,
+      "price": 606.0999755859375,
+      "currency": "USD",
+      "commission": 8.7278396484375,
+      "cash_after": 46296.832413980104
+    },
+    {
+      "timestamp": "2026-07-23T22:31:51.687363+00:00",
+      "symbol": "JPM",
+      "side": "BUY",
+      "quantity": 52,
+      "price": 349.8999938964844,
+      "currency": "USD",
+      "commission": 14.555839746093751,
+      "cash_after": 28087.47689161682
+    },
+    {
+      "timestamp": "2026-07-23T22:31:51.719510+00:00",
+      "symbol": "PLTR",
+      "side": "SELL",
+      "quantity": 57.0,
+      "price": 123.37000274658203,
+      "currency": "USD",
+      "commission": 5.625672125244141,
+      "cash_after": 35113.94137604675
     }
   ]
 }
