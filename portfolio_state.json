@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 35113.94137604675,
+  "cash": 26948.213728952025,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -32,6 +32,12 @@
       "symbol": "JPM",
       "quantity": 52.0,
       "avg_price": 349.8999938964844,
+      "currency": "USD"
+    },
+    "CRM": {
+      "symbol": "CRM",
+      "quantity": 47.0,
+      "avg_price": 173.60000610351562,
       "currency": "USD"
     }
   },
@@ -285,6 +291,16 @@
       "currency": "USD",
       "commission": 5.625672125244141,
       "cash_after": 35113.94137604675
+    },
+    {
+      "timestamp": "2026-07-27T22:34:35.716261+00:00",
+      "symbol": "CRM",
+      "side": "BUY",
+      "quantity": 47,
+      "price": 173.60000610351562,
+      "currency": "USD",
+      "commission": 6.527360229492188,
+      "cash_after": 26948.213728952025
     }
   ]
 }
