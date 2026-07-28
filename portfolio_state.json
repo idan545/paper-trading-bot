@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 26948.213728952025,
+  "cash": 1944.3665945281955,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -38,6 +38,18 @@
       "symbol": "CRM",
       "quantity": 47.0,
       "avg_price": 173.60000610351562,
+      "currency": "USD"
+    },
+    "COST": {
+      "symbol": "COST",
+      "quantity": 19.0,
+      "avg_price": 966.5800170898438,
+      "currency": "USD"
+    },
+    "MNDY": {
+      "symbol": "MNDY",
+      "quantity": 76.0,
+      "avg_price": 87.08999633789062,
       "currency": "USD"
     }
   },
@@ -301,6 +313,26 @@
       "currency": "USD",
       "commission": 6.527360229492188,
       "cash_after": 26948.213728952025
+    },
+    {
+      "timestamp": "2026-07-28T22:34:22.798494+00:00",
+      "symbol": "COST",
+      "side": "BUY",
+      "quantity": 19,
+      "price": 966.5800170898438,
+      "currency": "USD",
+      "commission": 14.692016259765627,
+      "cash_after": 8568.501387985227
+    },
+    {
+      "timestamp": "2026-07-28T22:34:22.818042+00:00",
+      "symbol": "MNDY",
+      "side": "BUY",
+      "quantity": 76,
+      "price": 87.08999633789062,
+      "currency": "USD",
+      "commission": 5.29507177734375,
+      "cash_after": 1944.3665945281955
     }
   ]
 }
