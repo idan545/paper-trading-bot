@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 1944.3665945281955,
+  "cash": 2945.510316427608,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -28,12 +28,6 @@
       "avg_price": 792.6900024414062,
       "currency": "USD"
     },
-    "JPM": {
-      "symbol": "JPM",
-      "quantity": 52.0,
-      "avg_price": 349.8999938964844,
-      "currency": "USD"
-    },
     "CRM": {
       "symbol": "CRM",
       "quantity": 47.0,
@@ -50,6 +44,12 @@
       "symbol": "MNDY",
       "quantity": 76.0,
       "avg_price": 87.08999633789062,
+      "currency": "USD"
+    },
+    "V": {
+      "symbol": "V",
+      "quantity": 47.0,
+      "avg_price": 366.2699890136719,
       "currency": "USD"
     }
   },
@@ -333,6 +333,26 @@
       "currency": "USD",
       "commission": 5.29507177734375,
       "cash_after": 1944.3665945281955
+    },
+    {
+      "timestamp": "2026-07-30T22:36:27.780825+00:00",
+      "symbol": "JPM",
+      "side": "SELL",
+      "quantity": 52.0,
+      "price": 350.8500061035156,
+      "currency": "USD",
+      "commission": 14.59536025390625,
+      "cash_after": 20173.9715516571
+    },
+    {
+      "timestamp": "2026-07-30T22:36:27.786045+00:00",
+      "symbol": "V",
+      "side": "BUY",
+      "quantity": 47,
+      "price": 366.2699890136719,
+      "currency": "USD",
+      "commission": 13.771751586914062,
+      "cash_after": 2945.510316427608
     }
   ]
 }
