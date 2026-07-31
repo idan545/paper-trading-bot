@@ -1,15 +1,9 @@
 {
   "base_currency": "USD",
-  "cash": 2945.510316427608,
+  "cash": 5673.137067770378,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
-    "AAPL": {
-      "symbol": "AAPL",
-      "quantity": 45.0,
-      "avg_price": 308.6300048828125,
-      "currency": "USD"
-    },
     "NVDA": {
       "symbol": "NVDA",
       "quantity": 56.0,
@@ -50,6 +44,12 @@
       "symbol": "V",
       "quantity": 47.0,
       "avg_price": 366.2699890136719,
+      "currency": "USD"
+    },
+    "MSFT": {
+      "symbol": "MSFT",
+      "quantity": 24.0,
+      "avg_price": 464.7200012207031,
       "currency": "USD"
     }
   },
@@ -353,6 +353,26 @@
       "currency": "USD",
       "commission": 13.771751586914062,
       "cash_after": 2945.510316427608
+    },
+    {
+      "timestamp": "2026-07-31T22:33:48.812510+00:00",
+      "symbol": "AAPL",
+      "side": "SELL",
+      "quantity": 45.0,
+      "price": 308.9100036621094,
+      "currency": "USD",
+      "commission": 11.120760131835938,
+      "cash_after": 16835.33972109069
+    },
+    {
+      "timestamp": "2026-07-31T22:33:48.815992+00:00",
+      "symbol": "MSFT",
+      "side": "BUY",
+      "quantity": 24,
+      "price": 464.7200012207031,
+      "currency": "USD",
+      "commission": 8.9226240234375,
+      "cash_after": 5673.137067770378
     }
   ]
 }
