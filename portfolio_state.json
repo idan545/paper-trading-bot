@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 5673.137067770378,
+  "cash": 4104.366208395382,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -40,16 +40,22 @@
       "avg_price": 87.08999633789062,
       "currency": "USD"
     },
-    "V": {
-      "symbol": "V",
-      "quantity": 47.0,
-      "avg_price": 366.2699890136719,
+    "GOOGL": {
+      "symbol": "GOOGL",
+      "quantity": 30.0,
+      "avg_price": 373.510009765625,
       "currency": "USD"
     },
-    "MSFT": {
-      "symbol": "MSFT",
-      "quantity": 24.0,
-      "avg_price": 464.7200012207031,
+    "TEVA": {
+      "symbol": "TEVA",
+      "quantity": 312.0,
+      "avg_price": 34.459999084472656,
+      "currency": "USD"
+    },
+    "NICE": {
+      "symbol": "NICE",
+      "quantity": 84.0,
+      "avg_price": 100.6500015258789,
       "currency": "USD"
     }
   },
@@ -373,6 +379,56 @@
       "currency": "USD",
       "commission": 8.9226240234375,
       "cash_after": 5673.137067770378
+    },
+    {
+      "timestamp": "2026-08-03T22:34:18.261166+00:00",
+      "symbol": "MSFT",
+      "side": "SELL",
+      "quantity": 24.0,
+      "price": 487.6499938964844,
+      "currency": "USD",
+      "commission": 9.3628798828125,
+      "cash_after": 17367.374041403193
+    },
+    {
+      "timestamp": "2026-08-03T22:34:18.269724+00:00",
+      "symbol": "GOOGL",
+      "side": "BUY",
+      "quantity": 30,
+      "price": 373.510009765625,
+      "currency": "USD",
+      "commission": 8.964240234375,
+      "cash_after": 6153.109508200068
+    },
+    {
+      "timestamp": "2026-08-03T22:34:18.292644+00:00",
+      "symbol": "V",
+      "side": "SELL",
+      "quantity": 47.0,
+      "price": 365.6700134277344,
+      "currency": "USD",
+      "commission": 13.749192504882814,
+      "cash_after": 23325.850946798702
+    },
+    {
+      "timestamp": "2026-08-03T22:34:18.308257+00:00",
+      "symbol": "TEVA",
+      "side": "BUY",
+      "quantity": 312,
+      "price": 34.459999084472656,
+      "currency": "USD",
+      "commission": 8.601215771484375,
+      "cash_after": 12565.730016671749
+    },
+    {
+      "timestamp": "2026-08-03T22:34:18.313023+00:00",
+      "symbol": "NICE",
+      "side": "BUY",
+      "quantity": 84,
+      "price": 100.6500015258789,
+      "currency": "USD",
+      "commission": 6.7636801025390625,
+      "cash_after": 4104.366208395382
     }
   ]
 }
