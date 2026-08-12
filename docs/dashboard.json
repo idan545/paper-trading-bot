@@ -1,15 +1,15 @@
 {
-  "as_of": "2026-08-11T22:12:43+00:00",
+  "as_of": "2026-08-12T22:11:30+00:00",
   "base_currency": "USD",
-  "usd_ils": 2.9963,
-  "total_value": 100825.62,
-  "cash": 4104.37,
-  "invested": 96721.25,
-  "day_change": -1129.33,
-  "day_change_pct": -0.0111,
-  "total_change_pct": 0.0083,
+  "usd_ils": 2.9823,
+  "total_value": 101099.41,
+  "cash": 6608.49,
+  "invested": 94490.93,
+  "day_change": 273.79,
+  "day_change_pct": 0.0027,
+  "total_change_pct": 0.011,
   "num_positions": 9,
-  "num_trades": 37,
+  "num_trades": 41,
   "positions": [
     {
       "symbol": "COST",
@@ -17,10 +17,10 @@
       "is_tase": false,
       "quantity": 19.0,
       "avg_price": 966.58,
-      "current_price": 944.32,
-      "unrealized_pnl": -422.94,
-      "unrealized_pnl_pct": -0.023,
-      "value_base": 17942.08
+      "current_price": 949.58,
+      "unrealized_pnl": -323.1,
+      "unrealized_pnl_pct": -0.0176,
+      "value_base": 18041.93
     },
     {
       "symbol": "NVDA",
@@ -28,21 +28,10 @@
       "is_tase": false,
       "quantity": 56.0,
       "avg_price": 210.96,
-      "current_price": 217.5,
-      "unrealized_pnl": 366.24,
-      "unrealized_pnl_pct": 0.031,
-      "value_base": 12180.0
-    },
-    {
-      "symbol": "ESLT",
-      "currency": "USD",
-      "is_tase": false,
-      "quantity": 15.0,
-      "avg_price": 792.69,
-      "current_price": 776.08,
-      "unrealized_pnl": -249.15,
-      "unrealized_pnl_pct": -0.021,
-      "value_base": 11641.2
+      "current_price": 224.09,
+      "unrealized_pnl": 735.28,
+      "unrealized_pnl_pct": 0.0622,
+      "value_base": 12549.04
     },
     {
       "symbol": "TEVA",
@@ -50,10 +39,10 @@
       "is_tase": false,
       "quantity": 312.0,
       "avg_price": 34.46,
-      "current_price": 36.48,
-      "unrealized_pnl": 630.24,
-      "unrealized_pnl_pct": 0.0586,
-      "value_base": 11381.76
+      "current_price": 36.74,
+      "unrealized_pnl": 711.36,
+      "unrealized_pnl_pct": 0.0662,
+      "value_base": 11462.88
     },
     {
       "symbol": "GOOGL",
@@ -61,10 +50,21 @@
       "is_tase": false,
       "quantity": 30.0,
       "avg_price": 373.51,
-      "current_price": 343.8,
-      "unrealized_pnl": -891.3,
-      "unrealized_pnl_pct": -0.0795,
-      "value_base": 10314.0
+      "current_price": 343.54,
+      "unrealized_pnl": -899.1,
+      "unrealized_pnl_pct": -0.0802,
+      "value_base": 10306.2
+    },
+    {
+      "symbol": "GLBE",
+      "currency": "USD",
+      "is_tase": false,
+      "quantity": 236.0,
+      "avg_price": 40.55,
+      "current_price": 40.55,
+      "unrealized_pnl": 0.0,
+      "unrealized_pnl_pct": 0.0,
+      "value_base": 9569.8
     },
     {
       "symbol": "CRM",
@@ -72,10 +72,10 @@
       "is_tase": false,
       "quantity": 47.0,
       "avg_price": 173.6,
-      "current_price": 197.47,
-      "unrealized_pnl": 1121.89,
-      "unrealized_pnl_pct": 0.1375,
-      "value_base": 9281.09
+      "current_price": 193.32,
+      "unrealized_pnl": 926.84,
+      "unrealized_pnl_pct": 0.1136,
+      "value_base": 9086.04
     },
     {
       "symbol": "WIX",
@@ -83,21 +83,21 @@
       "is_tase": false,
       "quantity": 132.0,
       "avg_price": 53.36,
-      "current_price": 66.71,
-      "unrealized_pnl": 1762.2,
-      "unrealized_pnl_pct": 0.2502,
-      "value_base": 8805.72
+      "current_price": 68.75,
+      "unrealized_pnl": 2031.48,
+      "unrealized_pnl_pct": 0.2884,
+      "value_base": 9075.0
     },
     {
-      "symbol": "NICE",
+      "symbol": "PLTR",
       "currency": "USD",
       "is_tase": false,
-      "quantity": 84.0,
-      "avg_price": 100.65,
-      "current_price": 101.52,
-      "unrealized_pnl": 73.08,
-      "unrealized_pnl_pct": 0.0086,
-      "value_base": 8527.68
+      "quantity": 46.0,
+      "avg_price": 171.04,
+      "current_price": 171.04,
+      "unrealized_pnl": 0.0,
+      "unrealized_pnl_pct": 0.0,
+      "value_base": 7867.84
     },
     {
       "symbol": "MNDY",
@@ -105,13 +105,45 @@
       "is_tase": false,
       "quantity": 76.0,
       "avg_price": 87.09,
-      "current_price": 87.47,
-      "unrealized_pnl": 28.88,
-      "unrealized_pnl_pct": 0.0044,
-      "value_base": 6647.72
+      "current_price": 85.95,
+      "unrealized_pnl": -86.64,
+      "unrealized_pnl_pct": -0.0131,
+      "value_base": 6532.2
     }
   ],
   "recent_trades": [
+    {
+      "timestamp": "2026-08-12T22:11:30.565185+00:00",
+      "symbol": "PLTR",
+      "side": "BUY",
+      "quantity": 46,
+      "price": 171.04,
+      "currency": "USD"
+    },
+    {
+      "timestamp": "2026-08-12T22:11:30.560440+00:00",
+      "symbol": "GLBE",
+      "side": "BUY",
+      "quantity": 236,
+      "price": 40.55,
+      "currency": "USD"
+    },
+    {
+      "timestamp": "2026-08-12T22:11:30.548730+00:00",
+      "symbol": "ESLT",
+      "side": "SELL",
+      "quantity": 15.0,
+      "price": 779.51,
+      "currency": "USD"
+    },
+    {
+      "timestamp": "2026-08-12T22:11:30.545109+00:00",
+      "symbol": "NICE",
+      "side": "SELL",
+      "quantity": 84.0,
+      "price": 98.56,
+      "currency": "USD"
+    },
     {
       "timestamp": "2026-08-03T22:34:18.313023+00:00",
       "symbol": "NICE",
@@ -174,38 +206,6 @@
       "side": "BUY",
       "quantity": 47,
       "price": 366.27,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-07-30T22:36:27.780825+00:00",
-      "symbol": "JPM",
-      "side": "SELL",
-      "quantity": 52.0,
-      "price": 350.85,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-07-28T22:34:22.818042+00:00",
-      "symbol": "MNDY",
-      "side": "BUY",
-      "quantity": 76,
-      "price": 87.09,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-07-28T22:34:22.798494+00:00",
-      "symbol": "COST",
-      "side": "BUY",
-      "quantity": 19,
-      "price": 966.58,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-07-27T22:34:35.716261+00:00",
-      "symbol": "CRM",
-      "side": "BUY",
-      "quantity": 47,
-      "price": 173.6,
       "currency": "USD"
     }
   ],
@@ -357,6 +357,10 @@
     {
       "date": "2026-08-11",
       "value": 100825.62
+    },
+    {
+      "date": "2026-08-12",
+      "value": 101099.41
     }
   ]
 }

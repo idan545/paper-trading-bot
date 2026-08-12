@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 4104.366208395382,
+  "cash": 6608.489175131221,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -14,12 +14,6 @@
       "symbol": "WIX",
       "quantity": 132.0,
       "avg_price": 53.36000061035156,
-      "currency": "USD"
-    },
-    "ESLT": {
-      "symbol": "ESLT",
-      "quantity": 15.0,
-      "avg_price": 792.6900024414062,
       "currency": "USD"
     },
     "CRM": {
@@ -52,10 +46,16 @@
       "avg_price": 34.459999084472656,
       "currency": "USD"
     },
-    "NICE": {
-      "symbol": "NICE",
-      "quantity": 84.0,
-      "avg_price": 100.6500015258789,
+    "GLBE": {
+      "symbol": "GLBE",
+      "quantity": 236.0,
+      "avg_price": 40.54999923706055,
+      "currency": "USD"
+    },
+    "PLTR": {
+      "symbol": "PLTR",
+      "quantity": 46.0,
+      "avg_price": 171.0399932861328,
       "currency": "USD"
     }
   },
@@ -429,6 +429,46 @@
       "currency": "USD",
       "commission": 6.7636801025390625,
       "cash_after": 4104.366208395382
+    },
+    {
+      "timestamp": "2026-08-12T22:11:30.545109+00:00",
+      "symbol": "NICE",
+      "side": "SELL",
+      "quantity": 84.0,
+      "price": 98.55999755859375,
+      "currency": "USD",
+      "commission": 6.6232318359375,
+      "cash_after": 12376.78277148132
+    },
+    {
+      "timestamp": "2026-08-12T22:11:30.548730+00:00",
+      "symbol": "ESLT",
+      "side": "SELL",
+      "quantity": 15.0,
+      "price": 779.510009765625,
+      "currency": "USD",
+      "commission": 9.3541201171875,
+      "cash_after": 24060.078797848506
+    },
+    {
+      "timestamp": "2026-08-12T22:11:30.560440+00:00",
+      "symbol": "GLBE",
+      "side": "BUY",
+      "quantity": 236,
+      "price": 40.54999923706055,
+      "currency": "USD",
+      "commission": 7.655839855957032,
+      "cash_after": 14482.62313804626
+    },
+    {
+      "timestamp": "2026-08-12T22:11:30.565185+00:00",
+      "symbol": "PLTR",
+      "side": "BUY",
+      "quantity": 46,
+      "price": 171.0399932861328,
+      "currency": "USD",
+      "commission": 6.294271752929688,
+      "cash_after": 6608.489175131221
     }
   ]
 }
