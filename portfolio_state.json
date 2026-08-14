@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 6608.489175131221,
+  "cash": 11268.960568344111,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -28,18 +28,6 @@
       "avg_price": 966.5800170898438,
       "currency": "USD"
     },
-    "MNDY": {
-      "symbol": "MNDY",
-      "quantity": 76.0,
-      "avg_price": 87.08999633789062,
-      "currency": "USD"
-    },
-    "GOOGL": {
-      "symbol": "GOOGL",
-      "quantity": 30.0,
-      "avg_price": 373.510009765625,
-      "currency": "USD"
-    },
     "TEVA": {
       "symbol": "TEVA",
       "quantity": 312.0,
@@ -56,6 +44,12 @@
       "symbol": "PLTR",
       "quantity": 46.0,
       "avg_price": 171.0399932861328,
+      "currency": "USD"
+    },
+    "AMZN": {
+      "symbol": "AMZN",
+      "quantity": 47.0,
+      "avg_price": 262.6499938964844,
       "currency": "USD"
     }
   },
@@ -469,6 +463,36 @@
       "currency": "USD",
       "commission": 6.294271752929688,
       "cash_after": 6608.489175131221
+    },
+    {
+      "timestamp": "2026-08-14T21:51:25.507444+00:00",
+      "symbol": "GOOGL",
+      "side": "SELL",
+      "quantity": 30.0,
+      "price": 345.8999938964844,
+      "currency": "USD",
+      "commission": 8.301599853515626,
+      "cash_after": 16977.187392172236
+    },
+    {
+      "timestamp": "2026-08-14T21:51:25.511084+00:00",
+      "symbol": "AMZN",
+      "side": "BUY",
+      "quantity": 47,
+      "price": 262.6499938964844,
+      "currency": "USD",
+      "commission": 9.875639770507814,
+      "cash_after": 4622.762039266963
+    },
+    {
+      "timestamp": "2026-08-14T21:51:25.546278+00:00",
+      "symbol": "MNDY",
+      "side": "SELL",
+      "quantity": 76.0,
+      "price": 87.5199966430664,
+      "currency": "USD",
+      "commission": 5.321215795898437,
+      "cash_after": 11268.960568344111
     }
   ]
 }
