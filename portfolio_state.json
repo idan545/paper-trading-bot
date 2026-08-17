@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 11268.960568344111,
+  "cash": 20850.238025271603,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -34,22 +34,16 @@
       "avg_price": 34.459999084472656,
       "currency": "USD"
     },
-    "GLBE": {
-      "symbol": "GLBE",
-      "quantity": 236.0,
-      "avg_price": 40.54999923706055,
-      "currency": "USD"
-    },
     "PLTR": {
       "symbol": "PLTR",
       "quantity": 46.0,
       "avg_price": 171.0399932861328,
       "currency": "USD"
     },
-    "AMZN": {
-      "symbol": "AMZN",
-      "quantity": 47.0,
-      "avg_price": 262.6499938964844,
+    "NFLX": {
+      "symbol": "NFLX",
+      "quantity": 163.0,
+      "avg_price": 76.0199966430664,
       "currency": "USD"
     }
   },
@@ -493,6 +487,36 @@
       "currency": "USD",
       "commission": 5.321215795898437,
       "cash_after": 11268.960568344111
+    },
+    {
+      "timestamp": "2026-08-17T21:51:37.429753+00:00",
+      "symbol": "AMZN",
+      "side": "SELL",
+      "quantity": 47.0,
+      "price": 261.30999755859375,
+      "currency": "USD",
+      "commission": 9.825255908203125,
+      "cash_after": 23540.705197689815
+    },
+    {
+      "timestamp": "2026-08-17T21:51:37.453976+00:00",
+      "symbol": "NFLX",
+      "side": "BUY",
+      "quantity": 163,
+      "price": 76.0199966430664,
+      "currency": "USD",
+      "commission": 9.91300756225586,
+      "cash_after": 11139.532737307734
+    },
+    {
+      "timestamp": "2026-08-17T21:51:37.471372+00:00",
+      "symbol": "GLBE",
+      "side": "SELL",
+      "quantity": 236.0,
+      "price": 41.18000030517578,
+      "currency": "USD",
+      "commission": 7.774784057617188,
+      "cash_after": 20850.238025271603
     }
   ]
 }
