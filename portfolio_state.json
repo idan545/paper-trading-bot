@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 20850.238025271603,
+  "cash": 2057.616443106075,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -44,6 +44,12 @@
       "symbol": "NFLX",
       "quantity": 163.0,
       "avg_price": 76.0199966430664,
+      "currency": "USD"
+    },
+    "WMT": {
+      "symbol": "WMT",
+      "quantity": 163.0,
+      "avg_price": 115.19999694824219,
       "currency": "USD"
     }
   },
@@ -517,6 +523,16 @@
       "currency": "USD",
       "commission": 7.774784057617188,
       "cash_after": 20850.238025271603
+    },
+    {
+      "timestamp": "2026-08-18T21:49:18.444760+00:00",
+      "symbol": "WMT",
+      "side": "BUY",
+      "quantity": 163,
+      "price": 115.19999694824219,
+      "currency": "USD",
+      "commission": 15.022079602050782,
+      "cash_after": 2057.616443106075
     }
   ]
 }
