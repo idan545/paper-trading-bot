@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 2057.616443106075,
+  "cash": 36692.495944058224,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -22,12 +22,6 @@
       "avg_price": 173.60000610351562,
       "currency": "USD"
     },
-    "COST": {
-      "symbol": "COST",
-      "quantity": 19.0,
-      "avg_price": 966.5800170898438,
-      "currency": "USD"
-    },
     "TEVA": {
       "symbol": "TEVA",
       "quantity": 312.0,
@@ -44,12 +38,6 @@
       "symbol": "NFLX",
       "quantity": 163.0,
       "avg_price": 76.0199966430664,
-      "currency": "USD"
-    },
-    "WMT": {
-      "symbol": "WMT",
-      "quantity": 163.0,
-      "avg_price": 115.19999694824219,
       "currency": "USD"
     }
   },
@@ -533,6 +521,26 @@
       "currency": "USD",
       "commission": 15.022079602050782,
       "cash_after": 2057.616443106075
+    },
+    {
+      "timestamp": "2026-08-20T21:54:52.199949+00:00",
+      "symbol": "WMT",
+      "side": "SELL",
+      "quantity": 163.0,
+      "price": 103.83999633789062,
+      "currency": "USD",
+      "commission": 13.540735522460938,
+      "cash_after": 18969.995110659787
+    },
+    {
+      "timestamp": "2026-08-20T21:54:52.203608+00:00",
+      "symbol": "COST",
+      "side": "SELL",
+      "quantity": 19.0,
+      "price": 933.510009765625,
+      "currency": "USD",
+      "commission": 14.1893521484375,
+      "cash_after": 36692.495944058224
     }
   ]
 }
