@@ -1,15 +1,9 @@
 {
   "base_currency": "USD",
-  "cash": 36692.495944058224,
+  "cash": 48707.19655636291,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
-    "NVDA": {
-      "symbol": "NVDA",
-      "quantity": 56.0,
-      "avg_price": 210.9600067138672,
-      "currency": "USD"
-    },
     "WIX": {
       "symbol": "WIX",
       "quantity": 132.0,
@@ -541,6 +535,16 @@
       "currency": "USD",
       "commission": 14.1893521484375,
       "cash_after": 36692.495944058224
+    },
+    {
+      "timestamp": "2026-08-21T21:50:22.531238+00:00",
+      "symbol": "NVDA",
+      "side": "SELL",
+      "quantity": 56.0,
+      "price": 214.72000122070312,
+      "currency": "USD",
+      "commission": 9.6194560546875,
+      "cash_after": 48707.19655636291
     }
   ]
 }

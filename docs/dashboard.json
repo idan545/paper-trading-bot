@@ -1,15 +1,15 @@
 {
-  "as_of": "2026-08-20T21:54:52+00:00",
+  "as_of": "2026-08-21T21:50:22+00:00",
   "base_currency": "USD",
-  "usd_ils": 2.9975,
-  "total_value": 101916.49,
-  "cash": 36692.5,
-  "invested": 65223.99,
-  "day_change": -1931.15,
-  "day_change_pct": -0.0186,
-  "total_change_pct": 0.0192,
-  "num_positions": 6,
-  "num_trades": 50,
+  "usd_ils": 2.9863,
+  "total_value": 102271.92,
+  "cash": 48707.2,
+  "invested": 53564.72,
+  "day_change": 355.43,
+  "day_change_pct": 0.0035,
+  "total_change_pct": 0.0227,
+  "num_positions": 5,
+  "num_trades": 51,
   "positions": [
     {
       "symbol": "NFLX",
@@ -17,21 +17,10 @@
       "is_tase": false,
       "quantity": 163.0,
       "avg_price": 76.02,
-      "current_price": 80.14,
-      "unrealized_pnl": 671.56,
-      "unrealized_pnl_pct": 0.0542,
-      "value_base": 13062.82
-    },
-    {
-      "symbol": "NVDA",
-      "currency": "USD",
-      "is_tase": false,
-      "quantity": 56.0,
-      "avg_price": 210.96,
-      "current_price": 216.85,
-      "unrealized_pnl": 329.84,
-      "unrealized_pnl_pct": 0.0279,
-      "value_base": 12143.6
+      "current_price": 79.59,
+      "unrealized_pnl": 581.91,
+      "unrealized_pnl_pct": 0.047,
+      "value_base": 12973.17
     },
     {
       "symbol": "TEVA",
@@ -39,10 +28,10 @@
       "is_tase": false,
       "quantity": 312.0,
       "avg_price": 34.46,
-      "current_price": 36.81,
-      "unrealized_pnl": 733.2,
-      "unrealized_pnl_pct": 0.0682,
-      "value_base": 11484.72
+      "current_price": 37.34,
+      "unrealized_pnl": 898.56,
+      "unrealized_pnl_pct": 0.0836,
+      "value_base": 11650.08
     },
     {
       "symbol": "WIX",
@@ -50,10 +39,10 @@
       "is_tase": false,
       "quantity": 132.0,
       "avg_price": 53.36,
-      "current_price": 82.39,
-      "unrealized_pnl": 3831.96,
-      "unrealized_pnl_pct": 0.544,
-      "value_base": 10875.48
+      "current_price": 82.07,
+      "unrealized_pnl": 3789.72,
+      "unrealized_pnl_pct": 0.538,
+      "value_base": 10833.24
     },
     {
       "symbol": "CRM",
@@ -61,10 +50,10 @@
       "is_tase": false,
       "quantity": 47.0,
       "avg_price": 173.6,
-      "current_price": 205.43,
-      "unrealized_pnl": 1496.01,
-      "unrealized_pnl_pct": 0.1834,
-      "value_base": 9655.21
+      "current_price": 209.17,
+      "unrealized_pnl": 1671.79,
+      "unrealized_pnl_pct": 0.2049,
+      "value_base": 9830.99
     },
     {
       "symbol": "PLTR",
@@ -72,13 +61,21 @@
       "is_tase": false,
       "quantity": 46.0,
       "avg_price": 171.04,
-      "current_price": 173.96,
-      "unrealized_pnl": 134.32,
-      "unrealized_pnl_pct": 0.0171,
-      "value_base": 8002.16
+      "current_price": 179.94,
+      "unrealized_pnl": 409.4,
+      "unrealized_pnl_pct": 0.052,
+      "value_base": 8277.24
     }
   ],
   "recent_trades": [
+    {
+      "timestamp": "2026-08-21T21:50:22.531238+00:00",
+      "symbol": "NVDA",
+      "side": "SELL",
+      "quantity": 56.0,
+      "price": 214.72,
+      "currency": "USD"
+    },
     {
       "timestamp": "2026-08-20T21:54:52.203608+00:00",
       "symbol": "COST",
@@ -165,14 +162,6 @@
       "side": "BUY",
       "quantity": 236,
       "price": 40.55,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-08-12T22:11:30.548730+00:00",
-      "symbol": "ESLT",
-      "side": "SELL",
-      "quantity": 15.0,
-      "price": 779.51,
       "currency": "USD"
     }
   ],
@@ -352,6 +341,10 @@
     {
       "date": "2026-08-20",
       "value": 101916.49
+    },
+    {
+      "date": "2026-08-21",
+      "value": 102271.92
     }
   ]
 }
