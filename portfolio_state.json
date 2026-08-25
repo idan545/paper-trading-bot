@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 5257.273760537715,
+  "cash": 13196.497100161738,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -20,12 +20,6 @@
       "symbol": "TEVA",
       "quantity": 312.0,
       "avg_price": 34.459999084472656,
-      "currency": "USD"
-    },
-    "PLTR": {
-      "symbol": "PLTR",
-      "quantity": 46.0,
-      "avg_price": 171.0399932861328,
       "currency": "USD"
     },
     "NFLX": {
@@ -593,6 +587,16 @@
       "currency": "USD",
       "commission": 4.9764,
       "cash_after": 5257.273760537715
+    },
+    {
+      "timestamp": "2026-08-25T21:54:18.480888+00:00",
+      "symbol": "PLTR",
+      "side": "SELL",
+      "quantity": 46.0,
+      "price": 172.72999572753906,
+      "currency": "USD",
+      "commission": 6.3564638427734375,
+      "cash_after": 13196.497100161738
     }
   ]
 }
