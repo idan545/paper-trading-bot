@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 13196.497100161738,
+  "cash": 23271.8813596466,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -8,12 +8,6 @@
       "symbol": "WIX",
       "quantity": 132.0,
       "avg_price": 53.36000061035156,
-      "currency": "USD"
-    },
-    "CRM": {
-      "symbol": "CRM",
-      "quantity": 47.0,
-      "avg_price": 173.60000610351562,
       "currency": "USD"
     },
     "TEVA": {
@@ -34,16 +28,22 @@
       "avg_price": 382.4100036621094,
       "currency": "USD"
     },
-    "COST": {
-      "symbol": "COST",
-      "quantity": 19.0,
-      "avg_price": 971.4000244140625,
-      "currency": "USD"
-    },
     "MNDY": {
       "symbol": "MNDY",
       "quantity": 66.0,
       "avg_price": 94.25,
+      "currency": "USD"
+    },
+    "NICE": {
+      "symbol": "NICE",
+      "quantity": 97.0,
+      "avg_price": 105.08999633789062,
+      "currency": "USD"
+    },
+    "PLTR": {
+      "symbol": "PLTR",
+      "quantity": 50.0,
+      "avg_price": 185.92999267578125,
       "currency": "USD"
     }
   },
@@ -597,6 +597,46 @@
       "currency": "USD",
       "commission": 6.3564638427734375,
       "cash_after": 13196.497100161738
+    },
+    {
+      "timestamp": "2026-08-28T05:32:47.187560+00:00",
+      "symbol": "COST",
+      "side": "SELL",
+      "quantity": 19.0,
+      "price": 934.6599731445312,
+      "currency": "USD",
+      "commission": 14.206831591796876,
+      "cash_after": 30940.829758316035
+    },
+    {
+      "timestamp": "2026-08-28T05:32:47.198188+00:00",
+      "symbol": "NICE",
+      "side": "BUY",
+      "quantity": 97,
+      "price": 105.08999633789062,
+      "currency": "USD",
+      "commission": 8.154983715820313,
+      "cash_after": 20738.945129824824
+    },
+    {
+      "timestamp": "2026-08-28T05:32:47.214920+00:00",
+      "symbol": "PLTR",
+      "side": "BUY",
+      "quantity": 50,
+      "price": 185.92999267578125,
+      "currency": "USD",
+      "commission": 7.43719970703125,
+      "cash_after": 11435.00829632873
+    },
+    {
+      "timestamp": "2026-08-28T05:32:47.218127+00:00",
+      "symbol": "CRM",
+      "side": "SELL",
+      "quantity": 47.0,
+      "price": 252.0500030517578,
+      "currency": "USD",
+      "commission": 9.477080114746094,
+      "cash_after": 23271.8813596466
     }
   ]
 }
