@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 23271.8813596466,
+  "cash": 17354.453807815546,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -8,12 +8,6 @@
       "symbol": "WIX",
       "quantity": 132.0,
       "avg_price": 53.36000061035156,
-      "currency": "USD"
-    },
-    "TEVA": {
-      "symbol": "TEVA",
-      "quantity": 312.0,
-      "avg_price": 34.459999084472656,
       "currency": "USD"
     },
     "NFLX": {
@@ -44,6 +38,12 @@
       "symbol": "PLTR",
       "quantity": 50.0,
       "avg_price": 185.92999267578125,
+      "currency": "USD"
+    },
+    "AAPL": {
+      "symbol": "AAPL",
+      "quantity": 54.0,
+      "avg_price": 319.70001220703125,
       "currency": "USD"
     }
   },
@@ -637,6 +637,26 @@
       "currency": "USD",
       "commission": 9.477080114746094,
       "cash_after": 23271.8813596466
+    },
+    {
+      "timestamp": "2026-08-29T03:16:11.697431+00:00",
+      "symbol": "AAPL",
+      "side": "BUY",
+      "quantity": 54,
+      "price": 319.70001220703125,
+      "currency": "USD",
+      "commission": 13.811040527343751,
+      "cash_after": 5994.269659939568
+    },
+    {
+      "timestamp": "2026-08-29T03:16:11.735002+00:00",
+      "symbol": "TEVA",
+      "side": "SELL",
+      "quantity": 312.0,
+      "price": 36.439998626708984,
+      "currency": "USD",
+      "commission": 9.095423657226563,
+      "cash_after": 17354.453807815546
     }
   ]
 }
