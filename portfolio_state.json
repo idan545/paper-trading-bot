@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 17354.453807815546,
+  "cash": 26343.256916336053,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -32,12 +32,6 @@
       "symbol": "NICE",
       "quantity": 97.0,
       "avg_price": 105.08999633789062,
-      "currency": "USD"
-    },
-    "PLTR": {
-      "symbol": "PLTR",
-      "quantity": 50.0,
-      "avg_price": 185.92999267578125,
       "currency": "USD"
     },
     "AAPL": {
@@ -657,6 +651,16 @@
       "currency": "USD",
       "commission": 9.095423657226563,
       "cash_after": 17354.453807815546
+    },
+    {
+      "timestamp": "2026-09-01T23:28:49.747080+00:00",
+      "symbol": "PLTR",
+      "side": "SELL",
+      "quantity": 50.0,
+      "price": 179.9199981689453,
+      "currency": "USD",
+      "commission": 7.196799926757813,
+      "cash_after": 26343.256916336053
     }
   ]
 }
