@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 26343.256916336053,
+  "cash": 44870.023337503044,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -14,12 +14,6 @@
       "symbol": "NFLX",
       "quantity": 163.0,
       "avg_price": 76.0199966430664,
-      "currency": "USD"
-    },
-    "V": {
-      "symbol": "V",
-      "quantity": 49.0,
-      "avg_price": 382.4100036621094,
       "currency": "USD"
     },
     "MNDY": {
@@ -661,6 +655,16 @@
       "currency": "USD",
       "commission": 7.196799926757813,
       "cash_after": 26343.256916336053
+    },
+    {
+      "timestamp": "2026-09-02T23:30:36.303554+00:00",
+      "symbol": "V",
+      "side": "SELL",
+      "quantity": 49.0,
+      "price": 378.3999938964844,
+      "currency": "USD",
+      "commission": 14.833279760742188,
+      "cash_after": 44870.023337503044
     }
   ]
 }
