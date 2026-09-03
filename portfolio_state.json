@@ -1,15 +1,9 @@
 {
   "base_currency": "USD",
-  "cash": 44870.023337503044,
+  "cash": 32078.74265708312,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
-    "WIX": {
-      "symbol": "WIX",
-      "quantity": 132.0,
-      "avg_price": 53.36000061035156,
-      "currency": "USD"
-    },
     "NFLX": {
       "symbol": "NFLX",
       "quantity": 163.0,
@@ -32,6 +26,18 @@
       "symbol": "AAPL",
       "quantity": 54.0,
       "avg_price": 319.70001220703125,
+      "currency": "USD"
+    },
+    "NVDA": {
+      "symbol": "NVDA",
+      "quantity": 52.0,
+      "avg_price": 228.4499969482422,
+      "currency": "USD"
+    },
+    "META": {
+      "symbol": "META",
+      "quantity": 19.0,
+      "avg_price": 610.6799926757812,
       "currency": "USD"
     }
   },
@@ -665,6 +671,36 @@
       "currency": "USD",
       "commission": 14.833279760742188,
       "cash_after": 44870.023337503044
+    },
+    {
+      "timestamp": "2026-09-03T23:27:34.822876+00:00",
+      "symbol": "NVDA",
+      "side": "BUY",
+      "quantity": 52,
+      "price": 228.4499969482422,
+      "currency": "USD",
+      "commission": 9.503519873046875,
+      "cash_after": 32981.1199763214
+    },
+    {
+      "timestamp": "2026-09-03T23:27:34.835093+00:00",
+      "symbol": "META",
+      "side": "BUY",
+      "quantity": 19,
+      "price": 610.6799926757812,
+      "currency": "USD",
+      "commission": 9.282335888671875,
+      "cash_after": 21368.917779592884
+    },
+    {
+      "timestamp": "2026-09-03T23:27:34.878693+00:00",
+      "symbol": "WIX",
+      "side": "SELL",
+      "quantity": 132.0,
+      "price": 81.19999694824219,
+      "currency": "USD",
+      "commission": 8.574719677734375,
+      "cash_after": 32078.74265708312
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
-  "as_of": "2026-09-02T23:30:36+00:00",
+  "as_of": "2026-09-03T23:27:34+00:00",
   "base_currency": "USD",
-  "usd_ils": 3.0195,
-  "total_value": 103944.39,
-  "cash": 44870.02,
-  "invested": 59074.37,
-  "day_change": 236.86,
-  "day_change_pct": 0.0023,
-  "total_change_pct": 0.0394,
-  "num_positions": 5,
-  "num_trades": 63,
+  "usd_ils": 3.0057,
+  "total_value": 103689.46,
+  "cash": 32078.74,
+  "invested": 71610.72,
+  "day_change": -254.93,
+  "day_change_pct": -0.0025,
+  "total_change_pct": 0.0369,
+  "num_positions": 6,
+  "num_trades": 66,
   "positions": [
     {
       "symbol": "AAPL",
@@ -17,10 +17,10 @@
       "is_tase": false,
       "quantity": 54.0,
       "avg_price": 319.7,
-      "current_price": 324.96,
-      "unrealized_pnl": 284.04,
-      "unrealized_pnl_pct": 0.0165,
-      "value_base": 17547.84
+      "current_price": 328.21,
+      "unrealized_pnl": 459.54,
+      "unrealized_pnl_pct": 0.0266,
+      "value_base": 17723.34
     },
     {
       "symbol": "NFLX",
@@ -28,21 +28,32 @@
       "is_tase": false,
       "quantity": 163.0,
       "avg_price": 76.02,
-      "current_price": 82.73,
-      "unrealized_pnl": 1093.73,
-      "unrealized_pnl_pct": 0.0883,
-      "value_base": 13484.99
+      "current_price": 82.67,
+      "unrealized_pnl": 1083.95,
+      "unrealized_pnl_pct": 0.0875,
+      "value_base": 13475.21
     },
     {
-      "symbol": "WIX",
+      "symbol": "NVDA",
       "currency": "USD",
       "is_tase": false,
-      "quantity": 132.0,
-      "avg_price": 53.36,
-      "current_price": 86.69,
-      "unrealized_pnl": 4399.56,
-      "unrealized_pnl_pct": 0.6246,
-      "value_base": 11443.08
+      "quantity": 52.0,
+      "avg_price": 228.45,
+      "current_price": 228.45,
+      "unrealized_pnl": 0.0,
+      "unrealized_pnl_pct": 0.0,
+      "value_base": 11879.4
+    },
+    {
+      "symbol": "META",
+      "currency": "USD",
+      "is_tase": false,
+      "quantity": 19.0,
+      "avg_price": 610.68,
+      "current_price": 610.68,
+      "unrealized_pnl": 0.0,
+      "unrealized_pnl_pct": 0.0,
+      "value_base": 11602.92
     },
     {
       "symbol": "NICE",
@@ -50,10 +61,10 @@
       "is_tase": false,
       "quantity": 97.0,
       "avg_price": 105.09,
-      "current_price": 106.86,
-      "unrealized_pnl": 171.69,
-      "unrealized_pnl_pct": 0.0168,
-      "value_base": 10365.42
+      "current_price": 108.31,
+      "unrealized_pnl": 312.34,
+      "unrealized_pnl_pct": 0.0306,
+      "value_base": 10506.07
     },
     {
       "symbol": "MNDY",
@@ -61,13 +72,37 @@
       "is_tase": false,
       "quantity": 66.0,
       "avg_price": 94.25,
-      "current_price": 94.44,
-      "unrealized_pnl": 12.54,
-      "unrealized_pnl_pct": 0.002,
-      "value_base": 6233.04
+      "current_price": 97.33,
+      "unrealized_pnl": 203.28,
+      "unrealized_pnl_pct": 0.0327,
+      "value_base": 6423.78
     }
   ],
   "recent_trades": [
+    {
+      "timestamp": "2026-09-03T23:27:34.878693+00:00",
+      "symbol": "WIX",
+      "side": "SELL",
+      "quantity": 132.0,
+      "price": 81.2,
+      "currency": "USD"
+    },
+    {
+      "timestamp": "2026-09-03T23:27:34.835093+00:00",
+      "symbol": "META",
+      "side": "BUY",
+      "quantity": 19,
+      "price": 610.68,
+      "currency": "USD"
+    },
+    {
+      "timestamp": "2026-09-03T23:27:34.822876+00:00",
+      "symbol": "NVDA",
+      "side": "BUY",
+      "quantity": 52,
+      "price": 228.45,
+      "currency": "USD"
+    },
     {
       "timestamp": "2026-09-02T23:30:36.303554+00:00",
       "symbol": "V",
@@ -138,30 +173,6 @@
       "side": "SELL",
       "quantity": 46.0,
       "price": 172.73,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-08-24T21:54:34.493525+00:00",
-      "symbol": "MNDY",
-      "side": "BUY",
-      "quantity": 66,
-      "price": 94.25,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-08-24T21:54:34.474413+00:00",
-      "symbol": "COST",
-      "side": "BUY",
-      "quantity": 19,
-      "price": 971.4,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-08-24T21:54:34.465960+00:00",
-      "symbol": "V",
-      "side": "BUY",
-      "quantity": 49,
-      "price": 382.41,
       "currency": "USD"
     }
   ],
@@ -373,6 +384,10 @@
     {
       "date": "2026-09-02",
       "value": 103944.39
+    },
+    {
+      "date": "2026-09-03",
+      "value": 103689.46
     }
   ]
 }
