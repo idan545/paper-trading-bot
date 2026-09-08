@@ -1,15 +1,9 @@
 {
   "base_currency": "USD",
-  "cash": 50829.10034095763,
+  "cash": 42585.225427114856,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
-    "NICE": {
-      "symbol": "NICE",
-      "quantity": 97.0,
-      "avg_price": 105.08999633789062,
-      "currency": "USD"
-    },
     "AAPL": {
       "symbol": "AAPL",
       "quantity": 54.0,
@@ -26,6 +20,18 @@
       "symbol": "META",
       "quantity": 19.0,
       "avg_price": 610.6799926757812,
+      "currency": "USD"
+    },
+    "AMD": {
+      "symbol": "AMD",
+      "quantity": 17.0,
+      "avg_price": 505.739990234375,
+      "currency": "USD"
+    },
+    "CRM": {
+      "symbol": "CRM",
+      "quantity": 38.0,
+      "avg_price": 249.1199951171875,
       "currency": "USD"
     }
   },
@@ -709,6 +715,36 @@
       "currency": "USD",
       "commission": 4.808495983886719,
       "cash_after": 50829.10034095763
+    },
+    {
+      "timestamp": "2026-09-08T23:33:41.036261+00:00",
+      "symbol": "AMD",
+      "side": "BUY",
+      "quantity": 17,
+      "price": 505.739990234375,
+      "currency": "USD",
+      "commission": 6.8780638671875005,
+      "cash_after": 42224.642443106066
+    },
+    {
+      "timestamp": "2026-09-08T23:33:41.053679+00:00",
+      "symbol": "NICE",
+      "side": "SELL",
+      "quantity": 97.0,
+      "price": 101.47000122070312,
+      "currency": "USD",
+      "commission": 7.8740720947265626,
+      "cash_after": 52059.358489419545
+    },
+    {
+      "timestamp": "2026-09-08T23:33:41.066852+00:00",
+      "symbol": "CRM",
+      "side": "BUY",
+      "quantity": 38,
+      "price": 249.1199951171875,
+      "currency": "USD",
+      "commission": 7.573247851562501,
+      "cash_after": 42585.225427114856
     }
   ]
 }
