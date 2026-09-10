@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 42585.225427114856,
+  "cash": 63157.47448282775,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -8,12 +8,6 @@
       "symbol": "AAPL",
       "quantity": 54.0,
       "avg_price": 319.70001220703125,
-      "currency": "USD"
-    },
-    "NVDA": {
-      "symbol": "NVDA",
-      "quantity": 52.0,
-      "avg_price": 228.4499969482422,
       "currency": "USD"
     },
     "META": {
@@ -26,12 +20,6 @@
       "symbol": "AMD",
       "quantity": 17.0,
       "avg_price": 505.739990234375,
-      "currency": "USD"
-    },
-    "CRM": {
-      "symbol": "CRM",
-      "quantity": 38.0,
-      "avg_price": 249.1199951171875,
       "currency": "USD"
     }
   },
@@ -745,6 +733,26 @@
       "currency": "USD",
       "commission": 7.573247851562501,
       "cash_after": 42585.225427114856
+    },
+    {
+      "timestamp": "2026-09-10T23:20:51.728168+00:00",
+      "symbol": "NVDA",
+      "side": "SELL",
+      "quantity": 52.0,
+      "price": 218.36000061035156,
+      "currency": "USD",
+      "commission": 9.083776025390625,
+      "cash_after": 53930.861682827745
+    },
+    {
+      "timestamp": "2026-09-10T23:20:51.767786+00:00",
+      "symbol": "CRM",
+      "side": "SELL",
+      "quantity": 38.0,
+      "price": 243.0,
+      "currency": "USD",
+      "commission": 7.3872,
+      "cash_after": 63157.47448282775
     }
   ]
 }
