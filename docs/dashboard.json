@@ -1,15 +1,15 @@
 {
-  "as_of": "2026-09-11T23:29:31+00:00",
+  "as_of": "2026-09-14T23:57:16+00:00",
   "base_currency": "USD",
-  "usd_ils": 3.0302,
-  "total_value": 102186.83,
-  "cash": 63157.47,
-  "invested": 39029.36,
-  "day_change": 590.15,
-  "day_change_pct": 0.0058,
-  "total_change_pct": 0.0219,
-  "num_positions": 3,
-  "num_trades": 73,
+  "usd_ils": 3.0402,
+  "total_value": 102164.75,
+  "cash": 46373.34,
+  "invested": 55791.41,
+  "day_change": -22.08,
+  "day_change_pct": -0.0002,
+  "total_change_pct": 0.0216,
+  "num_positions": 4,
+  "num_trades": 74,
   "positions": [
     {
       "symbol": "AAPL",
@@ -17,10 +17,21 @@
       "is_tase": false,
       "quantity": 54.0,
       "avg_price": 319.7,
-      "current_price": 332.27,
-      "unrealized_pnl": 678.78,
-      "unrealized_pnl_pct": 0.0393,
-      "value_base": 17942.58
+      "current_price": 333.08,
+      "unrealized_pnl": 722.52,
+      "unrealized_pnl_pct": 0.0419,
+      "value_base": 17986.32
+    },
+    {
+      "symbol": "GOOGL",
+      "currency": "USD",
+      "is_tase": false,
+      "quantity": 48.0,
+      "avg_price": 349.39,
+      "current_price": 349.39,
+      "unrealized_pnl": 0.0,
+      "unrealized_pnl_pct": 0.0,
+      "value_base": 16770.72
     },
     {
       "symbol": "META",
@@ -28,10 +39,10 @@
       "is_tase": false,
       "quantity": 19.0,
       "avg_price": 610.68,
-      "current_price": 648.03,
-      "unrealized_pnl": 709.65,
-      "unrealized_pnl_pct": 0.0612,
-      "value_base": 12312.57
+      "current_price": 665.6,
+      "unrealized_pnl": 1043.48,
+      "unrealized_pnl_pct": 0.0899,
+      "value_base": 12646.4
     },
     {
       "symbol": "AMD",
@@ -39,13 +50,21 @@
       "is_tase": false,
       "quantity": 17.0,
       "avg_price": 505.74,
-      "current_price": 516.13,
-      "unrealized_pnl": 176.63,
-      "unrealized_pnl_pct": 0.0205,
-      "value_base": 8774.21
+      "current_price": 493.41,
+      "unrealized_pnl": -209.61,
+      "unrealized_pnl_pct": -0.0244,
+      "value_base": 8387.97
     }
   ],
   "recent_trades": [
+    {
+      "timestamp": "2026-09-14T23:57:16.824036+00:00",
+      "symbol": "GOOGL",
+      "side": "BUY",
+      "quantity": 48,
+      "price": 349.39,
+      "currency": "USD"
+    },
     {
       "timestamp": "2026-09-10T23:20:51.767786+00:00",
       "symbol": "CRM",
@@ -132,14 +151,6 @@
       "side": "SELL",
       "quantity": 49.0,
       "price": 378.4,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-09-01T23:28:49.747080+00:00",
-      "symbol": "PLTR",
-      "side": "SELL",
-      "quantity": 50.0,
-      "price": 179.92,
       "currency": "USD"
     }
   ],
@@ -379,6 +390,10 @@
     {
       "date": "2026-09-11",
       "value": 102186.83
+    },
+    {
+      "date": "2026-09-14",
+      "value": 102164.75
     }
   ]
 }

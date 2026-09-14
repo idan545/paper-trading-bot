@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 63157.47448282775,
+  "cash": 46373.33720314025,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -20,6 +20,12 @@
       "symbol": "AMD",
       "quantity": 17.0,
       "avg_price": 505.739990234375,
+      "currency": "USD"
+    },
+    "GOOGL": {
+      "symbol": "GOOGL",
+      "quantity": 48.0,
+      "avg_price": 349.3900146484375,
       "currency": "USD"
     }
   },
@@ -753,6 +759,16 @@
       "currency": "USD",
       "commission": 7.3872,
       "cash_after": 63157.47448282775
+    },
+    {
+      "timestamp": "2026-09-14T23:57:16.824036+00:00",
+      "symbol": "GOOGL",
+      "side": "BUY",
+      "quantity": 48,
+      "price": 349.3900146484375,
+      "currency": "USD",
+      "commission": 13.416576562500001,
+      "cash_after": 46373.33720314025
     }
   ]
 }
