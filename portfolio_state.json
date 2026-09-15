@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 46373.33720314025,
+  "cash": 32507.00300314025,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -26,6 +26,12 @@
       "symbol": "GOOGL",
       "quantity": 48.0,
       "avg_price": 349.3900146484375,
+      "currency": "USD"
+    },
+    "TEVA": {
+      "symbol": "TEVA",
+      "quantity": 353.0,
+      "avg_price": 39.25,
       "currency": "USD"
     }
   },
@@ -769,6 +775,16 @@
       "currency": "USD",
       "commission": 13.416576562500001,
       "cash_after": 46373.33720314025
+    },
+    {
+      "timestamp": "2026-09-15T23:35:53.272836+00:00",
+      "symbol": "TEVA",
+      "side": "BUY",
+      "quantity": 353,
+      "price": 39.25,
+      "currency": "USD",
+      "commission": 11.084200000000001,
+      "cash_after": 32507.00300314025
     }
   ]
 }
