@@ -1,13 +1,13 @@
 {
-  "as_of": "2026-09-16T23:45:02+00:00",
+  "as_of": "2026-09-17T23:37:29+00:00",
   "base_currency": "USD",
-  "usd_ils": 3.0392,
-  "total_value": 102021.38,
+  "usd_ils": 3.0267,
+  "total_value": 103441.33,
   "cash": 32507.0,
-  "invested": 69514.38,
-  "day_change": -98.23,
-  "day_change_pct": -0.001,
-  "total_change_pct": 0.0202,
+  "invested": 70934.33,
+  "day_change": 1419.95,
+  "day_change_pct": 0.0139,
+  "total_change_pct": 0.0344,
   "num_positions": 5,
   "num_trades": 75,
   "positions": [
@@ -17,10 +17,10 @@
       "is_tase": false,
       "quantity": 54.0,
       "avg_price": 319.7,
-      "current_price": 332.41,
-      "unrealized_pnl": 686.34,
-      "unrealized_pnl_pct": 0.0398,
-      "value_base": 17950.14
+      "current_price": 337.0,
+      "unrealized_pnl": 934.2,
+      "unrealized_pnl_pct": 0.0541,
+      "value_base": 18198.0
     },
     {
       "symbol": "GOOGL",
@@ -28,10 +28,10 @@
       "is_tase": false,
       "quantity": 48.0,
       "avg_price": 349.39,
-      "current_price": 342.87,
-      "unrealized_pnl": -312.96,
-      "unrealized_pnl_pct": -0.0187,
-      "value_base": 16457.76
+      "current_price": 347.33,
+      "unrealized_pnl": -98.88,
+      "unrealized_pnl_pct": -0.0059,
+      "value_base": 16671.84
     },
     {
       "symbol": "TEVA",
@@ -39,10 +39,10 @@
       "is_tase": false,
       "quantity": 353.0,
       "avg_price": 39.25,
-      "current_price": 38.53,
-      "unrealized_pnl": -254.16,
-      "unrealized_pnl_pct": -0.0183,
-      "value_base": 13601.09
+      "current_price": 39.19,
+      "unrealized_pnl": -21.18,
+      "unrealized_pnl_pct": -0.0015,
+      "value_base": 13834.07
     },
     {
       "symbol": "META",
@@ -50,10 +50,10 @@
       "is_tase": false,
       "quantity": 19.0,
       "avg_price": 610.68,
-      "current_price": 673.31,
-      "unrealized_pnl": 1189.97,
-      "unrealized_pnl_pct": 0.1026,
-      "value_base": 12792.89
+      "current_price": 682.31,
+      "unrealized_pnl": 1360.97,
+      "unrealized_pnl_pct": 0.1173,
+      "value_base": 12963.89
     },
     {
       "symbol": "AMD",
@@ -61,10 +61,10 @@
       "is_tase": false,
       "quantity": 17.0,
       "avg_price": 505.74,
-      "current_price": 512.5,
-      "unrealized_pnl": 114.92,
-      "unrealized_pnl_pct": 0.0134,
-      "value_base": 8712.5
+      "current_price": 545.09,
+      "unrealized_pnl": 668.95,
+      "unrealized_pnl_pct": 0.0778,
+      "value_base": 9266.53
     }
   ],
   "recent_trades": [
@@ -413,6 +413,10 @@
     {
       "date": "2026-09-16",
       "value": 102021.38
+    },
+    {
+      "date": "2026-09-17",
+      "value": 103441.33
     }
   ]
 }
