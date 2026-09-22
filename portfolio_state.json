@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 32507.00300314025,
+  "cash": 10442.705320816029,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -8,12 +8,6 @@
       "symbol": "AAPL",
       "quantity": 54.0,
       "avg_price": 319.70001220703125,
-      "currency": "USD"
-    },
-    "META": {
-      "symbol": "META",
-      "quantity": 19.0,
-      "avg_price": 610.6799926757812,
       "currency": "USD"
     },
     "AMD": {
@@ -32,6 +26,18 @@
       "symbol": "TEVA",
       "quantity": 353.0,
       "avg_price": 39.25,
+      "currency": "USD"
+    },
+    "NVDA": {
+      "symbol": "NVDA",
+      "quantity": 65.0,
+      "avg_price": 228.8699951171875,
+      "currency": "USD"
+    },
+    "WMT": {
+      "symbol": "WMT",
+      "quantity": 192.0,
+      "avg_price": 110.12000274658203,
       "currency": "USD"
     }
   },
@@ -785,6 +791,36 @@
       "currency": "USD",
       "commission": 11.084200000000001,
       "cash_after": 32507.00300314025
+    },
+    {
+      "timestamp": "2026-09-22T23:43:49.889978+00:00",
+      "symbol": "NVDA",
+      "side": "BUY",
+      "quantity": 65,
+      "price": 228.8699951171875,
+      "currency": "USD",
+      "commission": 11.90123974609375,
+      "cash_after": 17618.552080776968
+    },
+    {
+      "timestamp": "2026-09-22T23:43:49.898845+00:00",
+      "symbol": "META",
+      "side": "SELL",
+      "quantity": 19.0,
+      "price": 736.594970703125,
+      "currency": "USD",
+      "commission": 11.1962435546875,
+      "cash_after": 31602.660280581655
+    },
+    {
+      "timestamp": "2026-09-22T23:43:49.914381+00:00",
+      "symbol": "WMT",
+      "side": "BUY",
+      "quantity": 192,
+      "price": 110.12000274658203,
+      "currency": "USD",
+      "commission": 16.914432421875002,
+      "cash_after": 10442.705320816029
     }
   ]
 }

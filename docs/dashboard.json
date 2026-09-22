@@ -1,48 +1,37 @@
 {
-  "as_of": "2026-09-22T00:14:05+00:00",
+  "as_of": "2026-09-22T23:43:49+00:00",
   "base_currency": "USD",
-  "usd_ils": 3.0087,
-  "total_value": NaN,
-  "cash": 32507.0,
-  "invested": NaN,
-  "day_change": NaN,
-  "day_change_pct": NaN,
-  "total_change_pct": NaN,
-  "num_positions": 5,
-  "num_trades": 75,
+  "usd_ils": 3.0046,
+  "total_value": 106219.13,
+  "cash": 10442.71,
+  "invested": 95776.42,
+  "day_change": 2857.06,
+  "day_change_pct": 0.0276,
+  "total_change_pct": 0.0622,
+  "num_positions": 6,
+  "num_trades": 78,
   "positions": [
+    {
+      "symbol": "WMT",
+      "currency": "USD",
+      "is_tase": false,
+      "quantity": 192.0,
+      "avg_price": 110.12,
+      "current_price": 110.12,
+      "unrealized_pnl": 0.0,
+      "unrealized_pnl_pct": 0.0,
+      "value_base": 21143.04
+    },
     {
       "symbol": "AAPL",
       "currency": "USD",
       "is_tase": false,
       "quantity": 54.0,
       "avg_price": 319.7,
-      "current_price": NaN,
-      "unrealized_pnl": NaN,
-      "unrealized_pnl_pct": NaN,
-      "value_base": NaN
-    },
-    {
-      "symbol": "META",
-      "currency": "USD",
-      "is_tase": false,
-      "quantity": 19.0,
-      "avg_price": 610.68,
-      "current_price": NaN,
-      "unrealized_pnl": NaN,
-      "unrealized_pnl_pct": NaN,
-      "value_base": NaN
-    },
-    {
-      "symbol": "AMD",
-      "currency": "USD",
-      "is_tase": false,
-      "quantity": 17.0,
-      "avg_price": 505.74,
-      "current_price": NaN,
-      "unrealized_pnl": NaN,
-      "unrealized_pnl_pct": NaN,
-      "value_base": NaN
+      "current_price": 339.75,
+      "unrealized_pnl": 1082.7,
+      "unrealized_pnl_pct": 0.0627,
+      "value_base": 18346.5
     },
     {
       "symbol": "GOOGL",
@@ -50,10 +39,21 @@
       "is_tase": false,
       "quantity": 48.0,
       "avg_price": 349.39,
-      "current_price": NaN,
-      "unrealized_pnl": NaN,
-      "unrealized_pnl_pct": NaN,
-      "value_base": NaN
+      "current_price": 351.16,
+      "unrealized_pnl": 84.96,
+      "unrealized_pnl_pct": 0.0051,
+      "value_base": 16855.68
+    },
+    {
+      "symbol": "NVDA",
+      "currency": "USD",
+      "is_tase": false,
+      "quantity": 65.0,
+      "avg_price": 228.87,
+      "current_price": 228.87,
+      "unrealized_pnl": 0.0,
+      "unrealized_pnl_pct": 0.0,
+      "value_base": 14876.55
     },
     {
       "symbol": "TEVA",
@@ -61,13 +61,48 @@
       "is_tase": false,
       "quantity": 353.0,
       "avg_price": 39.25,
-      "current_price": NaN,
-      "unrealized_pnl": NaN,
-      "unrealized_pnl_pct": NaN,
-      "value_base": NaN
+      "current_price": 39.52,
+      "unrealized_pnl": 95.31,
+      "unrealized_pnl_pct": 0.0069,
+      "value_base": 13950.56
+    },
+    {
+      "symbol": "AMD",
+      "currency": "USD",
+      "is_tase": false,
+      "quantity": 17.0,
+      "avg_price": 505.74,
+      "current_price": 623.77,
+      "unrealized_pnl": 2006.51,
+      "unrealized_pnl_pct": 0.2334,
+      "value_base": 10604.09
     }
   ],
   "recent_trades": [
+    {
+      "timestamp": "2026-09-22T23:43:49.914381+00:00",
+      "symbol": "WMT",
+      "side": "BUY",
+      "quantity": 192,
+      "price": 110.12,
+      "currency": "USD"
+    },
+    {
+      "timestamp": "2026-09-22T23:43:49.898845+00:00",
+      "symbol": "META",
+      "side": "SELL",
+      "quantity": 19.0,
+      "price": 736.59,
+      "currency": "USD"
+    },
+    {
+      "timestamp": "2026-09-22T23:43:49.889978+00:00",
+      "symbol": "NVDA",
+      "side": "BUY",
+      "quantity": 65,
+      "price": 228.87,
+      "currency": "USD"
+    },
     {
       "timestamp": "2026-09-15T23:35:53.272836+00:00",
       "symbol": "TEVA",
@@ -138,30 +173,6 @@
       "side": "SELL",
       "quantity": 163.0,
       "price": 78.25,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-09-03T23:27:34.878693+00:00",
-      "symbol": "WIX",
-      "side": "SELL",
-      "quantity": 132.0,
-      "price": 81.2,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-09-03T23:27:34.835093+00:00",
-      "symbol": "META",
-      "side": "BUY",
-      "quantity": 19,
-      "price": 610.68,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-09-03T23:27:34.822876+00:00",
-      "symbol": "NVDA",
-      "side": "BUY",
-      "quantity": 52,
-      "price": 228.45,
       "currency": "USD"
     }
   ],
@@ -424,7 +435,7 @@
     },
     {
       "date": "2026-09-22",
-      "value": NaN
+      "value": 106219.13
     }
   ]
 }
