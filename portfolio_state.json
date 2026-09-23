@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 10442.705320816029,
+  "cash": 1011.966687515247,
   "commission_rate": 0.0008,
   "min_commission": 1.0,
   "positions": {
@@ -38,6 +38,12 @@
       "symbol": "WMT",
       "quantity": 192.0,
       "avg_price": 110.12000274658203,
+      "currency": "USD"
+    },
+    "NICE": {
+      "symbol": "NICE",
+      "quantity": 80.0,
+      "avg_price": 117.79000091552734,
       "currency": "USD"
     }
   },
@@ -821,6 +827,16 @@
       "currency": "USD",
       "commission": 16.914432421875002,
       "cash_after": 10442.705320816029
+    },
+    {
+      "timestamp": "2026-09-23T23:53:26.559503+00:00",
+      "symbol": "NICE",
+      "side": "BUY",
+      "quantity": 80,
+      "price": 117.79000091552734,
+      "currency": "USD",
+      "commission": 7.538560058593751,
+      "cash_after": 1011.966687515247
     }
   ]
 }

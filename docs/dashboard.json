@@ -1,15 +1,15 @@
 {
-  "as_of": "2026-09-22T23:43:49+00:00",
+  "as_of": "2026-09-23T23:53:26+00:00",
   "base_currency": "USD",
-  "usd_ils": 3.0046,
-  "total_value": 106219.13,
-  "cash": 10442.71,
-  "invested": 95776.42,
-  "day_change": 2857.06,
-  "day_change_pct": 0.0276,
-  "total_change_pct": 0.0622,
-  "num_positions": 6,
-  "num_trades": 78,
+  "usd_ils": 3.036,
+  "total_value": 104948.89,
+  "cash": 1011.97,
+  "invested": 103936.93,
+  "day_change": -1270.24,
+  "day_change_pct": -0.012,
+  "total_change_pct": 0.0495,
+  "num_positions": 7,
+  "num_trades": 79,
   "positions": [
     {
       "symbol": "WMT",
@@ -17,10 +17,10 @@
       "is_tase": false,
       "quantity": 192.0,
       "avg_price": 110.12,
-      "current_price": 110.12,
-      "unrealized_pnl": 0.0,
-      "unrealized_pnl_pct": 0.0,
-      "value_base": 21143.04
+      "current_price": 110.53,
+      "unrealized_pnl": 78.72,
+      "unrealized_pnl_pct": 0.0037,
+      "value_base": 21221.76
     },
     {
       "symbol": "AAPL",
@@ -28,10 +28,10 @@
       "is_tase": false,
       "quantity": 54.0,
       "avg_price": 319.7,
-      "current_price": 339.75,
-      "unrealized_pnl": 1082.7,
-      "unrealized_pnl_pct": 0.0627,
-      "value_base": 18346.5
+      "current_price": 337.02,
+      "unrealized_pnl": 935.28,
+      "unrealized_pnl_pct": 0.0542,
+      "value_base": 18199.08
     },
     {
       "symbol": "GOOGL",
@@ -39,10 +39,10 @@
       "is_tase": false,
       "quantity": 48.0,
       "avg_price": 349.39,
-      "current_price": 351.16,
-      "unrealized_pnl": 84.96,
-      "unrealized_pnl_pct": 0.0051,
-      "value_base": 16855.68
+      "current_price": 337.83,
+      "unrealized_pnl": -554.88,
+      "unrealized_pnl_pct": -0.0331,
+      "value_base": 16215.84
     },
     {
       "symbol": "NVDA",
@@ -50,10 +50,10 @@
       "is_tase": false,
       "quantity": 65.0,
       "avg_price": 228.87,
-      "current_price": 228.87,
-      "unrealized_pnl": 0.0,
-      "unrealized_pnl_pct": 0.0,
-      "value_base": 14876.55
+      "current_price": 225.51,
+      "unrealized_pnl": -218.4,
+      "unrealized_pnl_pct": -0.0147,
+      "value_base": 14658.15
     },
     {
       "symbol": "TEVA",
@@ -61,10 +61,10 @@
       "is_tase": false,
       "quantity": 353.0,
       "avg_price": 39.25,
-      "current_price": 39.52,
-      "unrealized_pnl": 95.31,
-      "unrealized_pnl_pct": 0.0069,
-      "value_base": 13950.56
+      "current_price": 39.01,
+      "unrealized_pnl": -84.72,
+      "unrealized_pnl_pct": -0.0061,
+      "value_base": 13770.53
     },
     {
       "symbol": "AMD",
@@ -72,13 +72,32 @@
       "is_tase": false,
       "quantity": 17.0,
       "avg_price": 505.74,
-      "current_price": 623.77,
-      "unrealized_pnl": 2006.51,
-      "unrealized_pnl_pct": 0.2334,
-      "value_base": 10604.09
+      "current_price": 614.61,
+      "unrealized_pnl": 1850.79,
+      "unrealized_pnl_pct": 0.2153,
+      "value_base": 10448.37
+    },
+    {
+      "symbol": "NICE",
+      "currency": "USD",
+      "is_tase": false,
+      "quantity": 80.0,
+      "avg_price": 117.79,
+      "current_price": 117.79,
+      "unrealized_pnl": 0.0,
+      "unrealized_pnl_pct": 0.0,
+      "value_base": 9423.2
     }
   ],
   "recent_trades": [
+    {
+      "timestamp": "2026-09-23T23:53:26.559503+00:00",
+      "symbol": "NICE",
+      "side": "BUY",
+      "quantity": 80,
+      "price": 117.79,
+      "currency": "USD"
+    },
     {
       "timestamp": "2026-09-22T23:43:49.914381+00:00",
       "symbol": "WMT",
@@ -165,14 +184,6 @@
       "side": "SELL",
       "quantity": 66.0,
       "price": 91.07,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-09-04T23:11:38.776652+00:00",
-      "symbol": "NFLX",
-      "side": "SELL",
-      "quantity": 163.0,
-      "price": 78.25,
       "currency": "USD"
     }
   ],
@@ -436,6 +447,10 @@
     {
       "date": "2026-09-22",
       "value": 106219.13
+    },
+    {
+      "date": "2026-09-23",
+      "value": 104948.89
     }
   ]
 }
