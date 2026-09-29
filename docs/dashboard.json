@@ -1,7 +1,7 @@
 {
-  "as_of": "2026-09-26T00:01:41+00:00",
+  "as_of": "2026-09-29T01:10:47+00:00",
   "base_currency": "USD",
-  "usd_ils": 3.0499,
+  "usd_ils": 3.0686,
   "total_value": NaN,
   "cash": 1011.97,
   "invested": NaN,
@@ -458,6 +458,10 @@
     },
     {
       "date": "2026-09-26",
+      "value": NaN
+    },
+    {
+      "date": "2026-09-29",
       "value": NaN
     }
   ]
