@@ -1,0 +1,842 @@
+{
+  "base_currency": "USD",
+  "cash": 1011.966687515247,
+  "commission_rate": 0.0008,
+  "min_commission": 1.0,
+  "positions": {
+    "AAPL": {
+      "symbol": "AAPL",
+      "quantity": 54.0,
+      "avg_price": 319.70001220703125,
+      "currency": "USD"
+    },
+    "AMD": {
+      "symbol": "AMD",
+      "quantity": 17.0,
+      "avg_price": 505.739990234375,
+      "currency": "USD"
+    },
+    "GOOGL": {
+      "symbol": "GOOGL",
+      "quantity": 48.0,
+      "avg_price": 349.3900146484375,
+      "currency": "USD"
+    },
+    "TEVA": {
+      "symbol": "TEVA",
+      "quantity": 353.0,
+      "avg_price": 39.25,
+      "currency": "USD"
+    },
+    "NVDA": {
+      "symbol": "NVDA",
+      "quantity": 65.0,
+      "avg_price": 228.8699951171875,
+      "currency": "USD"
+    },
+    "WMT": {
+      "symbol": "WMT",
+      "quantity": 192.0,
+      "avg_price": 110.12000274658203,
+      "currency": "USD"
+    },
+    "NICE": {
+      "symbol": "NICE",
+      "quantity": 80.0,
+      "avg_price": 117.79000091552734,
+      "currency": "USD"
+    }
+  },
+  "trades": [
+    {
+      "timestamp": "2026-06-26T18:14:13.088729+00:00",
+      "symbol": "JPM",
+      "side": "BUY",
+      "quantity": 54,
+      "price": 329.7099914550781,
+      "currency": "USD",
+      "commission": 14.243471630859375,
+      "cash_after": 82181.41698979492
+    },
+    {
+      "timestamp": "2026-06-26T18:14:13.093868+00:00",
+      "symbol": "V",
+      "side": "BUY",
+      "quantity": 55,
+      "price": 337.8489990234375,
+      "currency": "USD",
+      "commission": 14.86535595703125,
+      "cash_after": 63584.856687548825
+    },
+    {
+      "timestamp": "2026-06-26T18:22:04.313988+00:00",
+      "symbol": "GLBE",
+      "side": "BUY",
+      "quantity": 238,
+      "price": 36.27000045776367,
+      "currency": "USD",
+      "commission": 6.905808087158204,
+      "cash_after": 54945.69077051392
+    },
+    {
+      "timestamp": "2026-07-01T22:48:16.426878+00:00",
+      "symbol": "META",
+      "side": "BUY",
+      "quantity": 18,
+      "price": 612.9099731445312,
+      "currency": "USD",
+      "commission": 8.82590361328125,
+      "cash_after": 43904.48535029907
+    },
+    {
+      "timestamp": "2026-07-01T22:48:16.458377+00:00",
+      "symbol": "NICE",
+      "side": "BUY",
+      "quantity": 100,
+      "price": 94.83000183105469,
+      "currency": "USD",
+      "commission": 7.586400146484375,
+      "cash_after": 34413.89876704712
+    },
+    {
+      "timestamp": "2026-07-02T22:37:50.611617+00:00",
+      "symbol": "AAPL",
+      "side": "BUY",
+      "quantity": 45,
+      "price": 308.6300048828125,
+      "currency": "USD",
+      "commission": 11.110680175781251,
+      "cash_after": 20514.437867144774
+    },
+    {
+      "timestamp": "2026-07-02T22:37:50.644275+00:00",
+      "symbol": "V",
+      "side": "SELL",
+      "quantity": 55.0,
+      "price": 362.1300048828125,
+      "currency": "USD",
+      "commission": 15.933720214843751,
+      "cash_after": 40415.65441548462
+    },
+    {
+      "timestamp": "2026-07-02T22:37:50.659877+00:00",
+      "symbol": "TEVA",
+      "side": "BUY",
+      "quantity": 347,
+      "price": 34.63999938964844,
+      "currency": "USD",
+      "commission": 9.616063830566407,
+      "cash_after": 28385.958563446045
+    },
+    {
+      "timestamp": "2026-07-02T22:37:50.671912+00:00",
+      "symbol": "MNDY",
+      "side": "BUY",
+      "quantity": 88,
+      "price": 79.7699966430664,
+      "currency": "USD",
+      "commission": 5.615807763671875,
+      "cash_after": 21360.58305109253
+    },
+    {
+      "timestamp": "2026-07-06T22:46:04.555901+00:00",
+      "symbol": "V",
+      "side": "BUY",
+      "quantity": 48,
+      "price": 357.25,
+      "currency": "USD",
+      "commission": 13.7184,
+      "cash_after": 4198.864651092528
+    },
+    {
+      "timestamp": "2026-07-09T22:50:50.916245+00:00",
+      "symbol": "JPM",
+      "side": "SELL",
+      "quantity": 54.0,
+      "price": 335.4700012207031,
+      "currency": "USD",
+      "commission": 14.492304052734376,
+      "cash_after": 22299.75241295776
+    },
+    {
+      "timestamp": "2026-07-10T22:32:46.726028+00:00",
+      "symbol": "NVDA",
+      "side": "BUY",
+      "quantity": 56,
+      "price": 210.9600067138672,
+      "currency": "USD",
+      "commission": 9.45100830078125,
+      "cash_after": 10476.541028680418
+    },
+    {
+      "timestamp": "2026-07-10T22:32:46.766051+00:00",
+      "symbol": "TEVA",
+      "side": "SELL",
+      "quantity": 347.0,
+      "price": 32.95000076293945,
+      "currency": "USD",
+      "commission": 9.146920211791993,
+      "cash_after": 21901.044373208617
+    },
+    {
+      "timestamp": "2026-07-14T22:31:13.236519+00:00",
+      "symbol": "PLTR",
+      "side": "BUY",
+      "quantity": 57,
+      "price": 133.72000122070312,
+      "currency": "USD",
+      "commission": 6.097632055664063,
+      "cash_after": 14272.906671572875
+    },
+    {
+      "timestamp": "2026-07-15T22:30:59.562377+00:00",
+      "symbol": "AMZN",
+      "side": "BUY",
+      "quantity": 54,
+      "price": 254.9600067138672,
+      "currency": "USD",
+      "commission": 11.014272290039063,
+      "cash_after": 494.05203673400865
+    },
+    {
+      "timestamp": "2026-07-20T22:31:23.596255+00:00",
+      "symbol": "MNDY",
+      "side": "SELL",
+      "quantity": 88.0,
+      "price": 76.75,
+      "currency": "USD",
+      "commission": 5.4032,
+      "cash_after": 7242.648836734009
+    },
+    {
+      "timestamp": "2026-07-20T22:31:23.601215+00:00",
+      "symbol": "WIX",
+      "side": "BUY",
+      "quantity": 132,
+      "price": 53.36000061035156,
+      "currency": "USD",
+      "commission": 5.634816064453125,
+      "cash_after": 193.49394010314973
+    },
+    {
+      "timestamp": "2026-07-20T22:31:23.604909+00:00",
+      "symbol": "GLBE",
+      "side": "SELL",
+      "quantity": 238.0,
+      "price": 36.58000183105469,
+      "currency": "USD",
+      "commission": 6.964832348632813,
+      "cash_after": 8892.569543545533
+    },
+    {
+      "timestamp": "2026-07-22T22:34:02.624539+00:00",
+      "symbol": "V",
+      "side": "SELL",
+      "quantity": 48.0,
+      "price": 353.4200134277344,
+      "currency": "USD",
+      "commission": 13.571328515625,
+      "cash_after": 25843.15885956116
+    },
+    {
+      "timestamp": "2026-07-22T22:34:02.642987+00:00",
+      "symbol": "NICE",
+      "side": "SELL",
+      "quantity": 100.0,
+      "price": 88.5199966430664,
+      "currency": "USD",
+      "commission": 7.081599731445313,
+      "cash_after": 34688.07692413636
+    },
+    {
+      "timestamp": "2026-07-22T22:34:02.647965+00:00",
+      "symbol": "ESLT",
+      "side": "BUY",
+      "quantity": 15,
+      "price": 792.6900024414062,
+      "currency": "USD",
+      "commission": 9.512280029296875,
+      "cash_after": 22788.21460748597
+    },
+    {
+      "timestamp": "2026-07-23T22:31:51.673901+00:00",
+      "symbol": "AMZN",
+      "side": "SELL",
+      "quantity": 54.0,
+      "price": 233.66000366210938,
+      "currency": "USD",
+      "commission": 10.094112158203126,
+      "cash_after": 35395.76069308167
+    },
+    {
+      "timestamp": "2026-07-23T22:31:51.677158+00:00",
+      "symbol": "META",
+      "side": "SELL",
+      "quantity": 18.0,
+      "price": 606.0999755859375,
+      "currency": "USD",
+      "commission": 8.7278396484375,
+      "cash_after": 46296.832413980104
+    },
+    {
+      "timestamp": "2026-07-23T22:31:51.687363+00:00",
+      "symbol": "JPM",
+      "side": "BUY",
+      "quantity": 52,
+      "price": 349.8999938964844,
+      "currency": "USD",
+      "commission": 14.555839746093751,
+      "cash_after": 28087.47689161682
+    },
+    {
+      "timestamp": "2026-07-23T22:31:51.719510+00:00",
+      "symbol": "PLTR",
+      "side": "SELL",
+      "quantity": 57.0,
+      "price": 123.37000274658203,
+      "currency": "USD",
+      "commission": 5.625672125244141,
+      "cash_after": 35113.94137604675
+    },
+    {
+      "timestamp": "2026-07-27T22:34:35.716261+00:00",
+      "symbol": "CRM",
+      "side": "BUY",
+      "quantity": 47,
+      "price": 173.60000610351562,
+      "currency": "USD",
+      "commission": 6.527360229492188,
+      "cash_after": 26948.213728952025
+    },
+    {
+      "timestamp": "2026-07-28T22:34:22.798494+00:00",
+      "symbol": "COST",
+      "side": "BUY",
+      "quantity": 19,
+      "price": 966.5800170898438,
+      "currency": "USD",
+      "commission": 14.692016259765627,
+      "cash_after": 8568.501387985227
+    },
+    {
+      "timestamp": "2026-07-28T22:34:22.818042+00:00",
+      "symbol": "MNDY",
+      "side": "BUY",
+      "quantity": 76,
+      "price": 87.08999633789062,
+      "currency": "USD",
+      "commission": 5.29507177734375,
+      "cash_after": 1944.3665945281955
+    },
+    {
+      "timestamp": "2026-07-30T22:36:27.780825+00:00",
+      "symbol": "JPM",
+      "side": "SELL",
+      "quantity": 52.0,
+      "price": 350.8500061035156,
+      "currency": "USD",
+      "commission": 14.59536025390625,
+      "cash_after": 20173.9715516571
+    },
+    {
+      "timestamp": "2026-07-30T22:36:27.786045+00:00",
+      "symbol": "V",
+      "side": "BUY",
+      "quantity": 47,
+      "price": 366.2699890136719,
+      "currency": "USD",
+      "commission": 13.771751586914062,
+      "cash_after": 2945.510316427608
+    },
+    {
+      "timestamp": "2026-07-31T22:33:48.812510+00:00",
+      "symbol": "AAPL",
+      "side": "SELL",
+      "quantity": 45.0,
+      "price": 308.9100036621094,
+      "currency": "USD",
+      "commission": 11.120760131835938,
+      "cash_after": 16835.33972109069
+    },
+    {
+      "timestamp": "2026-07-31T22:33:48.815992+00:00",
+      "symbol": "MSFT",
+      "side": "BUY",
+      "quantity": 24,
+      "price": 464.7200012207031,
+      "currency": "USD",
+      "commission": 8.9226240234375,
+      "cash_after": 5673.137067770378
+    },
+    {
+      "timestamp": "2026-08-03T22:34:18.261166+00:00",
+      "symbol": "MSFT",
+      "side": "SELL",
+      "quantity": 24.0,
+      "price": 487.6499938964844,
+      "currency": "USD",
+      "commission": 9.3628798828125,
+      "cash_after": 17367.374041403193
+    },
+    {
+      "timestamp": "2026-08-03T22:34:18.269724+00:00",
+      "symbol": "GOOGL",
+      "side": "BUY",
+      "quantity": 30,
+      "price": 373.510009765625,
+      "currency": "USD",
+      "commission": 8.964240234375,
+      "cash_after": 6153.109508200068
+    },
+    {
+      "timestamp": "2026-08-03T22:34:18.292644+00:00",
+      "symbol": "V",
+      "side": "SELL",
+      "quantity": 47.0,
+      "price": 365.6700134277344,
+      "currency": "USD",
+      "commission": 13.749192504882814,
+      "cash_after": 23325.850946798702
+    },
+    {
+      "timestamp": "2026-08-03T22:34:18.308257+00:00",
+      "symbol": "TEVA",
+      "side": "BUY",
+      "quantity": 312,
+      "price": 34.459999084472656,
+      "currency": "USD",
+      "commission": 8.601215771484375,
+      "cash_after": 12565.730016671749
+    },
+    {
+      "timestamp": "2026-08-03T22:34:18.313023+00:00",
+      "symbol": "NICE",
+      "side": "BUY",
+      "quantity": 84,
+      "price": 100.6500015258789,
+      "currency": "USD",
+      "commission": 6.7636801025390625,
+      "cash_after": 4104.366208395382
+    },
+    {
+      "timestamp": "2026-08-12T22:11:30.545109+00:00",
+      "symbol": "NICE",
+      "side": "SELL",
+      "quantity": 84.0,
+      "price": 98.55999755859375,
+      "currency": "USD",
+      "commission": 6.6232318359375,
+      "cash_after": 12376.78277148132
+    },
+    {
+      "timestamp": "2026-08-12T22:11:30.548730+00:00",
+      "symbol": "ESLT",
+      "side": "SELL",
+      "quantity": 15.0,
+      "price": 779.510009765625,
+      "currency": "USD",
+      "commission": 9.3541201171875,
+      "cash_after": 24060.078797848506
+    },
+    {
+      "timestamp": "2026-08-12T22:11:30.560440+00:00",
+      "symbol": "GLBE",
+      "side": "BUY",
+      "quantity": 236,
+      "price": 40.54999923706055,
+      "currency": "USD",
+      "commission": 7.655839855957032,
+      "cash_after": 14482.62313804626
+    },
+    {
+      "timestamp": "2026-08-12T22:11:30.565185+00:00",
+      "symbol": "PLTR",
+      "side": "BUY",
+      "quantity": 46,
+      "price": 171.0399932861328,
+      "currency": "USD",
+      "commission": 6.294271752929688,
+      "cash_after": 6608.489175131221
+    },
+    {
+      "timestamp": "2026-08-14T21:51:25.507444+00:00",
+      "symbol": "GOOGL",
+      "side": "SELL",
+      "quantity": 30.0,
+      "price": 345.8999938964844,
+      "currency": "USD",
+      "commission": 8.301599853515626,
+      "cash_after": 16977.187392172236
+    },
+    {
+      "timestamp": "2026-08-14T21:51:25.511084+00:00",
+      "symbol": "AMZN",
+      "side": "BUY",
+      "quantity": 47,
+      "price": 262.6499938964844,
+      "currency": "USD",
+      "commission": 9.875639770507814,
+      "cash_after": 4622.762039266963
+    },
+    {
+      "timestamp": "2026-08-14T21:51:25.546278+00:00",
+      "symbol": "MNDY",
+      "side": "SELL",
+      "quantity": 76.0,
+      "price": 87.5199966430664,
+      "currency": "USD",
+      "commission": 5.321215795898437,
+      "cash_after": 11268.960568344111
+    },
+    {
+      "timestamp": "2026-08-17T21:51:37.429753+00:00",
+      "symbol": "AMZN",
+      "side": "SELL",
+      "quantity": 47.0,
+      "price": 261.30999755859375,
+      "currency": "USD",
+      "commission": 9.825255908203125,
+      "cash_after": 23540.705197689815
+    },
+    {
+      "timestamp": "2026-08-17T21:51:37.453976+00:00",
+      "symbol": "NFLX",
+      "side": "BUY",
+      "quantity": 163,
+      "price": 76.0199966430664,
+      "currency": "USD",
+      "commission": 9.91300756225586,
+      "cash_after": 11139.532737307734
+    },
+    {
+      "timestamp": "2026-08-17T21:51:37.471372+00:00",
+      "symbol": "GLBE",
+      "side": "SELL",
+      "quantity": 236.0,
+      "price": 41.18000030517578,
+      "currency": "USD",
+      "commission": 7.774784057617188,
+      "cash_after": 20850.238025271603
+    },
+    {
+      "timestamp": "2026-08-18T21:49:18.444760+00:00",
+      "symbol": "WMT",
+      "side": "BUY",
+      "quantity": 163,
+      "price": 115.19999694824219,
+      "currency": "USD",
+      "commission": 15.022079602050782,
+      "cash_after": 2057.616443106075
+    },
+    {
+      "timestamp": "2026-08-20T21:54:52.199949+00:00",
+      "symbol": "WMT",
+      "side": "SELL",
+      "quantity": 163.0,
+      "price": 103.83999633789062,
+      "currency": "USD",
+      "commission": 13.540735522460938,
+      "cash_after": 18969.995110659787
+    },
+    {
+      "timestamp": "2026-08-20T21:54:52.203608+00:00",
+      "symbol": "COST",
+      "side": "SELL",
+      "quantity": 19.0,
+      "price": 933.510009765625,
+      "currency": "USD",
+      "commission": 14.1893521484375,
+      "cash_after": 36692.495944058224
+    },
+    {
+      "timestamp": "2026-08-21T21:50:22.531238+00:00",
+      "symbol": "NVDA",
+      "side": "SELL",
+      "quantity": 56.0,
+      "price": 214.72000122070312,
+      "currency": "USD",
+      "commission": 9.6194560546875,
+      "cash_after": 48707.19655636291
+    },
+    {
+      "timestamp": "2026-08-24T21:54:34.465960+00:00",
+      "symbol": "V",
+      "side": "BUY",
+      "quantity": 49,
+      "price": 382.4100036621094,
+      "currency": "USD",
+      "commission": 14.990472143554689,
+      "cash_after": 29954.115904775997
+    },
+    {
+      "timestamp": "2026-08-24T21:54:34.474413+00:00",
+      "symbol": "COST",
+      "side": "BUY",
+      "quantity": 19,
+      "price": 971.4000244140625,
+      "currency": "USD",
+      "commission": 14.76528037109375,
+      "cash_after": 11482.750160537715
+    },
+    {
+      "timestamp": "2026-08-24T21:54:34.493525+00:00",
+      "symbol": "MNDY",
+      "side": "BUY",
+      "quantity": 66,
+      "price": 94.25,
+      "currency": "USD",
+      "commission": 4.9764,
+      "cash_after": 5257.273760537715
+    },
+    {
+      "timestamp": "2026-08-25T21:54:18.480888+00:00",
+      "symbol": "PLTR",
+      "side": "SELL",
+      "quantity": 46.0,
+      "price": 172.72999572753906,
+      "currency": "USD",
+      "commission": 6.3564638427734375,
+      "cash_after": 13196.497100161738
+    },
+    {
+      "timestamp": "2026-08-28T05:32:47.187560+00:00",
+      "symbol": "COST",
+      "side": "SELL",
+      "quantity": 19.0,
+      "price": 934.6599731445312,
+      "currency": "USD",
+      "commission": 14.206831591796876,
+      "cash_after": 30940.829758316035
+    },
+    {
+      "timestamp": "2026-08-28T05:32:47.198188+00:00",
+      "symbol": "NICE",
+      "side": "BUY",
+      "quantity": 97,
+      "price": 105.08999633789062,
+      "currency": "USD",
+      "commission": 8.154983715820313,
+      "cash_after": 20738.945129824824
+    },
+    {
+      "timestamp": "2026-08-28T05:32:47.214920+00:00",
+      "symbol": "PLTR",
+      "side": "BUY",
+      "quantity": 50,
+      "price": 185.92999267578125,
+      "currency": "USD",
+      "commission": 7.43719970703125,
+      "cash_after": 11435.00829632873
+    },
+    {
+      "timestamp": "2026-08-28T05:32:47.218127+00:00",
+      "symbol": "CRM",
+      "side": "SELL",
+      "quantity": 47.0,
+      "price": 252.0500030517578,
+      "currency": "USD",
+      "commission": 9.477080114746094,
+      "cash_after": 23271.8813596466
+    },
+    {
+      "timestamp": "2026-08-29T03:16:11.697431+00:00",
+      "symbol": "AAPL",
+      "side": "BUY",
+      "quantity": 54,
+      "price": 319.70001220703125,
+      "currency": "USD",
+      "commission": 13.811040527343751,
+      "cash_after": 5994.269659939568
+    },
+    {
+      "timestamp": "2026-08-29T03:16:11.735002+00:00",
+      "symbol": "TEVA",
+      "side": "SELL",
+      "quantity": 312.0,
+      "price": 36.439998626708984,
+      "currency": "USD",
+      "commission": 9.095423657226563,
+      "cash_after": 17354.453807815546
+    },
+    {
+      "timestamp": "2026-09-01T23:28:49.747080+00:00",
+      "symbol": "PLTR",
+      "side": "SELL",
+      "quantity": 50.0,
+      "price": 179.9199981689453,
+      "currency": "USD",
+      "commission": 7.196799926757813,
+      "cash_after": 26343.256916336053
+    },
+    {
+      "timestamp": "2026-09-02T23:30:36.303554+00:00",
+      "symbol": "V",
+      "side": "SELL",
+      "quantity": 49.0,
+      "price": 378.3999938964844,
+      "currency": "USD",
+      "commission": 14.833279760742188,
+      "cash_after": 44870.023337503044
+    },
+    {
+      "timestamp": "2026-09-03T23:27:34.822876+00:00",
+      "symbol": "NVDA",
+      "side": "BUY",
+      "quantity": 52,
+      "price": 228.4499969482422,
+      "currency": "USD",
+      "commission": 9.503519873046875,
+      "cash_after": 32981.1199763214
+    },
+    {
+      "timestamp": "2026-09-03T23:27:34.835093+00:00",
+      "symbol": "META",
+      "side": "BUY",
+      "quantity": 19,
+      "price": 610.6799926757812,
+      "currency": "USD",
+      "commission": 9.282335888671875,
+      "cash_after": 21368.917779592884
+    },
+    {
+      "timestamp": "2026-09-03T23:27:34.878693+00:00",
+      "symbol": "WIX",
+      "side": "SELL",
+      "quantity": 132.0,
+      "price": 81.19999694824219,
+      "currency": "USD",
+      "commission": 8.574719677734375,
+      "cash_after": 32078.74265708312
+    },
+    {
+      "timestamp": "2026-09-04T23:11:38.776652+00:00",
+      "symbol": "NFLX",
+      "side": "SELL",
+      "quantity": 163.0,
+      "price": 78.25,
+      "currency": "USD",
+      "commission": 10.203800000000001,
+      "cash_after": 44823.28885708312
+    },
+    {
+      "timestamp": "2026-09-04T23:11:38.788191+00:00",
+      "symbol": "MNDY",
+      "side": "SELL",
+      "quantity": 66.0,
+      "price": 91.06999969482422,
+      "currency": "USD",
+      "commission": 4.808495983886719,
+      "cash_after": 50829.10034095763
+    },
+    {
+      "timestamp": "2026-09-08T23:33:41.036261+00:00",
+      "symbol": "AMD",
+      "side": "BUY",
+      "quantity": 17,
+      "price": 505.739990234375,
+      "currency": "USD",
+      "commission": 6.8780638671875005,
+      "cash_after": 42224.642443106066
+    },
+    {
+      "timestamp": "2026-09-08T23:33:41.053679+00:00",
+      "symbol": "NICE",
+      "side": "SELL",
+      "quantity": 97.0,
+      "price": 101.47000122070312,
+      "currency": "USD",
+      "commission": 7.8740720947265626,
+      "cash_after": 52059.358489419545
+    },
+    {
+      "timestamp": "2026-09-08T23:33:41.066852+00:00",
+      "symbol": "CRM",
+      "side": "BUY",
+      "quantity": 38,
+      "price": 249.1199951171875,
+      "currency": "USD",
+      "commission": 7.573247851562501,
+      "cash_after": 42585.225427114856
+    },
+    {
+      "timestamp": "2026-09-10T23:20:51.728168+00:00",
+      "symbol": "NVDA",
+      "side": "SELL",
+      "quantity": 52.0,
+      "price": 218.36000061035156,
+      "currency": "USD",
+      "commission": 9.083776025390625,
+      "cash_after": 53930.861682827745
+    },
+    {
+      "timestamp": "2026-09-10T23:20:51.767786+00:00",
+      "symbol": "CRM",
+      "side": "SELL",
+      "quantity": 38.0,
+      "price": 243.0,
+      "currency": "USD",
+      "commission": 7.3872,
+      "cash_after": 63157.47448282775
+    },
+    {
+      "timestamp": "2026-09-14T23:57:16.824036+00:00",
+      "symbol": "GOOGL",
+      "side": "BUY",
+      "quantity": 48,
+      "price": 349.3900146484375,
+      "currency": "USD",
+      "commission": 13.416576562500001,
+      "cash_after": 46373.33720314025
+    },
+    {
+      "timestamp": "2026-09-15T23:35:53.272836+00:00",
+      "symbol": "TEVA",
+      "side": "BUY",
+      "quantity": 353,
+      "price": 39.25,
+      "currency": "USD",
+      "commission": 11.084200000000001,
+      "cash_after": 32507.00300314025
+    },
+    {
+      "timestamp": "2026-09-22T23:43:49.889978+00:00",
+      "symbol": "NVDA",
+      "side": "BUY",
+      "quantity": 65,
+      "price": 228.8699951171875,
+      "currency": "USD",
+      "commission": 11.90123974609375,
+      "cash_after": 17618.552080776968
+    },
+    {
+      "timestamp": "2026-09-22T23:43:49.898845+00:00",
+      "symbol": "META",
+      "side": "SELL",
+      "quantity": 19.0,
+      "price": 736.594970703125,
+      "currency": "USD",
+      "commission": 11.1962435546875,
+      "cash_after": 31602.660280581655
+    },
+    {
+      "timestamp": "2026-09-22T23:43:49.914381+00:00",
+      "symbol": "WMT",
+      "side": "BUY",
+      "quantity": 192,
+      "price": 110.12000274658203,
+      "currency": "USD",
+      "commission": 16.914432421875002,
+      "cash_after": 10442.705320816029
+    },
+    {
+      "timestamp": "2026-09-23T23:53:26.559503+00:00",
+      "symbol": "NICE",
+      "side": "BUY",
+      "quantity": 80,
+      "price": 117.79000091552734,
+      "currency": "USD",
+      "commission": 7.538560058593751,
+      "cash_after": 1011.966687515247
+    }
+  ]
+}

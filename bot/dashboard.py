@@ -80,7 +80,7 @@ def build_snapshot(
             "symbol": sym,
             "currency": pos.currency,
             "is_tase": sym.upper().endswith(".TA"),
-            "quantity": round(pos.quantity, 2),
+            "quantity": round(pos.quantity, 4),
             "avg_price": round(pos.avg_price, 2),
             "current_price": round(px, 2),
             "unrealized_pnl": round(pos.unrealized_pnl(px), 2),
@@ -94,7 +94,7 @@ def build_snapshot(
             "timestamp": t.timestamp,
             "symbol": t.symbol,
             "side": t.side,
-            "quantity": round(t.quantity, 2),
+            "quantity": round(t.quantity, 4),
             "price": round(t.price, 2),
             "currency": t.currency,
         }

@@ -7,6 +7,7 @@
 """
 from __future__ import annotations
 
+import math
 from dataclasses import dataclass
 
 
@@ -25,9 +26,11 @@ def position_size(
     fx_to_base: float,
     rp: RiskParams,
     atr: float | None = None,
-) -> int:
+    fractional: bool = False,
+) -> float:
     """
-    מחשב כמות מניות (שלמה) לקנייה.
+    מחשב כמות מניות לקנייה. שלמה כברירת מחדל; עם fractional=True
+    מחזיר כמות חלקית מעוגלת כלפי מטה ל-4 ספרות אחרי הנקודה.
     equity_base - ההון הכולל במטבע הבסיס.
     entry_price - מחיר כניסה במטבע המקומי.
     fx_to_base  - שער המרה מטבע מקומי -> בסיס.
@@ -51,7 +54,11 @@ def position_size(
     max_notional_base = equity_base * rp.max_position_pct
     qty_by_cap = max_notional_base / (entry_price * fx_to_base)
 
-    qty = int(min(qty_by_risk, qty_by_cap))
+    raw = min(qty_by_risk, qty_by_cap)
+    if fractional:
+        qty = math.floor(raw * 10_000) / 10_000
+    else:
+        qty = int(raw)
     return max(qty, 0)
 
 

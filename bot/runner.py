@@ -27,7 +27,12 @@ from bot.strategy import TrendMomentumStrategy
 def _load_portfolio() -> Portfolio:
     if os.path.exists(C.STATE_FILE):
         return Portfolio.load(C.STATE_FILE)
-    return Portfolio(starting_cash=C.STARTING_CASH, base_currency=C.BASE_CURRENCY)
+    return Portfolio(
+        starting_cash=C.STARTING_CASH,
+        base_currency=C.BASE_CURRENCY,
+        commission_rate=getattr(C, "COMMISSION_RATE", 0.0008),
+        min_commission=getattr(C, "MIN_COMMISSION", 1.0),
+    )
 
 
 def run_once(verbose: bool = True) -> Portfolio:
@@ -70,7 +75,8 @@ def run_once(verbose: bool = True) -> Portfolio:
             atr_series = ind.atr(df["high"], df["low"], df["close"])
             a = float(atr_series.iloc[-1])
             a = a if not np.isnan(a) else None
-            qty = position_size(equity, price, rate, C.RISK_PARAMS, a)
+            qty = position_size(equity, price, rate, C.RISK_PARAMS, a,
+                                fractional=getattr(C, "FRACTIONAL_SHARES", False))
             if qty > 0 and pf.buy(sym, qty, price, rate, cur):
                 stop, target = stop_levels(price, C.RISK_PARAMS, a)
                 actions.append(f"BUY  {qty:>5} {sym:<9} @ {price:,.2f} {cur}"
@@ -114,7 +120,7 @@ def print_status(pf: Portfolio, prices: dict, fx: dict) -> None:
         for sym, pos in pf.positions.items():
             px = prices.get(sym, pos.avg_price)
             pnl = pos.unrealized_pnl(px)
-            print(f"  {sym:<9} qty={pos.quantity:>6.0f} "
+            print(f"  {sym:<9} qty={pos.quantity:>10.4f} "
                   f"avg={pos.avg_price:,.2f} now={px:,.2f} "
                   f"P&L={pnl:+,.2f} {pos.currency}")
     else:
