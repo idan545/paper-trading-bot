@@ -71,12 +71,14 @@
       "currency": "USD",
       "commission": 0.0,
       "cash_after": 123.0198414182373,
-      "total": 26.98015858176269,
       "cash_before": 150.0,
+      "total": 26.98015858176269,
       "usd_ils": 3.0568,
       "reason": "signal",
       "stop": 493.8111355832695,
-      "target": 580.9915998661756
+      "target": 580.9915998661756,
+      "avg_cost": 0.0,
+      "realized_pnl": 0.0
     },
     {
       "timestamp": "2026-10-09T03:37:21.008680+00:00",
@@ -87,12 +89,14 @@
       "currency": "USD",
       "commission": 0.0,
       "cash_after": 98.96875833207778,
-      "total": 24.051083086159515,
       "cash_before": 123.01984141823729,
+      "total": 24.051083086159515,
       "usd_ils": 3.0568,
       "reason": "signal",
       "stop": 216.22225636059335,
-      "target": 259.34119445502176
+      "target": 259.34119445502176,
+      "avg_cost": 0.0,
+      "realized_pnl": 0.0
     },
     {
       "timestamp": "2026-10-09T03:37:21.013515+00:00",
@@ -103,12 +107,14 @@
       "currency": "USD",
       "commission": 0.0,
       "cash_after": 74.50657475292434,
-      "total": 24.46218357915344,
       "cash_before": 98.96875833207778,
+      "total": 24.46218357915344,
       "usd_ils": 3.0568,
       "reason": "signal",
       "stop": 327.1154796393806,
-      "target": 391.16150136882163
+      "target": 391.16150136882163,
+      "avg_cost": 0.0,
+      "realized_pnl": 0.0
     },
     {
       "timestamp": "2026-10-09T03:37:21.025692+00:00",
@@ -119,12 +125,14 @@
       "currency": "USD",
       "commission": 0.0,
       "cash_after": 59.04391546938857,
-      "total": 15.462659283535764,
       "cash_before": 74.50657475292434,
+      "total": 15.462659283535764,
       "usd_ils": 3.0568,
       "reason": "signal",
       "stop": 560.8030748633249,
-      "target": 741.3648482897072
+      "target": 741.3648482897072,
+      "avg_cost": 0.0,
+      "realized_pnl": 0.0
     },
     {
       "timestamp": "2026-10-09T03:37:21.037768+00:00",
@@ -135,12 +143,14 @@
       "currency": "USD",
       "commission": 0.0,
       "cash_after": 29.05843973647384,
-      "total": 29.985475732914733,
       "cash_before": 59.04391546938857,
+      "total": 29.985475732914733,
       "usd_ils": 3.0568,
       "reason": "signal",
       "stop": 359.9220104905228,
-      "target": 406.01864733865654
+      "target": 406.01864733865654,
+      "avg_cost": 0.0,
+      "realized_pnl": 0.0
     },
     {
       "timestamp": "2026-10-09T03:37:21.059503+00:00",
@@ -151,12 +161,14 @@
       "currency": "USD",
       "commission": 0.0,
       "cash_after": 14.223042053221887,
-      "total": 14.835397683251953,
       "cash_before": 29.05843973647384,
+      "total": 14.835397683251953,
       "usd_ils": 3.0568,
       "reason": "signal",
       "stop": 105.50645762566978,
-      "target": 141.09304242077957
+      "target": 141.09304242077957,
+      "avg_cost": 0.0,
+      "realized_pnl": 0.0
     },
     {
       "timestamp": "2026-10-09T03:37:21.068006+00:00",
@@ -167,12 +179,14 @@
       "currency": "USD",
       "commission": 0.0,
       "cash_after": 2.9969893698326047,
-      "total": 11.226052683389282,
       "cash_before": 14.223042053221887,
+      "total": 11.226052683389282,
       "usd_ils": 3.0568,
       "reason": "signal",
       "stop": 77.0786746522025,
-      "target": 112.70602668741631
+      "target": 112.70602668741631,
+      "avg_cost": 0.0,
+      "realized_pnl": 0.0
     }
   ],
   "meta": {
@@ -180,7 +194,9 @@
       "symbol": "SPY",
       "start_price": 773.9299926757812,
       "start_value": 150.0,
-      "start_date": "2026-10-09"
+      "start_date": "2026-10-09",
+      "shares": 0.19381598002345254,
+      "invested_months": []
     },
     "start_date": "2026-10-09"
   }

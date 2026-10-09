@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-09T03:37:21+00:00",
+  "as_of": "2026-10-09T03:47:27+00:00",
   "base_currency": "USD",
   "usd_ils": 3.0568,
   "total_value": 149.93,
@@ -7,7 +7,7 @@
   "invested": 146.93,
   "day_change": -0.07,
   "day_change_pct": -0.0005,
-  "total_change_pct": -0.0,
+  "total_change_pct": -0.0005,
   "num_positions": 7,
   "num_trades": 7,
   "positions": [
@@ -20,7 +20,10 @@
       "current_price": 375.1,
       "unrealized_pnl": -0.01,
       "unrealized_pnl_pct": -0.0005,
-      "value_base": 29.97
+      "value_base": 29.97,
+      "cost_base": 29.99,
+      "stop": 359.92,
+      "target": 406.02
     },
     {
       "symbol": "MSFT",
@@ -31,7 +34,10 @@
       "current_price": 522.61,
       "unrealized_pnl": -0.01,
       "unrealized_pnl_pct": -0.0005,
-      "value_base": 26.97
+      "value_base": 26.97,
+      "cost_base": 26.98,
+      "stop": 493.81,
+      "target": 580.99
     },
     {
       "symbol": "GOOGL",
@@ -42,7 +48,10 @@
       "current_price": 348.29,
       "unrealized_pnl": -0.01,
       "unrealized_pnl_pct": -0.0005,
-      "value_base": 24.45
+      "value_base": 24.45,
+      "cost_base": 24.46,
+      "stop": 327.12,
+      "target": 391.16
     },
     {
       "symbol": "NVDA",
@@ -53,7 +62,10 @@
       "current_price": 230.48,
       "unrealized_pnl": -0.01,
       "unrealized_pnl_pct": -0.0005,
-      "value_base": 24.04
+      "value_base": 24.04,
+      "cost_base": 24.05,
+      "stop": 216.22,
+      "target": 259.34
     },
     {
       "symbol": "AMD",
@@ -64,7 +76,10 @@
       "current_price": 620.68,
       "unrealized_pnl": -0.01,
       "unrealized_pnl_pct": -0.0005,
-      "value_base": 15.45
+      "value_base": 15.45,
+      "cost_base": 15.46,
+      "stop": 560.8,
+      "target": 741.36
     },
     {
       "symbol": "NICE",
@@ -75,7 +90,10 @@
       "current_price": 117.31,
       "unrealized_pnl": -0.01,
       "unrealized_pnl_pct": -0.0005,
-      "value_base": 14.83
+      "value_base": 14.83,
+      "cost_base": 14.84,
+      "stop": 105.51,
+      "target": 141.09
     },
     {
       "symbol": "MNDY",
@@ -86,7 +104,10 @@
       "current_price": 88.91,
       "unrealized_pnl": -0.01,
       "unrealized_pnl_pct": -0.0005,
-      "value_base": 11.22
+      "value_base": 11.22,
+      "cost_base": 11.23,
+      "stop": 77.08,
+      "target": 112.71
     }
   ],
   "recent_trades": [
@@ -151,13 +172,151 @@
     {
       "date": "2026-10-09",
       "value": 149.93,
+      "contributed": 150.0,
       "bench": 150.0
     }
   ],
   "starting_cash": 150.0,
+  "deposited": 0,
+  "contributed": 150.0,
+  "profit": -0.07,
+  "num_deposits": 0,
+  "next_deposit": {
+    "date": "2026-10-10",
+    "amount": 300.0
+  },
+  "activity": [
+    {
+      "type": "BUY",
+      "timestamp": "2026-10-09T03:37:21.068006+00:00",
+      "symbol": "MNDY",
+      "quantity": 0.1262,
+      "price": 88.95,
+      "currency": "USD",
+      "total": 11.23,
+      "commission": 0.0,
+      "cash_before": 14.22,
+      "cash_after": 3.0,
+      "usd_ils": 3.0568,
+      "usd_ils_estimated": false,
+      "reason": "signal",
+      "reason_text": "איתות של האסטרטגיה",
+      "stop": 77.08,
+      "target": 112.71
+    },
+    {
+      "type": "BUY",
+      "timestamp": "2026-10-09T03:37:21.059503+00:00",
+      "symbol": "NICE",
+      "quantity": 0.1264,
+      "price": 117.37,
+      "currency": "USD",
+      "total": 14.84,
+      "commission": 0.0,
+      "cash_before": 29.06,
+      "cash_after": 14.22,
+      "usd_ils": 3.0568,
+      "usd_ils_estimated": false,
+      "reason": "signal",
+      "reason_text": "איתות של האסטרטגיה",
+      "stop": 105.51,
+      "target": 141.09
+    },
+    {
+      "type": "BUY",
+      "timestamp": "2026-10-09T03:37:21.037768+00:00",
+      "symbol": "V",
+      "quantity": 0.0799,
+      "price": 375.29,
+      "currency": "USD",
+      "total": 29.99,
+      "commission": 0.0,
+      "cash_before": 59.04,
+      "cash_after": 29.06,
+      "usd_ils": 3.0568,
+      "usd_ils_estimated": false,
+      "reason": "signal",
+      "reason_text": "איתות של האסטרטגיה",
+      "stop": 359.92,
+      "target": 406.02
+    },
+    {
+      "type": "BUY",
+      "timestamp": "2026-10-09T03:37:21.025692+00:00",
+      "symbol": "AMD",
+      "quantity": 0.0249,
+      "price": 620.99,
+      "currency": "USD",
+      "total": 15.46,
+      "commission": 0.0,
+      "cash_before": 74.51,
+      "cash_after": 59.04,
+      "usd_ils": 3.0568,
+      "usd_ils_estimated": false,
+      "reason": "signal",
+      "reason_text": "איתות של האסטרטגיה",
+      "stop": 560.8,
+      "target": 741.36
+    },
+    {
+      "type": "BUY",
+      "timestamp": "2026-10-09T03:37:21.013515+00:00",
+      "symbol": "GOOGL",
+      "quantity": 0.0702,
+      "price": 348.46,
+      "currency": "USD",
+      "total": 24.46,
+      "commission": 0.0,
+      "cash_before": 98.97,
+      "cash_after": 74.51,
+      "usd_ils": 3.0568,
+      "usd_ils_estimated": false,
+      "reason": "signal",
+      "reason_text": "איתות של האסטרטגיה",
+      "stop": 327.12,
+      "target": 391.16
+    },
+    {
+      "type": "BUY",
+      "timestamp": "2026-10-09T03:37:21.008680+00:00",
+      "symbol": "NVDA",
+      "quantity": 0.1043,
+      "price": 230.6,
+      "currency": "USD",
+      "total": 24.05,
+      "commission": 0.0,
+      "cash_before": 123.02,
+      "cash_after": 98.97,
+      "usd_ils": 3.0568,
+      "usd_ils_estimated": false,
+      "reason": "signal",
+      "reason_text": "איתות של האסטרטגיה",
+      "stop": 216.22,
+      "target": 259.34
+    },
+    {
+      "type": "BUY",
+      "timestamp": "2026-10-09T03:37:21.003706+00:00",
+      "symbol": "MSFT",
+      "quantity": 0.0516,
+      "price": 522.87,
+      "currency": "USD",
+      "total": 26.98,
+      "commission": 0.0,
+      "cash_before": 150.0,
+      "cash_after": 123.02,
+      "usd_ils": 3.0568,
+      "usd_ils_estimated": false,
+      "reason": "signal",
+      "reason_text": "איתות של האסטרטגיה",
+      "stop": 493.81,
+      "target": 580.99
+    }
+  ],
   "benchmark": {
     "symbol": "SPY",
     "value": 150.0,
+    "contributed": 150.0,
     "change_pct": 0.0,
     "start_date": "2026-10-09"
   }
