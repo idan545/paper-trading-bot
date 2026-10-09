@@ -122,6 +122,34 @@
   details.how h3{font-size:12px; color:var(--amber); margin:14px 0 6px; font-weight:600}
   details.how ul{margin:0; padding-inline-start:18px; font-size:12.5px; color:var(--muted); line-height:1.7}
 
+  /* ---- shekels / deposits / activity log ---- */
+  .ils{font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--faint); font-variant-numeric:tabular-nums}
+  .hero .ils{font-size:14px; margin-top:4px}
+  .stat .ils{margin-top:3px}
+  .nextdep{display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;
+    font-size:12.5px; color:var(--muted); background:var(--bg2); border:1px dashed var(--line);
+    border-radius:11px; padding:10px 13px; margin:-10px 0 24px}
+  .nextdep b{color:var(--amber); font-weight:600}
+  .acts{display:flex; flex-direction:column; gap:8px; margin-bottom:26px}
+  details.act{background:var(--bg2); border:1px solid var(--line-soft); border-radius:13px}
+  details.act[open]{border-color:var(--line)}
+  details.act summary{list-style:none; cursor:pointer; display:grid; grid-template-columns:auto 1fr auto;
+    gap:12px; align-items:center; padding:11px 14px}
+  details.act summary::-webkit-details-marker{display:none}
+  details.act summary:focus-visible{outline:2px solid var(--amber); outline-offset:-2px; border-radius:13px}
+  .act .who{min-width:0}
+  .act .who .tsym{font-family:"IBM Plex Mono",monospace; font-size:13px; font-weight:600}
+  .act .who .det{font-size:11px; color:var(--faint); margin-top:2px}
+  .act .amt{text-align:end; font-family:"IBM Plex Mono",monospace; font-size:13px; font-variant-numeric:tabular-nums}
+  .side.dep{color:var(--amber); background:rgba(231,176,120,.13)}
+  .act dl{display:grid; grid-template-columns:auto 1fr; gap:7px 14px; margin:0; padding:2px 14px 14px;
+    border-top:1px solid var(--line-soft); padding-top:12px; font-size:12.5px}
+  .act dt{color:var(--faint)}
+  .act dd{margin:0; direction:ltr; text-align:left; font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums; color:var(--ink)}
+  .act dd .ils{margin-left:8px}
+  .act dd .ils::before{content:"· "; color:var(--line)}
+  .act dd.txt{direction:rtl; text-align:left; font-family:system-ui,sans-serif; color:var(--muted)}
+
   /* ---- states ---- */
   .state{padding:60px 20px; text-align:center; color:var(--muted)}
   .state h3{font-family:"Fraunces",serif; font-weight:600; color:var(--ink); margin:0 0 8px; font-size:18px}
@@ -155,6 +183,11 @@ const fmtMoney = (n, cur) => {
   return sym + v.toLocaleString("en-US", {minimumFractionDigits:digits, maximumFractionDigits:digits});
 };
 const fmtSigned = (n, cur) => (n >= 0 ? "+" : "−") + fmtMoney(Math.abs(n), cur);
+// סכום בדולרים -> שקלים לפי שער נתון
+const fmtILS = (usd, rate) => fmtMoney(Number(usd) * Number(rate || 0), "ILS");
+const ilsSpan = (usd, rate) => rate ? `<span class="ils">${fmtILS(usd, rate)}</span>` : "";
+const fmtDate = (iso, opts) => new Date(iso).toLocaleDateString("he-IL", opts || {day:"numeric", month:"short", year:"numeric"});
+const MONTHS = ["ינואר","פברואר","מרץ","אפריל","מאי","יוני","יולי","אוגוסט","ספטמבר","אוקטובר","נובמבר","דצמבר"];
 const fmtPct = (p) => (p >= 0 ? "+" : "−") + (Math.abs(p)*100).toFixed(2) + "%";
 const cls = (n) => n > 0 ? "up" : n < 0 ? "down" : "flat";
 
@@ -165,12 +198,15 @@ function relTime(iso){
   return `${date} · ${time}`;
 }
 
-function equitySVG(history){
+function equitySVG(history, startCash){
   if(!history || history.length < 2) return "";
   const w = 100, h = 100, pad = 4;
   const vals = history.map(p => p.value);
   const hasBench = history.every(p => typeof p.bench === "number");
-  const all = hasBench ? vals.concat(history.map(p => p.bench)) : vals;
+  const contrib = history.map(p => typeof p.contributed === "number" ? p.contributed : startCash);
+  const hasContrib = contrib.some(v => v !== contrib[0]);   // מציירים רק אם היו הפקדות
+  let all = hasBench ? vals.concat(history.map(p => p.bench)) : vals;
+  if(hasContrib) all = all.concat(contrib);
   const min = Math.min(...all), max = Math.max(...all);
   const span = (max - min) || 1;
   const x = i => pad + (w - 2*pad) * (i/(history.length-1));
@@ -184,6 +220,13 @@ function equitySVG(history){
         fill="none" stroke="var(--muted)" stroke-width="1.2" stroke-dasharray="3 3"
         vector-effect="non-scaling-stroke"/>`
     : "";
+  // קו מדרגות של סך ההפקדות: כמה כסף "שלי" נכנס עד כל יום
+  const contribLine = hasContrib
+    ? `<path d="${contrib.map((v,i)=> i===0 ? `M${x(0).toFixed(2)},${y(v).toFixed(2)}`
+          : `L${x(i).toFixed(2)},${y(contrib[i-1]).toFixed(2)} L${x(i).toFixed(2)},${y(v).toFixed(2)}`).join(" ")}"
+        fill="none" stroke="var(--amber)" stroke-opacity=".55" stroke-width="1" stroke-dasharray="1 3"
+        vector-effect="non-scaling-stroke"/>`
+    : "";
   const lastX = x(history.length-1), lastY = y(vals[vals.length-1]);
   return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" role="img" aria-label="עקומת הון">
     <defs><linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
@@ -191,6 +234,7 @@ function equitySVG(history){
       <stop offset="100%" stop-color="${rising?'#84c0a0':'#df8a6c'}" stop-opacity="0"/>
     </linearGradient></defs>
     <path d="${area}" fill="url(#g)"/>
+    ${contribLine}
     ${benchLine}
     <path d="${line}" fill="none" stroke="${stroke}" stroke-width="1.6"
       stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
@@ -213,8 +257,9 @@ function positionRow(p){
       </div>
     </div>
     <div class="invested">
-      <div class="ilabel">מושקע</div>
+      <div class="ilabel">שווי</div>
       <div class="ival">${fmtMoney(invested, "USD")}</div>
+      ${ilsSpan(invested, RATE)}
     </div>
     <div class="pnl ${cls(p.unrealized_pnl)}">
       <div class="abs">${fmtSigned(p.unrealized_pnl, pnlCur)}</div>
@@ -223,14 +268,56 @@ function positionRow(p){
   </div>`;
 }
 
-function tradeRow(t){
-  const isBuy = t.side === "BUY";
-  return `<div class="trade">
-    <span class="side ${isBuy?'buy':'sell'}">${isBuy?'קנייה':'מכירה'}</span>
-    <div><div class="tsym">${t.symbol}</div>
-      <div class="det">${t.quantity} × ${Number(t.price).toLocaleString()} ${t.currency}</div></div>
-    <div class="tdate">${new Date(t.timestamp).toLocaleDateString("he-IL",{day:"numeric",month:"short"})}</div>
-  </div>`;
+function row(label, usd, rate, extra){
+  return `<dt>${label}</dt><dd>${fmtMoney(usd,"USD")}${ilsSpan(usd, rate)}${extra||""}</dd>`;
+}
+
+function activityCard(a){
+  const r = a.usd_ils;
+  const when = fmtDate(a.type === "DEPOSIT" && a.date ? a.date : a.timestamp);
+  if(a.type === "DEPOSIT"){
+    const [yy, mm] = (a.month || "").split("-");
+    return `<details class="act">
+      <summary>
+        <span class="side dep">הפקדה</span>
+        <div class="who"><div class="tsym">משכורת ${MONTHS[Number(mm)-1] || ""} ${yy || ""}</div>
+          <div class="det">${when}</div></div>
+        <div class="amt up">+${fmtMoney(a.total,"USD")}<br>${ilsSpan(a.total, r)}</div>
+      </summary>
+      <dl>
+        ${row("סכום ההפקדה", a.total, r)}
+        ${row("עו״ש לפני", a.cash_before, r)}
+        ${row("עו״ש אחרי", a.cash_after, r)}
+        <dt>נכנס לחשבון</dt><dd class="txt">${fmtDate(a.timestamp, {day:"numeric", month:"short", hour:"2-digit", minute:"2-digit"})}</dd>
+        <dt>שער דולר</dt><dd>${Number(r).toFixed(3)}</dd>
+        ${a.reason_text ? `<dt>הערה</dt><dd class="txt">${a.reason_text}</dd>` : ""}
+      </dl>
+    </details>`;
+  }
+  const isBuy = a.type === "BUY";
+  const pnl = a.realized_pnl;
+  return `<details class="act">
+    <summary>
+      <span class="side ${isBuy?'buy':'sell'}">${isBuy?'קנייה':'מכירה'}</span>
+      <div class="who"><div class="tsym">${a.symbol}</div>
+        <div class="det">${when} · ${a.quantity} מניות</div></div>
+      <div class="amt">${fmtMoney(a.total,"USD")}<br>${ilsSpan(a.total, r)}</div>
+    </summary>
+    <dl>
+      <dt>מה ${isBuy?'נקנה':'נמכר'}</dt><dd class="txt">${a.quantity} מניות של ${a.symbol}</dd>
+      ${row("מחיר למניה", a.price, r)}
+      ${row(isBuy ? "סה״כ שולם" : "סה״כ התקבל", a.total, r)}
+      ${a.commission ? row("עמלה", a.commission, r) : `<dt>עמלה</dt><dd>$0.00</dd>`}
+      ${row("עו״ש לפני", a.cash_before, r)}
+      ${row("עו״ש אחרי", a.cash_after, r)}
+      ${!isBuy ? row("מחיר קנייה ממוצע", a.avg_cost, r) : ""}
+      ${!isBuy ? `<dt>רווח / הפסד</dt><dd class="${cls(pnl)}">${fmtSigned(pnl,"USD")}${r ? `<span class="ils">${(pnl>=0?"+":"−")+fmtILS(Math.abs(pnl), r)}</span>` : ""}</dd>` : ""}
+      ${isBuy && a.stop ? row("stop-loss", a.stop, r) : ""}
+      ${isBuy && a.target ? row("יעד רווח", a.target, r) : ""}
+      <dt>סיבה</dt><dd class="txt">${a.reason_text || ""}</dd>
+      <dt>שער דולר</dt><dd>${Number(r).toFixed(3)}${a.usd_ils_estimated ? " (משוער)" : ""}</dd>
+    </dl>
+  </details>`;
 }
 
 function benchCard(d){
@@ -245,7 +332,7 @@ function benchCard(d){
       : `המדד מקדים את הבוט ב-${(-diff*100).toFixed(2)} נקודות אחוז. קנייה פשוטה של המדד הייתה עדיפה עד עכשיו.`;
   return `<div class="bench">
     <div class="row1">
-      <span class="k">אילו אותם ${fmtMoney(d.starting_cash||0,"USD")} הושקעו ב-${new Date(b.start_date).toLocaleDateString("he-IL")} במדד S&amp;P&nbsp;500 (${b.symbol})</span>
+      <span class="k">אילו אותו כסף (${fmtMoney(b.contributed || d.starting_cash || 0,"USD")}, כולל ההפקדות) הושקע במדד S&amp;P&nbsp;500 (${b.symbol}) ביום שנכנס</span>
       <span class="v ${cls(idx)}">${fmtMoney(b.value,"USD")} · ${fmtPct(idx)}</span>
     </div>
     <div class="verdict ${diff>=0?'up':'down'}">${verdict}</div>
@@ -258,6 +345,8 @@ function howItWorks(d){
     <h3>הכללים</h3>
     <ul>
       <li>מתחיל עם ${fmtMoney(d.starting_cash||0,"USD")} וירטואליים. אין כאן כסף אמיתי.</li>
+      ${d.next_deposit ? `<li>ב-10 לכל חודש "נכנסת משכורת" ו-${fmtMoney(d.next_deposit.amount,"USD")} ממנה מופרשים לתיק. אם ה-10 יוצא בסוף שבוע, הכסף נכנס ביום המסחר הבא. גם המדד להשוואה מקבל את אותן הפקדות.</li>` : ""}
+      <li>הרווח מחושב מול סך הכסף שהופקד, כך שהפקדה לא נספרת כרווח.</li>
       <li>רץ פעם ביום אחרי סגירת המסחר בארה"ב, על כ-20 מניות גדולות (כולל חברות ישראליות שנסחרות בארה"ב).</li>
       <li>קונה רק כשהמחיר מעל הממוצע של 50 יום, ה-MACD חיובי וה-RSI מתחת ל-75. מוכר כשהמומנטום מתהפך.</li>
       <li>מסכן כ-1% מהתיק בכל עסקה, ולא יותר מ-20% מהתיק במניה אחת. לכל פוזיציה יש stop-loss ויעד רווח.</li>
@@ -274,16 +363,21 @@ function howItWorks(d){
   </details>`;
 }
 
+let RATE = 0;   // שער הדולר העדכני, להצגת שווי בשקלים
+
 function render(d){
   const base = d.base_currency;
+  RATE = d.usd_ils;
+  const contributed = d.contributed ?? d.starting_cash ?? 0;
+  const profit = d.profit ?? (d.total_value - contributed);
+  const activity = d.activity || [];
   const dc = cls(d.day_change), tc = cls(d.total_change_pct);
   const positions = d.positions.length
     ? `<div class="rows">${d.positions.map(positionRow).join("")}</div>`
     : `<div class="empty" style="margin-bottom:28px">אין פוזיציות פתוחות כרגע. הבוט ייכנס לעסקה כשיתקבל איתות.</div>`;
-  const trades = d.recent_trades.length
-    ? `<div class="rows" style="gap:0;background:var(--bg2);border:1px solid var(--line-soft);border-radius:13px;overflow:hidden">
-        ${d.recent_trades.map(tradeRow).join("")}</div>`
-    : `<div class="empty">עדיין לא בוצעו עסקאות.</div>`;
+  const acts = activity.length
+    ? `<div class="acts">${activity.map(activityCard).join("")}</div>`
+    : `<div class="empty" style="margin-bottom:26px">עדיין אין פעולות בחשבון.</div>`;
 
   app.innerHTML = `
     <header>
@@ -299,33 +393,36 @@ function render(d){
     <div class="hero">
       <div class="label">שווי תיק כולל</div>
       <div class="value mono">${fmtMoney(d.total_value, base)}</div>
+      <div class="ils">≈ ${fmtILS(d.total_value, RATE)}</div>
       <div class="changes">
         <span class="chg ${dc}"><span class="cap">היום</span>${fmtSigned(d.day_change, base)} · ${fmtPct(d.day_change_pct)}</span>
-        <span class="chg ${tc}"><span class="cap">מ-${fmtMoney(d.starting_cash||0, base)}</span>${fmtPct(d.total_change_pct)}</span>
+        <span class="chg ${tc}"><span class="cap">רווח מול ${fmtMoney(contributed, base)} שהופקדו</span>${fmtSigned(profit, base)} · ${fmtPct(d.total_change_pct)}</span>
       </div>
     </div>
 
     <div class="notice">סימולציה לימודית בכסף וירטואלי. לא המלצה ולא ייעוץ השקעות.</div>
 
     ${d.equity_history && d.equity_history.length >= 2 ? `<div class="curve">
-      ${equitySVG(d.equity_history)}
+      ${equitySVG(d.equity_history, d.starting_cash || 0)}
       <div class="ends"><span>${d.equity_history[0].date}</span><span>${d.equity_history.at(-1).date}</span></div>
-      ${d.benchmark ? `<div class="legend"><span><i style="color:${d.total_change_pct >= 0 ? 'var(--gain)' : 'var(--loss)'}"></i>הבוט</span><span><i class="dash" style="color:var(--muted)"></i>S&amp;P 500</span></div>` : ""}
+      ${d.benchmark ? `<div class="legend"><span><i style="color:${d.total_change_pct >= 0 ? 'var(--gain)' : 'var(--loss)'}"></i>הבוט</span><span><i class="dash" style="color:var(--muted)"></i>S&amp;P 500</span>${(d.num_deposits||0) > 0 ? `<span><i class="dash" style="color:var(--amber);border-top-style:dotted"></i>הופקד</span>` : ""}</div>` : ""}
     </div>` : ""}
 
     ${benchCard(d)}
 
     <div class="strip">
-      <div class="stat"><div class="k">מזומן</div><div class="v">${fmtMoney(d.cash, base)}</div></div>
-      <div class="stat"><div class="k">מושקע</div><div class="v">${fmtMoney(d.invested, base)}</div></div>
-      <div class="stat"><div class="k">פוזיציות</div><div class="v">${d.num_positions}</div></div>
+      <div class="stat"><div class="k">עו״ש</div><div class="v">${fmtMoney(d.cash, base)}</div>${ilsSpan(d.cash, RATE)}</div>
+      <div class="stat"><div class="k">במניות</div><div class="v">${fmtMoney(d.invested, base)}</div>${ilsSpan(d.invested, RATE)}</div>
+      <div class="stat"><div class="k">הופקד</div><div class="v">${fmtMoney(contributed, base)}</div>${ilsSpan(contributed, RATE)}</div>
     </div>
+
+    ${d.next_deposit ? `<div class="nextdep"><span>הפקדה הבאה: <b>${fmtMoney(d.next_deposit.amount, base)}</b> ${ilsSpan(d.next_deposit.amount, RATE)}</span><span>${fmtDate(d.next_deposit.date)}</span></div>` : ""}
 
     <div class="sec-h"><h2>פוזיציות פתוחות</h2><span class="count">${d.num_positions}</span></div>
     ${positions}
 
-    <div class="sec-h"><h2>עסקאות אחרונות</h2><span class="count">${d.num_trades} סה״כ</span></div>
-    ${trades}
+    <div class="sec-h"><h2>יומן פעולות</h2><span class="count">${d.num_trades} עסקאות · ${d.num_deposits||0} הפקדות</span></div>
+    ${acts}
 
     ${howItWorks(d)}
 

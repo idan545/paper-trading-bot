@@ -11,7 +11,7 @@
 from __future__ import annotations
 
 import os
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 
 import numpy as np
 
@@ -40,6 +40,9 @@ def run_once(verbose: bool = True) -> Portfolio:
     strat = TrendMomentumStrategy(C.STRATEGY_PARAMS)
     usd_ils = D.usd_ils_rate()
 
+    today = datetime.now(timezone.utc).date()
+    pf.meta.setdefault("start_date", today.isoformat())
+
     universe = D.get_universe_history(
         C.UNIVERSE, period=C.HISTORY_PERIOD, interval=C.HISTORY_INTERVAL
     )
@@ -48,6 +51,11 @@ def run_once(verbose: bool = True) -> Portfolio:
 
     slip = getattr(C, "SLIPPAGE_PCT", 0.0)
     actions = []
+
+    # הפקדות חודשיות - לפני המסחר, כדי שהכסף יוכל להיות מושקע כבר היום
+    for dep in _process_deposits(pf, usd_ils, today):
+        actions.append(f"DEPOSIT +{dep['amount']:,.2f} USD  (משכורת {dep['month']}, "
+                       f"עו\"ש {dep['cash_before']:,.2f} -> {dep['cash_after']:,.2f})")
     for sym, df in universe.items():
         if df.empty or len(df) < C.STRATEGY_PARAMS.trend_sma:
             continue
@@ -87,7 +95,8 @@ def run_once(verbose: bool = True) -> Portfolio:
             if exit_px is not None:
                 fill = exit_px * (1 - slip)
                 qty = pos.quantity
-                if pf.sell(sym, qty, fill, rate, cur):
+                if pf.sell(sym, qty, fill, rate, cur,
+                           reason=reason.lower(), usd_ils=usd_ils):
                     actions.append(f"{reason:<6} {qty:>8.4f} {sym:<6} @ {fill:,.2f} {cur}")
                 continue
 
@@ -104,16 +113,20 @@ def run_once(verbose: bool = True) -> Portfolio:
             a = a if not np.isnan(a) else None
             qty = position_size(equity, fill, rate, C.RISK_PARAMS, a,
                                 fractional=getattr(C, "FRACTIONAL_SHARES", False))
-            if qty > 0 and pf.buy(sym, qty, fill, rate, cur):
+            if qty > 0 and pf.buy(sym, qty, fill, rate, cur,
+                                  reason="signal", usd_ils=usd_ils):
                 stop, target = stop_levels(fill, C.RISK_PARAMS, a)
                 pf.positions[sym].stop = stop
                 pf.positions[sym].target = target
+                pf.trades[-1].stop = stop
+                pf.trades[-1].target = target
                 actions.append(f"BUY    {qty:>8.4f} {sym:<6} @ {fill:,.2f} {cur}"
                                f"  (stop {stop:,.2f} / target {target:,.2f})")
         elif sig == -1 and sym in pf.positions:
             fill = price * (1 - slip)
             qty = pf.positions[sym].quantity
-            if pf.sell(sym, qty, fill, rate, cur):
+            if pf.sell(sym, qty, fill, rate, cur,
+                       reason="signal", usd_ils=usd_ils):
                 actions.append(f"SELL   {qty:>8.4f} {sym:<6} @ {fill:,.2f} {cur}")
 
     benchmark = _update_benchmark(pf)
@@ -146,15 +159,33 @@ def run_once(verbose: bool = True) -> Portfolio:
     return pf
 
 
-def _update_benchmark(pf: Portfolio) -> dict | None:
+def _process_deposits(pf: Portfolio, usd_ils: float, today: date) -> list[dict]:
     """
-    מדד השוואה: כמה היה שווה אותו הון התחלתי אילו נקנה ב-S&P 500 (SPY)
-    ביום שהתיק התחיל, והוחזק בלי לגעת. נשמר בתיק כדי שנקודת ההתחלה תישאר
-    קבועה בין הרצות.
+    מפקיד את ההפקדה החודשית לכל חודש שהגיע בו יום ההפקדה ועוד לא הופקד.
+    עובר על כל החודשים מתחילת התיק, כך שהרצה שפוספסה לא "מאבדת" משכורת.
+    הפקדה שיום ה-10 שלה קודם לתחילת התיק - לא נספרת.
     """
-    symbol = getattr(C, "BENCHMARK", None)
-    if not symbol:
-        return None
+    amount = float(getattr(C, "MONTHLY_DEPOSIT", 0.0) or 0.0)
+    day = int(getattr(C, "DEPOSIT_DAY", 10))
+    if amount <= 0:
+        return []
+    start = date.fromisoformat(pf.meta.get("start_date", today.isoformat()))
+    done = {d.get("month") for d in pf.meta.get("deposits", [])}
+    made = []
+    y, m = start.year, start.month
+    while (y, m) <= (today.year, today.month):
+        due = date(y, m, min(day, 28))
+        key = f"{y:04d}-{m:02d}"
+        if start <= due <= today and key not in done:
+            made.append(pf.deposit(amount, key, due.isoformat(), usd_ils,
+                                   note="הפרשה חודשית מהמשכורת"))
+        m += 1
+        if m > 12:
+            y, m = y + 1, 1
+    return made
+
+
+def _benchmark_price(symbol: str) -> float | None:
     try:
         bdf = D.get_history(symbol, period="5d", interval="1d")
         closes = bdf["close"].dropna()
@@ -164,7 +195,20 @@ def _update_benchmark(pf: Portfolio) -> dict | None:
     except Exception as e:  # noqa: BLE001
         print(f"[warn] benchmark {symbol} failed: {e}")
         return None
-    if not np.isfinite(px) or px <= 0:
+    return px if np.isfinite(px) and px > 0 else None
+
+
+def _update_benchmark(pf: Portfolio) -> dict | None:
+    """
+    מדד השוואה: אותו הון התחלתי נקנה ב-S&P 500 (SPY) ביום שהתיק התחיל,
+    וכל הפקדה חודשית קונה עוד SPY ביום שבו היא נכנסה. כך ההשוואה הוגנת:
+    אותו כסף, באותם ימים - רק בלי מסחר.
+    """
+    symbol = getattr(C, "BENCHMARK", None)
+    if not symbol:
+        return None
+    px = _benchmark_price(symbol)
+    if px is None:
         return None
     b = pf.meta.get("benchmark")
     if not b or b.get("symbol") != symbol:
@@ -173,13 +217,27 @@ def _update_benchmark(pf: Portfolio) -> dict | None:
             "start_price": px,
             "start_value": C.STARTING_CASH,
             "start_date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+            "shares": C.STARTING_CASH / px,
+            "invested_months": [],
         }
         pf.meta["benchmark"] = b
-    value = b["start_value"] * px / b["start_price"]
+    if "shares" not in b:   # מבנה ישן, לפני ההפקדות
+        b["shares"] = b["start_value"] / b["start_price"]
+        b.setdefault("invested_months", [])
+    # כל הפקדה שעוד לא הושקעה במדד - נקנית עכשיו במחיר הנוכחי
+    for dep in pf.meta.get("deposits", []):
+        if dep["month"] not in b["invested_months"]:
+            b["shares"] += dep["amount"] / px
+            b["invested_months"].append(dep["month"])
+    contributed = b["start_value"] + sum(
+        d["amount"] for d in pf.meta.get("deposits", [])
+        if d["month"] in b["invested_months"])
+    value = b["shares"] * px
     return {
         "symbol": symbol,
         "value": round(value, 2),
-        "change_pct": round(value / b["start_value"] - 1.0, 4),
+        "contributed": round(contributed, 2),
+        "change_pct": round(value / contributed - 1.0, 4) if contributed else 0.0,
         "start_date": b["start_date"],
     }
 

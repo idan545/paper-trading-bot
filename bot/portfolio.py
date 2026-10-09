@@ -40,6 +40,15 @@ class Trade:
     currency: str
     commission: float
     cash_after: float
+    # פרטים לתצוגה המפורטת (ערכי ברירת מחדל - עסקאות ישנות לא כללו אותם)
+    cash_before: float = 0.0     # עו"ש לפני העסקה (מטבע בסיס)
+    total: float = 0.0           # סכום העסקה במטבע בסיס, כולל עמלה
+    usd_ils: float = 0.0         # שער הדולר ביום העסקה
+    reason: str = ""             # signal / stop / target
+    stop: float = 0.0            # רמת stop-loss שנקבעה בקנייה
+    target: float = 0.0          # יעד רווח שנקבע בקנייה
+    avg_cost: float = 0.0        # במכירה: מחיר הקנייה הממוצע
+    realized_pnl: float = 0.0    # במכירה: רווח/הפסד ממומש (מטבע בסיס)
 
 
 class Portfolio:
@@ -70,7 +79,8 @@ class Portfolio:
     # ----- ביצוע פקודות -----
     def buy(self, symbol: str, quantity: float, price: float,
             fx_to_base: float = 1.0, currency: str = "USD",
-            ts: str | None = None) -> bool:
+            ts: str | None = None, reason: str = "",
+            usd_ils: float = 0.0) -> bool:
         """
         קנייה. price במטבע המקומי, fx_to_base ממיר מטבע מקומי -> בסיס.
         מחזיר True אם בוצע, False אם אין מספיק מזומן.
@@ -83,6 +93,7 @@ class Portfolio:
         if total_cost > self.cash + 1e-9:
             return False
 
+        cash_before = self.cash
         self.cash -= total_cost
         pos = self.positions.get(symbol) or Position(symbol=symbol, currency=currency)
         new_qty = pos.quantity + quantity
@@ -91,12 +102,15 @@ class Portfolio:
         pos.quantity = new_qty
         pos.currency = currency
         self.positions[symbol] = pos
-        self._record(symbol, "BUY", quantity, price, currency, commission, ts)
+        self._record(symbol, "BUY", quantity, price, currency, commission, ts,
+                     cash_before=cash_before, total=total_cost,
+                     usd_ils=usd_ils, reason=reason)
         return True
 
     def sell(self, symbol: str, quantity: float, price: float,
              fx_to_base: float = 1.0, currency: str = "USD",
-             ts: str | None = None) -> bool:
+             ts: str | None = None, reason: str = "",
+             usd_ils: float = 0.0) -> bool:
         """מכירה. לא תומך בשורט - לא נמכור יותר ממה שיש."""
         pos = self.positions.get(symbol)
         if not pos or quantity <= 0:
@@ -106,20 +120,50 @@ class Portfolio:
             return False
         notional_base = quantity * price * fx_to_base
         commission = self._commission(notional_base)
+        cash_before = self.cash
+        avg_cost = pos.avg_price
+        realized = (price - avg_cost) * quantity * fx_to_base - commission
         self.cash += notional_base - commission
         pos.quantity -= quantity
         if pos.quantity <= 1e-9:
             del self.positions[symbol]
         else:
             self.positions[symbol] = pos
-        self._record(symbol, "SELL", quantity, price, currency, commission, ts)
+        self._record(symbol, "SELL", quantity, price, currency, commission, ts,
+                     cash_before=cash_before, total=notional_base - commission,
+                     usd_ils=usd_ils, reason=reason, avg_cost=avg_cost,
+                     realized_pnl=realized)
         return True
 
-    def _record(self, symbol, side, qty, price, currency, commission, ts):
+    def deposit(self, amount: float, month: str, due_date: str,
+                usd_ils: float = 0.0, note: str = "") -> dict:
+        """
+        הפקדה לחשבון (למשל חלק מהמשכורת). נשמרת ב-meta["deposits"] ולא
+        ברשימת העסקאות, כדי לא לבלבל חישובי רווח של עסקאות.
+        """
+        entry = {
+            "month": month,                 # "YYYY-MM" - מונע הפקדה כפולה
+            "date": due_date,               # היום בחודש שבו "נכנסה המשכורת"
+            "credited_at": datetime.now(timezone.utc).isoformat(),
+            "amount": float(amount),
+            "cash_before": self.cash,
+            "cash_after": self.cash + float(amount),
+            "usd_ils": usd_ils,
+            "note": note,
+        }
+        self.cash += float(amount)
+        self.meta.setdefault("deposits", []).append(entry)
+        return entry
+
+    def total_deposited(self) -> float:
+        return sum(d.get("amount", 0.0) for d in self.meta.get("deposits", []))
+
+    def _record(self, symbol, side, qty, price, currency, commission, ts, **extra):
         self.trades.append(Trade(
             timestamp=ts or datetime.now(timezone.utc).isoformat(),
             symbol=symbol, side=side, quantity=qty, price=price,
             currency=currency, commission=commission, cash_after=self.cash,
+            **extra,
         ))
 
     # ----- הערכת שווי -----

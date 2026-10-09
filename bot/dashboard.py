@@ -47,10 +47,13 @@ def _load_equity_history(path: str) -> list[dict]:
 
 
 def _append_today(history: list[dict], total_value: float,
-                  bench_value: float | None = None) -> list[dict]:
+                  bench_value: float | None = None,
+                  contributed: float | None = None) -> list[dict]:
     """מוסיף/מעדכן את נקודת ההון של היום (לפי תאריך UTC)."""
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     point = {"date": today, "value": round(total_value, 2)}
+    if _is_finite_number(contributed):
+        point["contributed"] = round(contributed, 2)
     if _is_finite_number(bench_value):
         point["bench"] = round(bench_value, 2)
     if history and history[-1].get("date") == today:
@@ -70,12 +73,20 @@ def build_snapshot(
     benchmark: dict | None = None,
 ) -> dict:
     total = pf.total_value(prices, fx)
+    deposited = pf.total_deposited()
+    contributed = starting_cash + deposited          # כמה כסף "שלי" נכנס לתיק
+    profit = total - contributed
 
-    prev = equity_history[-2]["value"] if len(equity_history) >= 2 else starting_cash
-    base = equity_history[0]["value"] if equity_history else starting_cash
-    day_change = total - prev
-    day_change_pct = (day_change / prev) if prev else 0.0
-    total_change_pct = (total / base - 1.0) if base else 0.0
+    # שינוי יומי בלי ההפקדה: הפקדה של $300 היא לא רווח
+    if len(equity_history) >= 2:
+        prev = equity_history[-2]
+        prev_value = prev["value"]
+        prev_contrib = prev.get("contributed", starting_cash)
+    else:
+        prev_value, prev_contrib = starting_cash, starting_cash
+    day_change = (total - contributed) - (prev_value - prev_contrib)
+    day_change_pct = (day_change / prev_value) if prev_value else 0.0
+    total_change_pct = (profit / contributed) if contributed else 0.0
 
     positions = []
     for sym, pos in pf.positions.items():
@@ -91,6 +102,9 @@ def build_snapshot(
             "unrealized_pnl": round(pos.unrealized_pnl(px), 2),
             "unrealized_pnl_pct": round((px / pos.avg_price - 1.0), 4) if pos.avg_price else 0.0,
             "value_base": round(pos.market_value(px) * rate, 2),
+            "cost_base": round(pos.quantity * pos.avg_price * rate, 2),
+            "stop": round(pos.stop, 2),
+            "target": round(pos.target, 2),
         })
     positions.sort(key=lambda p: p["value_base"], reverse=True)
 
@@ -105,6 +119,9 @@ def build_snapshot(
         }
         for t in pf.trades[-12:][::-1]
     ]
+
+    activity = _activity(pf, usd_ils)
+    next_dep = _next_deposit()
 
     return {
         "as_of": datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -122,8 +139,92 @@ def build_snapshot(
         "recent_trades": recent,
         "equity_history": equity_history,
         "starting_cash": starting_cash,
+        "deposited": round(deposited, 2),
+        "contributed": round(contributed, 2),
+        "profit": round(profit, 2),
+        "num_deposits": len(pf.meta.get("deposits", [])),
+        "next_deposit": next_dep,
+        "activity": activity,
         "benchmark": benchmark,
     }
+
+
+REASONS = {
+    "signal": "איתות של האסטרטגיה",
+    "stop": "stop-loss: המחיר ירד לרמת ההגנה",
+    "target": "יעד רווח הושג",
+}
+
+
+def _activity(pf: Portfolio, usd_ils_now: float, limit: int = 200) -> list[dict]:
+    """
+    יומן אחד של כל התנועות בחשבון - קניות, מכירות והפקדות - מהחדש לישן,
+    עם כל הפרטים לתצוגה המפורטת. עסקאות ישנות בלי שער דולר מקבלות את
+    השער הנוכחי (מסומן usd_ils_estimated).
+    """
+    items = []
+    for t in pf.trades:
+        rate = t.usd_ils or usd_ils_now
+        total = t.total or (t.quantity * t.price + t.commission)
+        cash_before = t.cash_before or (
+            t.cash_after + total if t.side == "BUY" else t.cash_after - total)
+        item = {
+            "type": t.side,
+            "timestamp": t.timestamp,
+            "symbol": t.symbol,
+            "quantity": round(t.quantity, 4),
+            "price": round(t.price, 2),
+            "currency": t.currency,
+            "total": round(total, 2),
+            "commission": round(t.commission, 2),
+            "cash_before": round(cash_before, 2),
+            "cash_after": round(t.cash_after, 2),
+            "usd_ils": round(rate, 4),
+            "usd_ils_estimated": not t.usd_ils,
+            "reason": t.reason or "signal",
+            "reason_text": REASONS.get(t.reason or "signal", t.reason),
+        }
+        if t.side == "BUY":
+            item["stop"] = round(t.stop, 2)
+            item["target"] = round(t.target, 2)
+        else:
+            item["avg_cost"] = round(t.avg_cost, 2)
+            item["realized_pnl"] = round(t.realized_pnl, 2)
+        items.append(item)
+    for d in pf.meta.get("deposits", []):
+        items.append({
+            "type": "DEPOSIT",
+            "timestamp": d.get("credited_at"),
+            "date": d.get("date"),
+            "month": d.get("month"),
+            "total": round(d["amount"], 2),
+            "currency": "USD",
+            "cash_before": round(d["cash_before"], 2),
+            "cash_after": round(d["cash_after"], 2),
+            "usd_ils": round(d.get("usd_ils") or usd_ils_now, 4),
+            "reason_text": d.get("note", ""),
+        })
+    items.sort(key=lambda i: i.get("timestamp") or "", reverse=True)
+    return items[:limit]
+
+
+def _next_deposit() -> dict | None:
+    """מתי וכמה תהיה ההפקדה החודשית הבאה (לפי config)."""
+    try:
+        import config as C
+    except ImportError:
+        return None
+    amount = float(getattr(C, "MONTHLY_DEPOSIT", 0.0) or 0.0)
+    if amount <= 0:
+        return None
+    day = min(int(getattr(C, "DEPOSIT_DAY", 10)), 28)
+    today = datetime.now(timezone.utc).date()
+    y, m = today.year, today.month
+    if today.day >= day:
+        m += 1
+        if m > 12:
+            y, m = y + 1, 1
+    return {"date": f"{y:04d}-{m:02d}-{day:02d}", "amount": amount}
 
 
 def export(
@@ -139,9 +240,10 @@ def export(
     history = _load_equity_history(equity_path)
     today_value = pf.total_value(prices, fx)
     bench_value = benchmark.get("value") if benchmark else None
+    contributed = starting_cash + pf.total_deposited()
     # לא מוסיפים נקודת הון שבורה; עדיף לדלג על יום מאשר לשבור את הקובץ
     if _is_finite_number(today_value):
-        history = _append_today(history, today_value, bench_value)
+        history = _append_today(history, today_value, bench_value, contributed)
     with open(equity_path, "w", encoding="utf-8") as f:
         json.dump(_clean(history), f, ensure_ascii=False, indent=2, allow_nan=False)
 
