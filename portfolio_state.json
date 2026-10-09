@@ -1,8 +1,144 @@
 {
   "base_currency": "USD",
-  "cash": 150.0,
+  "cash": 2.9969893698326047,
   "commission_rate": 0.0,
   "min_commission": 0.0,
-  "positions": {},
-  "trades": []
+  "positions": {
+    "MSFT": {
+      "symbol": "MSFT",
+      "quantity": 0.0516,
+      "avg_price": 522.8712903442382,
+      "currency": "USD",
+      "stop": 493.8111355832695,
+      "target": 580.9915998661756
+    },
+    "NVDA": {
+      "symbol": "NVDA",
+      "quantity": 0.1043,
+      "avg_price": 230.59523572540283,
+      "currency": "USD",
+      "stop": 216.22225636059335,
+      "target": 259.34119445502176
+    },
+    "GOOGL": {
+      "symbol": "GOOGL",
+      "quantity": 0.0702,
+      "avg_price": 348.4641535491943,
+      "currency": "USD",
+      "stop": 327.1154796393806,
+      "target": 391.16150136882163
+    },
+    "AMD": {
+      "symbol": "AMD",
+      "quantity": 0.0249,
+      "avg_price": 620.990332672119,
+      "currency": "USD",
+      "stop": 560.8030748633249,
+      "target": 741.3648482897072
+    },
+    "V": {
+      "symbol": "V",
+      "quantity": 0.0799,
+      "avg_price": 375.28755610656737,
+      "currency": "USD",
+      "stop": 359.9220104905228,
+      "target": 406.01864733865654
+    },
+    "NICE": {
+      "symbol": "NICE",
+      "quantity": 0.1264,
+      "avg_price": 117.36865255737304,
+      "currency": "USD",
+      "stop": 105.50645762566978,
+      "target": 141.09304242077957
+    },
+    "MNDY": {
+      "symbol": "MNDY",
+      "quantity": 0.1262,
+      "avg_price": 88.95445866394043,
+      "currency": "USD",
+      "stop": 77.0786746522025,
+      "target": 112.70602668741631
+    }
+  },
+  "trades": [
+    {
+      "timestamp": "2026-10-09T03:37:21.003706+00:00",
+      "symbol": "MSFT",
+      "side": "BUY",
+      "quantity": 0.0516,
+      "price": 522.8712903442382,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 123.0198414182373
+    },
+    {
+      "timestamp": "2026-10-09T03:37:21.008680+00:00",
+      "symbol": "NVDA",
+      "side": "BUY",
+      "quantity": 0.1043,
+      "price": 230.59523572540283,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 98.96875833207778
+    },
+    {
+      "timestamp": "2026-10-09T03:37:21.013515+00:00",
+      "symbol": "GOOGL",
+      "side": "BUY",
+      "quantity": 0.0702,
+      "price": 348.4641535491943,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 74.50657475292434
+    },
+    {
+      "timestamp": "2026-10-09T03:37:21.025692+00:00",
+      "symbol": "AMD",
+      "side": "BUY",
+      "quantity": 0.0249,
+      "price": 620.990332672119,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 59.04391546938857
+    },
+    {
+      "timestamp": "2026-10-09T03:37:21.037768+00:00",
+      "symbol": "V",
+      "side": "BUY",
+      "quantity": 0.0799,
+      "price": 375.28755610656737,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 29.05843973647384
+    },
+    {
+      "timestamp": "2026-10-09T03:37:21.059503+00:00",
+      "symbol": "NICE",
+      "side": "BUY",
+      "quantity": 0.1264,
+      "price": 117.36865255737304,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 14.223042053221887
+    },
+    {
+      "timestamp": "2026-10-09T03:37:21.068006+00:00",
+      "symbol": "MNDY",
+      "side": "BUY",
+      "quantity": 0.1262,
+      "price": 88.95445866394043,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 2.9969893698326047
+    }
+  ],
+  "meta": {
+    "benchmark": {
+      "symbol": "SPY",
+      "start_price": 773.9299926757812,
+      "start_value": 150.0,
+      "start_date": "2026-10-09"
+    }
+  }
 }
