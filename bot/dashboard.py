@@ -9,19 +9,40 @@
 from __future__ import annotations
 
 import json
+import math
 import os
 from datetime import datetime, timezone
 
 from .portfolio import Portfolio
 
 
+def _is_finite_number(v) -> bool:
+    return isinstance(v, (int, float)) and math.isfinite(v)
+
+
+def _clean(obj):
+    """
+    מחליף כל NaN/Infinity ב-None (null ב-JSON). NaN אינו JSON חוקי,
+    והדפדפן מסרב לקרוא קובץ שמכיל אותו.
+    """
+    if isinstance(obj, float) and not math.isfinite(obj):
+        return None
+    if isinstance(obj, dict):
+        return {k: _clean(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [_clean(v) for v in obj]
+    return obj
+
+
 def _load_equity_history(path: str) -> list[dict]:
     if os.path.exists(path):
         try:
             with open(path, encoding="utf-8") as f:
-                return json.load(f)
+                history = json.load(f)
         except (json.JSONDecodeError, OSError):
             return []
+        # מסננים נקודות שבורות (NaN) שנכתבו בעבר
+        return [p for p in history if _is_finite_number(p.get("value"))]
     return []
 
 
@@ -108,12 +129,15 @@ def export(
     starting_cash: float,
 ) -> dict:
     history = _load_equity_history(equity_path)
-    history = _append_today(history, pf.total_value(prices, fx))
+    today_value = pf.total_value(prices, fx)
+    # לא מוסיפים נקודת הון שבורה; עדיף לדלג על יום מאשר לשבור את הקובץ
+    if _is_finite_number(today_value):
+        history = _append_today(history, today_value)
     with open(equity_path, "w", encoding="utf-8") as f:
-        json.dump(history, f, ensure_ascii=False, indent=2)
+        json.dump(_clean(history), f, ensure_ascii=False, indent=2, allow_nan=False)
 
-    snapshot = build_snapshot(pf, prices, fx, usd_ils, history, starting_cash)
+    snapshot = _clean(build_snapshot(pf, prices, fx, usd_ils, history, starting_cash))
     os.makedirs(os.path.dirname(dashboard_path) or ".", exist_ok=True)
     with open(dashboard_path, "w", encoding="utf-8") as f:
-        json.dump(snapshot, f, ensure_ascii=False, indent=2)
+        json.dump(snapshot, f, ensure_ascii=False, indent=2, allow_nan=False)
     return snapshot

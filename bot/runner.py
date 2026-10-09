@@ -45,7 +45,14 @@ def run_once(verbose: bool = True) -> Portfolio:
     for sym, df in universe.items():
         if df.empty or len(df) < C.STRATEGY_PARAMS.trend_sma:
             continue
-        price = float(df["close"].iloc[-1])
+        # yfinance מחזיר לפעמים מחיר סגירה ריק (NaN) לנר האחרון.
+        # משתמשים במחיר התקין האחרון, ומדלגים אם אין כזה.
+        valid_close = df["close"].dropna()
+        if valid_close.empty:
+            continue
+        price = float(valid_close.iloc[-1])
+        if not np.isfinite(price) or price <= 0:
+            continue
         prices_now[sym] = price
         rate = D.fx_to_usd(sym, usd_ils)
         fx_map[sym] = rate

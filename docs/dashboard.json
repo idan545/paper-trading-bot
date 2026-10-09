@@ -5,8 +5,8 @@
   "total_value": 106112.9,
   "cash": 1011.97,
   "invested": 105100.93,
-  "day_change": NaN,
-  "day_change_pct": NaN,
+  "day_change": 183.84,
+  "day_change_pct": 0.0017,
   "total_change_pct": 0.0611,
   "num_positions": 7,
   "num_trades": 79,
@@ -457,40 +457,12 @@
       "value": 104825.39
     },
     {
-      "date": "2026-09-26",
-      "value": NaN
-    },
-    {
-      "date": "2026-09-29",
-      "value": NaN
-    },
-    {
-      "date": "2026-09-30",
-      "value": NaN
-    },
-    {
-      "date": "2026-10-01",
-      "value": NaN
-    },
-    {
-      "date": "2026-10-02",
-      "value": NaN
-    },
-    {
-      "date": "2026-10-03",
-      "value": NaN
-    },
-    {
       "date": "2026-10-06",
       "value": 105326.66
     },
     {
       "date": "2026-10-07",
       "value": 105929.06
-    },
-    {
-      "date": "2026-10-08",
-      "value": NaN
     },
     {
       "date": "2026-10-09",
