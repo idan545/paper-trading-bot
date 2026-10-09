@@ -1,0 +1,6 @@
+# Netlify publishes the same static dashboard that GitHub Pages serves.
+# The folder was renamed from webapp/ to docs/ for GitHub Pages; this file
+# overrides the old "webapp" publish directory set in the Netlify UI.
+[build]
+  publish = "docs"
+  command = ""
