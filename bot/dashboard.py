@@ -46,13 +46,17 @@ def _load_equity_history(path: str) -> list[dict]:
     return []
 
 
-def _append_today(history: list[dict], total_value: float) -> list[dict]:
+def _append_today(history: list[dict], total_value: float,
+                  bench_value: float | None = None) -> list[dict]:
     """מוסיף/מעדכן את נקודת ההון של היום (לפי תאריך UTC)."""
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    point = {"date": today, "value": round(total_value, 2)}
+    if _is_finite_number(bench_value):
+        point["bench"] = round(bench_value, 2)
     if history and history[-1].get("date") == today:
-        history[-1]["value"] = round(total_value, 2)
+        history[-1] = point
     else:
-        history.append({"date": today, "value": round(total_value, 2)})
+        history.append(point)
     return history[-365:]  # שומרים שנה אחרונה
 
 
@@ -63,6 +67,7 @@ def build_snapshot(
     usd_ils: float,
     equity_history: list[dict],
     starting_cash: float,
+    benchmark: dict | None = None,
 ) -> dict:
     total = pf.total_value(prices, fx)
 
@@ -116,6 +121,8 @@ def build_snapshot(
         "positions": positions,
         "recent_trades": recent,
         "equity_history": equity_history,
+        "starting_cash": starting_cash,
+        "benchmark": benchmark,
     }
 
 
@@ -127,16 +134,19 @@ def export(
     dashboard_path: str,
     equity_path: str,
     starting_cash: float,
+    benchmark: dict | None = None,
 ) -> dict:
     history = _load_equity_history(equity_path)
     today_value = pf.total_value(prices, fx)
+    bench_value = benchmark.get("value") if benchmark else None
     # לא מוסיפים נקודת הון שבורה; עדיף לדלג על יום מאשר לשבור את הקובץ
     if _is_finite_number(today_value):
-        history = _append_today(history, today_value)
+        history = _append_today(history, today_value, bench_value)
     with open(equity_path, "w", encoding="utf-8") as f:
         json.dump(_clean(history), f, ensure_ascii=False, indent=2, allow_nan=False)
 
-    snapshot = _clean(build_snapshot(pf, prices, fx, usd_ils, history, starting_cash))
+    snapshot = _clean(build_snapshot(pf, prices, fx, usd_ils, history,
+                                     starting_cash, benchmark))
     os.makedirs(os.path.dirname(dashboard_path) or ".", exist_ok=True)
     with open(dashboard_path, "w", encoding="utf-8") as f:
         json.dump(snapshot, f, ensure_ascii=False, indent=2, allow_nan=False)

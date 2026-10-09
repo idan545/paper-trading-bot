@@ -20,6 +20,8 @@ class Position:
     quantity: float = 0.0
     avg_price: float = 0.0       # מחיר ממוצע במטבע המקומי של הסימבול
     currency: str = "USD"
+    stop: float = 0.0            # מחיר stop-loss (0 = לא הוגדר)
+    target: float = 0.0          # מחיר take-profit (0 = לא הוגדר)
 
     def market_value(self, price: float) -> float:
         return self.quantity * price
@@ -59,6 +61,7 @@ class Portfolio:
         self.min_commission = min_commission
         self.positions: dict[str, Position] = {}
         self.trades: list[Trade] = []
+        self.meta: dict = {}     # נתונים נוספים שנשמרים עם התיק (למשל benchmark)
 
     # ----- עזרי עמלות -----
     def _commission(self, notional_base: float) -> float:
@@ -143,6 +146,7 @@ class Portfolio:
             "min_commission": self.min_commission,
             "positions": {s: asdict(p) for s, p in self.positions.items()},
             "trades": [asdict(t) for t in self.trades],
+            "meta": self.meta,
         }
 
     def save(self, path: str) -> None:
@@ -163,4 +167,5 @@ class Portfolio:
             s: Position(**pos) for s, pos in d.get("positions", {}).items()
         }
         p.trades = [Trade(**t) for t in d.get("trades", [])]
+        p.meta = d.get("meta", {})
         return p

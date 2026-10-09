@@ -105,6 +105,23 @@
   button.refresh:focus-visible{outline:2px solid var(--amber); outline-offset:2px}
   .disclaimer{font-size:10px; color:var(--faint); max-width:60%; line-height:1.5}
 
+  /* ---- benchmark / methodology ---- */
+  .notice{font-size:11.5px; color:var(--muted); line-height:1.55; background:var(--bg2);
+    border:1px solid var(--line-soft); border-radius:11px; padding:9px 12px; margin:0 0 18px}
+  .bench{background:var(--bg2); border:1px solid var(--line-soft); border-radius:13px; padding:13px 14px; margin-bottom:24px}
+  .bench .row1{display:flex; justify-content:space-between; align-items:baseline; gap:10px; flex-wrap:wrap}
+  .bench .k{font-size:12px; color:var(--muted)}
+  .bench .v{font-family:"IBM Plex Mono",monospace; font-size:15px; font-variant-numeric:tabular-nums}
+  .bench .verdict{font-size:12.5px; margin-top:8px; line-height:1.5}
+  .legend{display:flex; gap:14px; direction:rtl; font-size:10.5px; color:var(--faint); padding:4px 6px 0}
+  .legend i{display:inline-block; width:14px; height:0; border-top:2px solid; vertical-align:middle; margin-inline-start:5px}
+  .legend i.dash{border-top-style:dashed}
+  details.how{background:var(--bg2); border:1px solid var(--line-soft); border-radius:13px; padding:12px 14px; margin-bottom:22px}
+  details.how summary{cursor:pointer; font-family:"Fraunces",serif; font-weight:600; font-size:14px; color:var(--ink)}
+  details.how summary:focus-visible{outline:2px solid var(--amber); outline-offset:3px; border-radius:4px}
+  details.how h3{font-size:12px; color:var(--amber); margin:14px 0 6px; font-weight:600}
+  details.how ul{margin:0; padding-inline-start:18px; font-size:12.5px; color:var(--muted); line-height:1.7}
+
   /* ---- states ---- */
   .state{padding:60px 20px; text-align:center; color:var(--muted)}
   .state h3{font-family:"Fraunces",serif; font-weight:600; color:var(--ink); margin:0 0 8px; font-size:18px}
@@ -152,7 +169,9 @@ function equitySVG(history){
   if(!history || history.length < 2) return "";
   const w = 100, h = 100, pad = 4;
   const vals = history.map(p => p.value);
-  const min = Math.min(...vals), max = Math.max(...vals);
+  const hasBench = history.every(p => typeof p.bench === "number");
+  const all = hasBench ? vals.concat(history.map(p => p.bench)) : vals;
+  const min = Math.min(...all), max = Math.max(...all);
   const span = (max - min) || 1;
   const x = i => pad + (w - 2*pad) * (i/(history.length-1));
   const y = v => (h - pad) - (h - 2*pad) * ((v - min)/span);
@@ -160,6 +179,11 @@ function equitySVG(history){
   const stroke = rising ? "var(--gain)" : "var(--loss)";
   let line = history.map((p,i)=>`${i?"L":"M"}${x(i).toFixed(2)},${y(p.value).toFixed(2)}`).join(" ");
   let area = line + ` L${x(history.length-1).toFixed(2)},${h-pad} L${x(0).toFixed(2)},${h-pad} Z`;
+  const benchLine = hasBench
+    ? `<path d="${history.map((p,i)=>`${i?"L":"M"}${x(i).toFixed(2)},${y(p.bench).toFixed(2)}`).join(" ")}"
+        fill="none" stroke="var(--muted)" stroke-width="1.2" stroke-dasharray="3 3"
+        vector-effect="non-scaling-stroke"/>`
+    : "";
   const lastX = x(history.length-1), lastY = y(vals[vals.length-1]);
   return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" role="img" aria-label="עקומת הון">
     <defs><linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
@@ -167,6 +191,7 @@ function equitySVG(history){
       <stop offset="100%" stop-color="${rising?'#84c0a0':'#df8a6c'}" stop-opacity="0"/>
     </linearGradient></defs>
     <path d="${area}" fill="url(#g)"/>
+    ${benchLine}
     <path d="${line}" fill="none" stroke="${stroke}" stroke-width="1.6"
       stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
     <circle cx="${lastX.toFixed(2)}" cy="${lastY.toFixed(2)}" r="2.2" fill="${rising?'#84c0a0':'#df8a6c'}" vector-effect="non-scaling-stroke"/>
@@ -208,6 +233,47 @@ function tradeRow(t){
   </div>`;
 }
 
+function benchCard(d){
+  const b = d.benchmark;
+  if(!b) return "";
+  const bot = d.total_change_pct, idx = b.change_pct;
+  const diff = bot - idx;
+  const verdict = Math.abs(diff) < 0.0005
+    ? `הבוט והמדד כרגע באותה נקודה.`
+    : diff > 0
+      ? `הבוט מקדים את המדד ב-${(diff*100).toFixed(2)} נקודות אחוז.`
+      : `המדד מקדים את הבוט ב-${(-diff*100).toFixed(2)} נקודות אחוז. קנייה פשוטה של המדד הייתה עדיפה עד עכשיו.`;
+  return `<div class="bench">
+    <div class="row1">
+      <span class="k">אילו אותם ${fmtMoney(d.starting_cash||0,"USD")} הושקעו ב-${new Date(b.start_date).toLocaleDateString("he-IL")} במדד S&amp;P&nbsp;500 (${b.symbol})</span>
+      <span class="v ${cls(idx)}">${fmtMoney(b.value,"USD")} · ${fmtPct(idx)}</span>
+    </div>
+    <div class="verdict ${diff>=0?'up':'down'}">${verdict}</div>
+  </div>`;
+}
+
+function howItWorks(d){
+  return `<details class="how">
+    <summary>איך הבוט עובד, ומה הוא לא אומר</summary>
+    <h3>הכללים</h3>
+    <ul>
+      <li>מתחיל עם ${fmtMoney(d.starting_cash||0,"USD")} וירטואליים. אין כאן כסף אמיתי.</li>
+      <li>רץ פעם ביום אחרי סגירת המסחר בארה"ב, על כ-20 מניות גדולות (כולל חברות ישראליות שנסחרות בארה"ב).</li>
+      <li>קונה רק כשהמחיר מעל הממוצע של 50 יום, ה-MACD חיובי וה-RSI מתחת ל-75. מוכר כשהמומנטום מתהפך.</li>
+      <li>מסכן כ-1% מהתיק בכל עסקה, ולא יותר מ-20% מהתיק במניה אחת. לכל פוזיציה יש stop-loss ויעד רווח.</li>
+      <li>קונה חלקי מניות, בלי עמלות, ועם החלקה של 0.05% בכל קנייה ומכירה.</li>
+    </ul>
+    <h3>מה כדאי לדעת</h3>
+    <ul>
+      <li>זו סימולציה לימודית, לא המלצה לקנות או למכור. אין כאן ייעוץ השקעות.</li>
+      <li>הביצוע הוא במחיר הסגירה. בפועל, פקודה שנשלחת אחרי הסגירה מתבצעת בפתיחה של היום הבא, במחיר אחר.</li>
+      <li>לא מחושבים מסים, ולא כל ברוקר מאפשר חלקי מניות או מסחר בלי עמלות.</li>
+      <li>תקופה של שבועות או חודשים היא מדגם קטן. רווח או הפסד בה יכולים להיות מזל.</li>
+      <li>הקו המקווקו בגרף הוא המדד: אותו סכום שהושקע ב-S&P 500 ופשוט הוחזק. אם הבוט לא עוקף אותו לאורך זמן, אין לו יתרון.</li>
+    </ul>
+  </details>`;
+}
+
 function render(d){
   const base = d.base_currency;
   const dc = cls(d.day_change), tc = cls(d.total_change_pct);
@@ -235,14 +301,19 @@ function render(d){
       <div class="value mono">${fmtMoney(d.total_value, base)}</div>
       <div class="changes">
         <span class="chg ${dc}"><span class="cap">היום</span>${fmtSigned(d.day_change, base)} · ${fmtPct(d.day_change_pct)}</span>
-        <span class="chg ${tc}"><span class="cap">מתחילת המעקב</span>${fmtPct(d.total_change_pct)}</span>
+        <span class="chg ${tc}"><span class="cap">מ-${fmtMoney(d.starting_cash||0, base)}</span>${fmtPct(d.total_change_pct)}</span>
       </div>
     </div>
+
+    <div class="notice">סימולציה לימודית בכסף וירטואלי. לא המלצה ולא ייעוץ השקעות.</div>
 
     ${d.equity_history && d.equity_history.length >= 2 ? `<div class="curve">
       ${equitySVG(d.equity_history)}
       <div class="ends"><span>${d.equity_history[0].date}</span><span>${d.equity_history.at(-1).date}</span></div>
+      ${d.benchmark ? `<div class="legend"><span><i style="color:${d.total_change_pct >= 0 ? 'var(--gain)' : 'var(--loss)'}"></i>הבוט</span><span><i class="dash" style="color:var(--muted)"></i>S&amp;P 500</span></div>` : ""}
     </div>` : ""}
+
+    ${benchCard(d)}
 
     <div class="strip">
       <div class="stat"><div class="k">מזומן</div><div class="v">${fmtMoney(d.cash, base)}</div></div>
@@ -255,6 +326,8 @@ function render(d){
 
     <div class="sec-h"><h2>עסקאות אחרונות</h2><span class="count">${d.num_trades} סה״כ</span></div>
     ${trades}
+
+    ${howItWorks(d)}
 
     <div class="foot">
       <span class="disclaimer">סימולציה בלבד — אין כאן ייעוץ השקעות. ביצועי עבר אינם מבטיחים עתיד.</span>
