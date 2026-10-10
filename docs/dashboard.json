@@ -1,13 +1,13 @@
 {
-  "as_of": "2026-10-09T03:47:27+00:00",
+  "as_of": "2026-10-10T01:08:04+00:00",
   "base_currency": "USD",
-  "usd_ils": 3.0568,
-  "total_value": 149.93,
-  "cash": 3.0,
+  "usd_ils": 3.0599,
+  "total_value": 449.93,
+  "cash": 303.0,
   "invested": 146.93,
-  "day_change": -0.07,
-  "day_change_pct": -0.0005,
-  "total_change_pct": -0.0005,
+  "day_change": -0.0,
+  "day_change_pct": -0.0,
+  "total_change_pct": -0.0002,
   "num_positions": 7,
   "num_trades": 7,
   "positions": [
@@ -174,18 +174,36 @@
       "value": 149.93,
       "contributed": 150.0,
       "bench": 150.0
+    },
+    {
+      "date": "2026-10-10",
+      "value": 449.93,
+      "contributed": 450.0,
+      "bench": 450.0
     }
   ],
   "starting_cash": 150.0,
-  "deposited": 0,
-  "contributed": 150.0,
+  "deposited": 300.0,
+  "contributed": 450.0,
   "profit": -0.07,
-  "num_deposits": 0,
+  "num_deposits": 1,
   "next_deposit": {
-    "date": "2026-10-10",
+    "date": "2026-11-10",
     "amount": 300.0
   },
   "activity": [
+    {
+      "type": "DEPOSIT",
+      "timestamp": "2026-10-10T01:08:04.602160+00:00",
+      "date": "2026-10-10",
+      "month": "2026-10",
+      "total": 300.0,
+      "currency": "USD",
+      "cash_before": 3.0,
+      "cash_after": 303.0,
+      "usd_ils": 3.0599,
+      "reason_text": "הפרשה חודשית מהמשכורת"
+    },
     {
       "type": "BUY",
       "timestamp": "2026-10-09T03:37:21.068006+00:00",
@@ -315,9 +333,9 @@
   ],
   "benchmark": {
     "symbol": "SPY",
-    "value": 150.0,
-    "contributed": 150.0,
-    "change_pct": 0.0,
+    "value": 450.0,
+    "contributed": 450.0,
+    "change_pct": -0.0,
     "start_date": "2026-10-09"
   }
 }

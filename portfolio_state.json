@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 2.9969893698326047,
+  "cash": 302.9969893698326,
   "commission_rate": 0.0,
   "min_commission": 0.0,
   "positions": {
@@ -195,9 +195,23 @@
       "start_price": 773.9299926757812,
       "start_value": 150.0,
       "start_date": "2026-10-09",
-      "shares": 0.19381598002345254,
-      "invested_months": []
+      "shares": 0.5814479400703576,
+      "invested_months": [
+        "2026-10"
+      ]
     },
-    "start_date": "2026-10-09"
+    "start_date": "2026-10-09",
+    "deposits": [
+      {
+        "month": "2026-10",
+        "date": "2026-10-10",
+        "credited_at": "2026-10-10T01:08:04.602160+00:00",
+        "amount": 300.0,
+        "cash_before": 2.9969893698326047,
+        "cash_after": 302.9969893698326,
+        "usd_ils": 3.0599000453948975,
+        "note": "הפרשה חודשית מהמשכורת"
+      }
+    ]
   }
 }
