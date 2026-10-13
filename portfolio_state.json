@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 302.9969893698326,
+  "cash": 5.286686357478352,
   "commission_rate": 0.0,
   "min_commission": 0.0,
   "positions": {
@@ -11,14 +11,6 @@
       "currency": "USD",
       "stop": 493.8111355832695,
       "target": 580.9915998661756
-    },
-    "NVDA": {
-      "symbol": "NVDA",
-      "quantity": 0.1043,
-      "avg_price": 230.59523572540283,
-      "currency": "USD",
-      "stop": 216.22225636059335,
-      "target": 259.34119445502176
     },
     "GOOGL": {
       "symbol": "GOOGL",
@@ -59,6 +51,38 @@
       "currency": "USD",
       "stop": 77.0786746522025,
       "target": 112.70602668741631
+    },
+    "AMZN": {
+      "symbol": "AMZN",
+      "quantity": 0.311,
+      "avg_price": 259.6597637786865,
+      "currency": "USD",
+      "stop": 245.16784999255512,
+      "target": 288.6435913509493
+    },
+    "WMT": {
+      "symbol": "WMT",
+      "quantity": 0.7976,
+      "avg_price": 113.13654183197019,
+      "currency": "USD",
+      "stop": 107.76638349288444,
+      "target": 123.87685851014172
+    },
+    "COST": {
+      "symbol": "COST",
+      "quantity": 0.0939,
+      "avg_price": 959.919722442627,
+      "currency": "USD",
+      "stop": 923.2017124944174,
+      "target": 1033.3557423390462
+    },
+    "TEVA": {
+      "symbol": "TEVA",
+      "quantity": 1.4609,
+      "avg_price": 41.19058316802978,
+      "currency": "USD",
+      "stop": 38.10289845815743,
+      "target": 47.36595258777449
     }
   },
   "trades": [
@@ -185,6 +209,96 @@
       "reason": "signal",
       "stop": 77.0786746522025,
       "target": 112.70602668741631,
+      "avg_cost": 0.0,
+      "realized_pnl": 0.0
+    },
+    {
+      "timestamp": "2026-10-13T02:40:48.486304+00:00",
+      "symbol": "NVDA",
+      "side": "SELL",
+      "quantity": 0.1043,
+      "price": 226.20684732055665,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 326.59036354536664,
+      "cash_before": 302.9969893698326,
+      "total": 23.59337417553406,
+      "usd_ils": 3.0759999752044678,
+      "reason": "signal",
+      "stop": 0.0,
+      "target": 0.0,
+      "avg_cost": 230.59523572540283,
+      "realized_pnl": -0.4577089106254568
+    },
+    {
+      "timestamp": "2026-10-13T02:40:48.490500+00:00",
+      "symbol": "AMZN",
+      "side": "BUY",
+      "quantity": 0.311,
+      "price": 259.6597637786865,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 245.83617701019514,
+      "cash_before": 326.59036354536664,
+      "total": 80.7541865351715,
+      "usd_ils": 3.0759999752044678,
+      "reason": "signal",
+      "stop": 245.16784999255512,
+      "target": 288.6435913509493,
+      "avg_cost": 0.0,
+      "realized_pnl": 0.0
+    },
+    {
+      "timestamp": "2026-10-13T02:40:48.501654+00:00",
+      "symbol": "WMT",
+      "side": "BUY",
+      "quantity": 0.7976,
+      "price": 113.1365418319702,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 155.59847124501573,
+      "cash_before": 245.83617701019514,
+      "total": 90.23770576517943,
+      "usd_ils": 3.0759999752044678,
+      "reason": "signal",
+      "stop": 107.76638349288444,
+      "target": 123.87685851014172,
+      "avg_cost": 0.0,
+      "realized_pnl": 0.0
+    },
+    {
+      "timestamp": "2026-10-13T02:40:48.504055+00:00",
+      "symbol": "COST",
+      "side": "BUY",
+      "quantity": 0.0939,
+      "price": 959.919722442627,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 65.46200930765306,
+      "cash_before": 155.59847124501573,
+      "total": 90.13646193736267,
+      "usd_ils": 3.0759999752044678,
+      "reason": "signal",
+      "stop": 923.2017124944174,
+      "target": 1033.3557423390462,
+      "avg_cost": 0.0,
+      "realized_pnl": 0.0
+    },
+    {
+      "timestamp": "2026-10-13T02:40:48.508104+00:00",
+      "symbol": "TEVA",
+      "side": "BUY",
+      "quantity": 1.4609,
+      "price": 41.19058316802978,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 5.286686357478352,
+      "cash_before": 65.46200930765306,
+      "total": 60.17532295017471,
+      "usd_ils": 3.0759999752044678,
+      "reason": "signal",
+      "stop": 38.10289845815743,
+      "target": 47.36595258777449,
       "avg_cost": 0.0,
       "realized_pnl": 0.0
     }
