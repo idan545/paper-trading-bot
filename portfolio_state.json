@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 5.286686357478352,
+  "cash": 18.71650596695711,
   "commission_rate": 0.0,
   "min_commission": 0.0,
   "positions": {
@@ -19,14 +19,6 @@
       "currency": "USD",
       "stop": 327.1154796393806,
       "target": 391.16150136882163
-    },
-    "AMD": {
-      "symbol": "AMD",
-      "quantity": 0.0249,
-      "avg_price": 620.990332672119,
-      "currency": "USD",
-      "stop": 560.8030748633249,
-      "target": 741.3648482897072
     },
     "V": {
       "symbol": "V",
@@ -301,6 +293,24 @@
       "target": 47.36595258777449,
       "avg_cost": 0.0,
       "realized_pnl": 0.0
+    },
+    {
+      "timestamp": "2026-10-15T23:45:27.120242+00:00",
+      "symbol": "AMD",
+      "side": "SELL",
+      "quantity": 0.0249,
+      "price": 539.3501851196289,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 18.71650596695711,
+      "cash_before": 5.286686357478352,
+      "total": 13.42981960947876,
+      "usd_ils": 3.0994999408721924,
+      "reason": "stop",
+      "stop": 0.0,
+      "target": 0.0,
+      "avg_cost": 620.990332672119,
+      "realized_pnl": -2.032839674057004
     }
   ],
   "meta": {
