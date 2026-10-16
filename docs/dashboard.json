@@ -1,15 +1,15 @@
 {
-  "as_of": "2026-10-15T23:45:27+00:00",
+  "as_of": "2026-10-16T23:46:23+00:00",
   "base_currency": "USD",
-  "usd_ils": 3.0995,
-  "total_value": 454.57,
-  "cash": 18.72,
-  "invested": 435.85,
-  "day_change": 4.32,
-  "day_change_pct": 0.0096,
-  "total_change_pct": 0.0102,
-  "num_positions": 9,
-  "num_trades": 13,
+  "usd_ils": 3.1112,
+  "total_value": 453.68,
+  "cash": 42.61,
+  "invested": 411.07,
+  "day_change": -0.89,
+  "day_change_pct": -0.002,
+  "total_change_pct": 0.0082,
+  "num_positions": 8,
+  "num_trades": 14,
   "positions": [
     {
       "symbol": "WMT",
@@ -17,10 +17,10 @@
       "is_tase": false,
       "quantity": 0.7976,
       "avg_price": 113.14,
-      "current_price": 117.87,
-      "unrealized_pnl": 3.78,
-      "unrealized_pnl_pct": 0.0418,
-      "value_base": 94.01,
+      "current_price": 118.81,
+      "unrealized_pnl": 4.53,
+      "unrealized_pnl_pct": 0.0501,
+      "value_base": 94.76,
       "cost_base": 90.24,
       "stop": 107.77,
       "target": 123.88
@@ -31,10 +31,10 @@
       "is_tase": false,
       "quantity": 0.0939,
       "avg_price": 959.92,
-      "current_price": 978.01,
-      "unrealized_pnl": 1.7,
-      "unrealized_pnl_pct": 0.0188,
-      "value_base": 91.84,
+      "current_price": 989.11,
+      "unrealized_pnl": 2.74,
+      "unrealized_pnl_pct": 0.0304,
+      "value_base": 92.88,
       "cost_base": 90.14,
       "stop": 923.2,
       "target": 1033.36
@@ -45,10 +45,10 @@
       "is_tase": false,
       "quantity": 0.311,
       "avg_price": 259.66,
-      "current_price": 254.76,
-      "unrealized_pnl": -1.52,
-      "unrealized_pnl_pct": -0.0189,
-      "value_base": 79.23,
+      "current_price": 250.0,
+      "unrealized_pnl": -3.0,
+      "unrealized_pnl_pct": -0.0372,
+      "value_base": 77.75,
       "cost_base": 80.75,
       "stop": 245.17,
       "target": 288.64
@@ -59,10 +59,10 @@
       "is_tase": false,
       "quantity": 1.4609,
       "avg_price": 41.19,
-      "current_price": 41.11,
-      "unrealized_pnl": -0.12,
-      "unrealized_pnl_pct": -0.002,
-      "value_base": 60.06,
+      "current_price": 41.5,
+      "unrealized_pnl": 0.45,
+      "unrealized_pnl_pct": 0.0075,
+      "value_base": 60.63,
       "cost_base": 60.18,
       "stop": 38.1,
       "target": 47.37
@@ -73,10 +73,10 @@
       "is_tase": false,
       "quantity": 0.0799,
       "avg_price": 375.29,
-      "current_price": 399.75,
-      "unrealized_pnl": 1.95,
-      "unrealized_pnl_pct": 0.0652,
-      "value_base": 31.94,
+      "current_price": 402.61,
+      "unrealized_pnl": 2.18,
+      "unrealized_pnl_pct": 0.0728,
+      "value_base": 32.17,
       "cost_base": 29.99,
       "stop": 359.92,
       "target": 406.02
@@ -87,27 +87,13 @@
       "is_tase": false,
       "quantity": 0.0516,
       "avg_price": 522.87,
-      "current_price": 539.44,
-      "unrealized_pnl": 0.85,
-      "unrealized_pnl_pct": 0.0317,
-      "value_base": 27.84,
+      "current_price": 529.05,
+      "unrealized_pnl": 0.32,
+      "unrealized_pnl_pct": 0.0118,
+      "value_base": 27.3,
       "cost_base": 26.98,
       "stop": 493.81,
       "target": 580.99
-    },
-    {
-      "symbol": "GOOGL",
-      "currency": "USD",
-      "is_tase": false,
-      "quantity": 0.0702,
-      "avg_price": 348.46,
-      "current_price": 349.22,
-      "unrealized_pnl": 0.05,
-      "unrealized_pnl_pct": 0.0022,
-      "value_base": 24.52,
-      "cost_base": 24.46,
-      "stop": 327.12,
-      "target": 391.16
     },
     {
       "symbol": "NICE",
@@ -115,10 +101,10 @@
       "is_tase": false,
       "quantity": 0.1264,
       "avg_price": 117.37,
-      "current_price": 114.91,
-      "unrealized_pnl": -0.31,
-      "unrealized_pnl_pct": -0.0209,
-      "value_base": 14.52,
+      "current_price": 112.17,
+      "unrealized_pnl": -0.66,
+      "unrealized_pnl_pct": -0.0443,
+      "value_base": 14.18,
       "cost_base": 14.84,
       "stop": 105.51,
       "target": 141.09
@@ -129,16 +115,24 @@
       "is_tase": false,
       "quantity": 0.1262,
       "avg_price": 88.95,
-      "current_price": 94.3,
-      "unrealized_pnl": 0.67,
-      "unrealized_pnl_pct": 0.0601,
-      "value_base": 11.9,
+      "current_price": 90.37,
+      "unrealized_pnl": 0.18,
+      "unrealized_pnl_pct": 0.0159,
+      "value_base": 11.4,
       "cost_base": 11.23,
       "stop": 77.08,
       "target": 112.71
     }
   ],
   "recent_trades": [
+    {
+      "timestamp": "2026-10-16T23:46:22.819627+00:00",
+      "symbol": "GOOGL",
+      "side": "SELL",
+      "quantity": 0.0702,
+      "price": 340.42,
+      "currency": "USD"
+    },
     {
       "timestamp": "2026-10-15T23:45:27.120242+00:00",
       "symbol": "AMD",
@@ -226,14 +220,6 @@
       "quantity": 0.0702,
       "price": 348.46,
       "currency": "USD"
-    },
-    {
-      "timestamp": "2026-10-09T03:37:21.008680+00:00",
-      "symbol": "NVDA",
-      "side": "BUY",
-      "quantity": 0.1043,
-      "price": 230.6,
-      "currency": "USD"
     }
   ],
   "equity_history": [
@@ -266,18 +252,42 @@
       "value": 454.57,
       "contributed": 450.0,
       "bench": 448.76
+    },
+    {
+      "date": "2026-10-16",
+      "value": 453.68,
+      "contributed": 450.0,
+      "bench": 443.79
     }
   ],
   "starting_cash": 150.0,
   "deposited": 300.0,
   "contributed": 450.0,
-  "profit": 4.57,
+  "profit": 3.68,
   "num_deposits": 1,
   "next_deposit": {
     "date": "2026-11-10",
     "amount": 300.0
   },
   "activity": [
+    {
+      "type": "SELL",
+      "timestamp": "2026-10-16T23:46:22.819627+00:00",
+      "symbol": "GOOGL",
+      "quantity": 0.0702,
+      "price": 340.42,
+      "currency": "USD",
+      "total": 23.9,
+      "commission": 0.0,
+      "cash_before": 18.72,
+      "cash_after": 42.61,
+      "usd_ils": 3.1112,
+      "usd_ils_estimated": false,
+      "reason": "signal",
+      "reason_text": "איתות של האסטרטגיה",
+      "avg_cost": 348.46,
+      "realized_pnl": -0.56
+    },
     {
       "type": "SELL",
       "timestamp": "2026-10-15T23:45:27.120242+00:00",
@@ -527,9 +537,9 @@
   ],
   "benchmark": {
     "symbol": "SPY",
-    "value": 448.76,
+    "value": 443.79,
     "contributed": 450.0,
-    "change_pct": -0.0028,
+    "change_pct": -0.0138,
     "start_date": "2026-10-09"
   }
 }

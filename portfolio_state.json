@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 18.71650596695711,
+  "cash": 42.61396900100557,
   "commission_rate": 0.0,
   "min_commission": 0.0,
   "positions": {
@@ -11,14 +11,6 @@
       "currency": "USD",
       "stop": 493.8111355832695,
       "target": 580.9915998661756
-    },
-    "GOOGL": {
-      "symbol": "GOOGL",
-      "quantity": 0.0702,
-      "avg_price": 348.4641535491943,
-      "currency": "USD",
-      "stop": 327.1154796393806,
-      "target": 391.16150136882163
     },
     "V": {
       "symbol": "V",
@@ -311,6 +303,24 @@
       "target": 0.0,
       "avg_cost": 620.990332672119,
       "realized_pnl": -2.032839674057004
+    },
+    {
+      "timestamp": "2026-10-16T23:46:22.819627+00:00",
+      "symbol": "GOOGL",
+      "side": "SELL",
+      "quantity": 0.0702,
+      "price": 340.4197013397217,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 42.61396900100557,
+      "cash_before": 18.71650596695711,
+      "total": 23.897463034048464,
+      "usd_ils": 3.1112000942230225,
+      "reason": "signal",
+      "stop": 0.0,
+      "target": 0.0,
+      "avg_cost": 348.4641535491943,
+      "realized_pnl": -0.5647205451049752
     }
   ],
   "meta": {
