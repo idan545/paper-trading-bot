@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 42.61396900100557,
+  "cash": 75.08267011441805,
   "commission_rate": 0.0,
   "min_commission": 0.0,
   "positions": {
@@ -11,14 +11,6 @@
       "currency": "USD",
       "stop": 493.8111355832695,
       "target": 580.9915998661756
-    },
-    "V": {
-      "symbol": "V",
-      "quantity": 0.0799,
-      "avg_price": 375.28755610656737,
-      "currency": "USD",
-      "stop": 359.9220104905228,
-      "target": 406.01864733865654
     },
     "NICE": {
       "symbol": "NICE",
@@ -321,6 +313,24 @@
       "target": 0.0,
       "avg_cost": 348.4641535491943,
       "realized_pnl": -0.5647205451049752
+    },
+    {
+      "timestamp": "2026-10-22T00:08:06.456153+00:00",
+      "symbol": "V",
+      "side": "SELL",
+      "quantity": 0.0799,
+      "price": 406.3667223205567,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 75.08267011441805,
+      "cash_before": 42.61396900100557,
+      "total": 32.46870111341248,
+      "usd_ils": 3.0894999504089355,
+      "reason": "target",
+      "stop": 0.0,
+      "target": 0.0,
+      "avg_cost": 375.28755610656737,
+      "realized_pnl": 2.4832253804977458
     }
   ],
   "meta": {
