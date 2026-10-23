@@ -1,15 +1,15 @@
 {
-  "as_of": "2026-10-23T00:04:57+00:00",
+  "as_of": "2026-10-23T23:55:37+00:00",
   "base_currency": "USD",
-  "usd_ils": 3.1102,
-  "total_value": 458.39,
-  "cash": 75.08,
-  "invested": 383.31,
-  "day_change": -0.08,
-  "day_change_pct": -0.0002,
-  "total_change_pct": 0.0186,
-  "num_positions": 7,
-  "num_trades": 15,
+  "usd_ils": 3.0991,
+  "total_value": 455.35,
+  "cash": 29.98,
+  "invested": 425.36,
+  "day_change": -3.12,
+  "day_change_pct": -0.0068,
+  "total_change_pct": 0.0119,
+  "num_positions": 8,
+  "num_trades": 18,
   "positions": [
     {
       "symbol": "WMT",
@@ -17,10 +17,10 @@
       "is_tase": false,
       "quantity": 0.7976,
       "avg_price": 113.14,
-      "current_price": 117.8,
-      "unrealized_pnl": 3.72,
-      "unrealized_pnl_pct": 0.0412,
-      "value_base": 93.96,
+      "current_price": 119.89,
+      "unrealized_pnl": 5.39,
+      "unrealized_pnl_pct": 0.0597,
+      "value_base": 95.62,
       "cost_base": 90.24,
       "stop": 107.77,
       "target": 123.88
@@ -31,27 +31,27 @@
       "is_tase": false,
       "quantity": 0.0939,
       "avg_price": 959.92,
-      "current_price": 998.31,
-      "unrealized_pnl": 3.6,
-      "unrealized_pnl_pct": 0.04,
-      "value_base": 93.74,
+      "current_price": 1003.32,
+      "unrealized_pnl": 4.08,
+      "unrealized_pnl_pct": 0.0452,
+      "value_base": 94.21,
       "cost_base": 90.14,
       "stop": 923.2,
       "target": 1033.36
     },
     {
-      "symbol": "AMZN",
+      "symbol": "V",
       "currency": "USD",
       "is_tase": false,
-      "quantity": 0.311,
-      "avg_price": 259.66,
-      "current_price": 262.37,
-      "unrealized_pnl": 0.84,
-      "unrealized_pnl_pct": 0.0104,
-      "value_base": 81.6,
-      "cost_base": 80.75,
-      "stop": 245.17,
-      "target": 288.64
+      "quantity": 0.2184,
+      "avg_price": 408.12,
+      "current_price": 407.92,
+      "unrealized_pnl": -0.04,
+      "unrealized_pnl_pct": -0.0005,
+      "value_base": 89.09,
+      "cost_base": 89.13,
+      "stop": 391.21,
+      "target": 441.95
     },
     {
       "symbol": "TEVA",
@@ -59,13 +59,27 @@
       "is_tase": false,
       "quantity": 1.4609,
       "avg_price": 41.19,
-      "current_price": 40.62,
-      "unrealized_pnl": -0.83,
-      "unrealized_pnl_pct": -0.0139,
-      "value_base": 59.34,
+      "current_price": 39.41,
+      "unrealized_pnl": -2.6,
+      "unrealized_pnl_pct": -0.0432,
+      "value_base": 57.57,
       "cost_base": 60.18,
       "stop": 38.1,
       "target": 47.37
+    },
+    {
+      "symbol": "WIX",
+      "currency": "USD",
+      "is_tase": false,
+      "quantity": 0.4032,
+      "avg_price": 81.98,
+      "current_price": 81.94,
+      "unrealized_pnl": -0.02,
+      "unrealized_pnl_pct": -0.0005,
+      "value_base": 33.04,
+      "cost_base": 33.05,
+      "stop": 70.69,
+      "target": 104.57
     },
     {
       "symbol": "MSFT",
@@ -73,10 +87,10 @@
       "is_tase": false,
       "quantity": 0.0516,
       "avg_price": 522.87,
-      "current_price": 532.95,
-      "unrealized_pnl": 0.52,
-      "unrealized_pnl_pct": 0.0193,
-      "value_base": 27.5,
+      "current_price": 524.51,
+      "unrealized_pnl": 0.08,
+      "unrealized_pnl_pct": 0.0031,
+      "value_base": 27.06,
       "cost_base": 26.98,
       "stop": 493.81,
       "target": 580.99
@@ -87,10 +101,10 @@
       "is_tase": false,
       "quantity": 0.1264,
       "avg_price": 117.37,
-      "current_price": 114.95,
-      "unrealized_pnl": -0.31,
-      "unrealized_pnl_pct": -0.0206,
-      "value_base": 14.53,
+      "current_price": 121.18,
+      "unrealized_pnl": 0.48,
+      "unrealized_pnl_pct": 0.0325,
+      "value_base": 15.32,
       "cost_base": 14.84,
       "stop": 105.51,
       "target": 141.09
@@ -101,16 +115,40 @@
       "is_tase": false,
       "quantity": 0.1262,
       "avg_price": 88.95,
-      "current_price": 100.15,
-      "unrealized_pnl": 1.41,
-      "unrealized_pnl_pct": 0.1259,
-      "value_base": 12.64,
+      "current_price": 106.53,
+      "unrealized_pnl": 2.22,
+      "unrealized_pnl_pct": 0.1976,
+      "value_base": 13.44,
       "cost_base": 11.23,
       "stop": 77.08,
       "target": 112.71
     }
   ],
   "recent_trades": [
+    {
+      "timestamp": "2026-10-23T23:55:37.304998+00:00",
+      "symbol": "WIX",
+      "side": "BUY",
+      "quantity": 0.4032,
+      "price": 81.98,
+      "currency": "USD"
+    },
+    {
+      "timestamp": "2026-10-23T23:55:37.277185+00:00",
+      "symbol": "V",
+      "side": "BUY",
+      "quantity": 0.2184,
+      "price": 408.12,
+      "currency": "USD"
+    },
+    {
+      "timestamp": "2026-10-23T23:55:37.260770+00:00",
+      "symbol": "AMZN",
+      "side": "SELL",
+      "quantity": 0.311,
+      "price": 247.88,
+      "currency": "USD"
+    },
     {
       "timestamp": "2026-10-22T00:08:06.456153+00:00",
       "symbol": "V",
@@ -182,30 +220,6 @@
       "quantity": 0.1262,
       "price": 88.95,
       "currency": "USD"
-    },
-    {
-      "timestamp": "2026-10-09T03:37:21.059503+00:00",
-      "symbol": "NICE",
-      "side": "BUY",
-      "quantity": 0.1264,
-      "price": 117.37,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-10-09T03:37:21.037768+00:00",
-      "symbol": "V",
-      "side": "BUY",
-      "quantity": 0.0799,
-      "price": 375.29,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-10-09T03:37:21.025692+00:00",
-      "symbol": "AMD",
-      "side": "BUY",
-      "quantity": 0.0249,
-      "price": 620.99,
-      "currency": "USD"
     }
   ],
   "equity_history": [
@@ -265,21 +279,75 @@
     },
     {
       "date": "2026-10-23",
-      "value": 458.39,
+      "value": 455.35,
       "contributed": 450.0,
-      "bench": 449.51
+      "bench": 441.88
     }
   ],
   "starting_cash": 150.0,
   "deposited": 300.0,
   "contributed": 450.0,
-  "profit": 8.39,
+  "profit": 5.35,
   "num_deposits": 1,
   "next_deposit": {
     "date": "2026-11-10",
     "amount": 300.0
   },
   "activity": [
+    {
+      "type": "BUY",
+      "timestamp": "2026-10-23T23:55:37.304998+00:00",
+      "symbol": "WIX",
+      "quantity": 0.4032,
+      "price": 81.98,
+      "currency": "USD",
+      "total": 33.05,
+      "commission": 0.0,
+      "cash_before": 63.04,
+      "cash_after": 29.98,
+      "usd_ils": 3.0991,
+      "usd_ils_estimated": false,
+      "reason": "signal",
+      "reason_text": "איתות של האסטרטגיה",
+      "stop": 70.69,
+      "target": 104.57
+    },
+    {
+      "type": "BUY",
+      "timestamp": "2026-10-23T23:55:37.277185+00:00",
+      "symbol": "V",
+      "quantity": 0.2184,
+      "price": 408.12,
+      "currency": "USD",
+      "total": 89.13,
+      "commission": 0.0,
+      "cash_before": 152.17,
+      "cash_after": 63.04,
+      "usd_ils": 3.0991,
+      "usd_ils_estimated": false,
+      "reason": "signal",
+      "reason_text": "איתות של האסטרטגיה",
+      "stop": 391.21,
+      "target": 441.95
+    },
+    {
+      "type": "SELL",
+      "timestamp": "2026-10-23T23:55:37.260770+00:00",
+      "symbol": "AMZN",
+      "quantity": 0.311,
+      "price": 247.88,
+      "currency": "USD",
+      "total": 77.09,
+      "commission": 0.0,
+      "cash_before": 75.08,
+      "cash_after": 152.17,
+      "usd_ils": 3.0991,
+      "usd_ils_estimated": false,
+      "reason": "signal",
+      "reason_text": "איתות של האסטרטגיה",
+      "avg_cost": 259.66,
+      "realized_pnl": -3.66
+    },
     {
       "type": "SELL",
       "timestamp": "2026-10-22T00:08:06.456153+00:00",
@@ -565,9 +633,9 @@
   ],
   "benchmark": {
     "symbol": "SPY",
-    "value": 449.51,
+    "value": 441.88,
     "contributed": 450.0,
-    "change_pct": -0.0011,
+    "change_pct": -0.018,
     "start_date": "2026-10-09"
   }
 }

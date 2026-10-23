@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 75.08267011441805,
+  "cash": 29.983102227467377,
   "commission_rate": 0.0,
   "min_commission": 0.0,
   "positions": {
@@ -28,14 +28,6 @@
       "stop": 77.0786746522025,
       "target": 112.70602668741631
     },
-    "AMZN": {
-      "symbol": "AMZN",
-      "quantity": 0.311,
-      "avg_price": 259.6597637786865,
-      "currency": "USD",
-      "stop": 245.16784999255512,
-      "target": 288.6435913509493
-    },
     "WMT": {
       "symbol": "WMT",
       "quantity": 0.7976,
@@ -59,6 +51,22 @@
       "currency": "USD",
       "stop": 38.10289845815743,
       "target": 47.36595258777449
+    },
+    "V": {
+      "symbol": "V",
+      "quantity": 0.2184,
+      "avg_price": 408.1239734344482,
+      "currency": "USD",
+      "stop": 391.208933701939,
+      "target": 441.95405289946666
+    },
+    "WIX": {
+      "symbol": "WIX",
+      "quantity": 0.4032,
+      "avg_price": 81.98097244262695,
+      "currency": "USD",
+      "stop": 70.6876642202732,
+      "target": 104.56758888733444
     }
   },
   "trades": [
@@ -331,6 +339,60 @@
       "target": 0.0,
       "avg_cost": 375.28755610656737,
       "realized_pnl": 2.4832253804977458
+    },
+    {
+      "timestamp": "2026-10-23T23:55:37.260770+00:00",
+      "symbol": "AMZN",
+      "side": "SELL",
+      "quantity": 0.311,
+      "price": 247.876,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 152.17210611441806,
+      "cash_before": 75.08267011441805,
+      "total": 77.089436,
+      "usd_ils": 3.099100112915039,
+      "reason": "signal",
+      "stop": 0.0,
+      "target": 0.0,
+      "avg_cost": 259.6597637786865,
+      "realized_pnl": -3.6647505351715033
+    },
+    {
+      "timestamp": "2026-10-23T23:55:37.277185+00:00",
+      "symbol": "V",
+      "side": "BUY",
+      "quantity": 0.2184,
+      "price": 408.1239734344482,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 63.03783031633456,
+      "cash_before": 152.17210611441806,
+      "total": 89.1342757980835,
+      "usd_ils": 3.099100112915039,
+      "reason": "signal",
+      "stop": 391.208933701939,
+      "target": 441.95405289946666,
+      "avg_cost": 0.0,
+      "realized_pnl": 0.0
+    },
+    {
+      "timestamp": "2026-10-23T23:55:37.304998+00:00",
+      "symbol": "WIX",
+      "side": "BUY",
+      "quantity": 0.4032,
+      "price": 81.98097244262695,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 29.983102227467377,
+      "cash_before": 63.03783031633456,
+      "total": 33.054728088867186,
+      "usd_ils": 3.099100112915039,
+      "reason": "signal",
+      "stop": 70.6876642202732,
+      "target": 104.56758888733444,
+      "avg_cost": 0.0,
+      "realized_pnl": 0.0
     }
   ],
   "meta": {
