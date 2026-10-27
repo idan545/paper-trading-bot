@@ -1,12 +1,12 @@
 {
-  "as_of": "2026-10-23T23:55:37+00:00",
+  "as_of": "2026-10-27T00:41:46+00:00",
   "base_currency": "USD",
-  "usd_ils": 3.0991,
+  "usd_ils": 3.072,
   "total_value": 455.35,
   "cash": 29.98,
   "invested": 425.36,
-  "day_change": -3.12,
-  "day_change_pct": -0.0068,
+  "day_change": -0.0,
+  "day_change_pct": -0.0,
   "total_change_pct": 0.0119,
   "num_positions": 8,
   "num_trades": 18,
@@ -279,6 +279,12 @@
     },
     {
       "date": "2026-10-23",
+      "value": 455.35,
+      "contributed": 450.0,
+      "bench": 441.88
+    },
+    {
+      "date": "2026-10-27",
       "value": 455.35,
       "contributed": 450.0,
       "bench": 441.88
