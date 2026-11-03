@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 29.983102227467377,
+  "cash": 256.0929587423602,
   "commission_rate": 0.0,
   "min_commission": 0.0,
   "positions": {
@@ -20,30 +20,6 @@
       "stop": 105.50645762566978,
       "target": 141.09304242077957
     },
-    "MNDY": {
-      "symbol": "MNDY",
-      "quantity": 0.1262,
-      "avg_price": 88.95445866394043,
-      "currency": "USD",
-      "stop": 77.0786746522025,
-      "target": 112.70602668741631
-    },
-    "WMT": {
-      "symbol": "WMT",
-      "quantity": 0.7976,
-      "avg_price": 113.13654183197019,
-      "currency": "USD",
-      "stop": 107.76638349288444,
-      "target": 123.87685851014172
-    },
-    "COST": {
-      "symbol": "COST",
-      "quantity": 0.0939,
-      "avg_price": 959.919722442627,
-      "currency": "USD",
-      "stop": 923.2017124944174,
-      "target": 1033.3557423390462
-    },
     "TEVA": {
       "symbol": "TEVA",
       "quantity": 1.4609,
@@ -52,21 +28,21 @@
       "stop": 38.10289845815743,
       "target": 47.36595258777449
     },
-    "V": {
-      "symbol": "V",
-      "quantity": 0.2184,
-      "avg_price": 408.1239734344482,
+    "ESLT": {
+      "symbol": "ESLT",
+      "quantity": 0.0747,
+      "avg_price": 742.8412056884765,
       "currency": "USD",
-      "stop": 391.208933701939,
-      "target": 441.95405289946666
+      "stop": 680.9455549587378,
+      "target": 866.6325071479539
     },
-    "WIX": {
-      "symbol": "WIX",
-      "quantity": 0.4032,
-      "avg_price": 81.98097244262695,
+    "GLBE": {
+      "symbol": "GLBE",
+      "quantity": 1.1493,
+      "avg_price": 43.00148954200744,
       "currency": "USD",
-      "stop": 70.6876642202732,
-      "target": 104.56758888733444
+      "stop": 38.99227855228764,
+      "target": 51.01991152144706
     }
   },
   "trades": [
@@ -391,6 +367,132 @@
       "reason": "signal",
       "stop": 70.6876642202732,
       "target": 104.56758888733444,
+      "avg_cost": 0.0,
+      "realized_pnl": 0.0
+    },
+    {
+      "timestamp": "2026-11-03T03:00:26.276712+00:00",
+      "symbol": "V",
+      "side": "SELL",
+      "quantity": 0.2184,
+      "price": 425.2972547607422,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 122.86802266721347,
+      "cash_before": 29.983102227467377,
+      "total": 92.8849204397461,
+      "usd_ils": 3.14739990234375,
+      "reason": "signal",
+      "stop": 0.0,
+      "target": 0.0,
+      "avg_cost": 408.1239734344482,
+      "realized_pnl": 3.7506446416626074
+    },
+    {
+      "timestamp": "2026-11-03T03:00:26.276898+00:00",
+      "symbol": "WMT",
+      "side": "SELL",
+      "quantity": 0.7976,
+      "price": 124.03794847488405,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 221.80069037078098,
+      "cash_before": 122.86802266721347,
+      "total": 98.93266770356752,
+      "usd_ils": 3.14739990234375,
+      "reason": "target",
+      "stop": 0.0,
+      "target": 0.0,
+      "avg_cost": 113.13654183197019,
+      "realized_pnl": 8.69496193838809
+    },
+    {
+      "timestamp": "2026-11-03T03:00:26.277045+00:00",
+      "symbol": "COST",
+      "side": "SELL",
+      "quantity": 0.0939,
+      "price": 1032.8390644678766,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 318.7842785243146,
+      "cash_before": 221.80069037078098,
+      "total": 96.9835881535336,
+      "usd_ils": 3.14739990234375,
+      "reason": "target",
+      "stop": 0.0,
+      "target": 0.0,
+      "avg_cost": 959.919722442627,
+      "realized_pnl": 6.847126216170942
+    },
+    {
+      "timestamp": "2026-11-03T03:00:26.285340+00:00",
+      "symbol": "ESLT",
+      "side": "BUY",
+      "quantity": 0.0747,
+      "price": 742.8412056884765,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 263.29404045938537,
+      "cash_before": 318.7842785243146,
+      "total": 55.4902380649292,
+      "usd_ils": 3.14739990234375,
+      "reason": "signal",
+      "stop": 680.9455549587378,
+      "target": 866.6325071479539,
+      "avg_cost": 0.0,
+      "realized_pnl": 0.0
+    },
+    {
+      "timestamp": "2026-11-03T03:00:26.287444+00:00",
+      "symbol": "MNDY",
+      "side": "SELL",
+      "quantity": 0.1262,
+      "price": 95.21237213516235,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 275.3098418228429,
+      "cash_before": 263.29404045938537,
+      "total": 12.01580136345749,
+      "usd_ils": 3.14739990234375,
+      "reason": "signal",
+      "stop": 0.0,
+      "target": 0.0,
+      "avg_cost": 88.95445866394043,
+      "realized_pnl": 0.7897486800682071
+    },
+    {
+      "timestamp": "2026-11-03T03:00:26.289478+00:00",
+      "symbol": "WIX",
+      "side": "SELL",
+      "quantity": 0.4032,
+      "price": 74.91252194976808,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 305.51457067298935,
+      "cash_before": 275.3098418228429,
+      "total": 30.204728850146488,
+      "usd_ils": 3.14739990234375,
+      "reason": "signal",
+      "stop": 0.0,
+      "target": 0.0,
+      "avg_cost": 81.98097244262695,
+      "realized_pnl": -2.8499992387206974
+    },
+    {
+      "timestamp": "2026-11-03T03:00:26.291915+00:00",
+      "symbol": "GLBE",
+      "side": "BUY",
+      "quantity": 1.1493,
+      "price": 43.00148954200744,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 256.0929587423602,
+      "cash_before": 305.51457067298935,
+      "total": 49.421611930629155,
+      "usd_ils": 3.14739990234375,
+      "reason": "signal",
+      "stop": 38.99227855228764,
+      "target": 51.01991152144706,
       "avg_cost": 0.0,
       "realized_pnl": 0.0
     }
