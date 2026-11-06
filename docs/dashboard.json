@@ -1,15 +1,15 @@
 {
-  "as_of": "2026-11-05T01:41:57+00:00",
+  "as_of": "2026-11-06T01:43:11+00:00",
   "base_currency": "USD",
-  "usd_ils": 3.1525,
-  "total_value": 461.94,
-  "cash": 256.09,
-  "invested": 205.85,
-  "day_change": 1.16,
-  "day_change_pct": 0.0025,
-  "total_change_pct": 0.0265,
-  "num_positions": 5,
-  "num_trades": 25,
+  "usd_ils": 3.2051,
+  "total_value": 462.68,
+  "cash": 268.67,
+  "invested": 194.0,
+  "day_change": 0.74,
+  "day_change_pct": 0.0016,
+  "total_change_pct": 0.0282,
+  "num_positions": 4,
+  "num_trades": 26,
   "positions": [
     {
       "symbol": "TEVA",
@@ -17,10 +17,10 @@
       "is_tase": false,
       "quantity": 1.4609,
       "avg_price": 41.19,
-      "current_price": 41.91,
-      "unrealized_pnl": 1.05,
-      "unrealized_pnl_pct": 0.0175,
-      "value_base": 61.23,
+      "current_price": 41.85,
+      "unrealized_pnl": 0.96,
+      "unrealized_pnl_pct": 0.016,
+      "value_base": 61.14,
       "cost_base": 60.18,
       "stop": 38.1,
       "target": 47.37
@@ -31,10 +31,10 @@
       "is_tase": false,
       "quantity": 0.0747,
       "avg_price": 742.84,
-      "current_price": 756.62,
-      "unrealized_pnl": 1.03,
-      "unrealized_pnl_pct": 0.0185,
-      "value_base": 56.52,
+      "current_price": 703.46,
+      "unrealized_pnl": -2.94,
+      "unrealized_pnl_pct": -0.053,
+      "value_base": 52.55,
       "cost_base": 55.49,
       "stop": 680.95,
       "target": 866.63
@@ -45,10 +45,10 @@
       "is_tase": false,
       "quantity": 1.1493,
       "avg_price": 43.0,
-      "current_price": 41.58,
-      "unrealized_pnl": -1.63,
-      "unrealized_pnl_pct": -0.0331,
-      "value_base": 47.79,
+      "current_price": 44.93,
+      "unrealized_pnl": 2.22,
+      "unrealized_pnl_pct": 0.0448,
+      "value_base": 51.64,
       "cost_base": 49.42,
       "stop": 38.99,
       "target": 51.02
@@ -59,30 +59,24 @@
       "is_tase": false,
       "quantity": 0.0516,
       "avg_price": 522.87,
-      "current_price": 520.99,
-      "unrealized_pnl": -0.1,
-      "unrealized_pnl_pct": -0.0036,
-      "value_base": 26.88,
+      "current_price": 555.8,
+      "unrealized_pnl": 1.7,
+      "unrealized_pnl_pct": 0.063,
+      "value_base": 28.68,
       "cost_base": 26.98,
       "stop": 493.81,
       "target": 580.99
-    },
-    {
-      "symbol": "NICE",
-      "currency": "USD",
-      "is_tase": false,
-      "quantity": 0.1264,
-      "avg_price": 117.37,
-      "current_price": 106.27,
-      "unrealized_pnl": -1.4,
-      "unrealized_pnl_pct": -0.0946,
-      "value_base": 13.43,
-      "cost_base": 14.84,
-      "stop": 105.51,
-      "target": 141.09
     }
   ],
   "recent_trades": [
+    {
+      "timestamp": "2026-11-06T01:43:11.509698+00:00",
+      "symbol": "NICE",
+      "side": "SELL",
+      "quantity": 0.1264,
+      "price": 99.54,
+      "currency": "USD"
+    },
     {
       "timestamp": "2026-11-03T03:00:26.291915+00:00",
       "symbol": "GLBE",
@@ -169,14 +163,6 @@
       "side": "SELL",
       "quantity": 0.0799,
       "price": 406.37,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-10-16T23:46:22.819627+00:00",
-      "symbol": "GOOGL",
-      "side": "SELL",
-      "quantity": 0.0702,
-      "price": 340.42,
       "currency": "USD"
     }
   ],
@@ -288,18 +274,42 @@
       "value": 461.94,
       "contributed": 450.0,
       "bench": 438.62
+    },
+    {
+      "date": "2026-11-06",
+      "value": 462.68,
+      "contributed": 450.0,
+      "bench": 445.86
     }
   ],
   "starting_cash": 150.0,
   "deposited": 300.0,
   "contributed": 450.0,
-  "profit": 11.94,
+  "profit": 12.68,
   "num_deposits": 1,
   "next_deposit": {
     "date": "2026-11-10",
     "amount": 300.0
   },
   "activity": [
+    {
+      "type": "SELL",
+      "timestamp": "2026-11-06T01:43:11.509698+00:00",
+      "symbol": "NICE",
+      "quantity": 0.1264,
+      "price": 99.54,
+      "currency": "USD",
+      "total": 12.58,
+      "commission": 0.0,
+      "cash_before": 256.09,
+      "cash_after": 268.67,
+      "usd_ils": 3.2051,
+      "usd_ils_estimated": false,
+      "reason": "stop",
+      "reason_text": "stop-loss: המחיר ירד לרמת ההגנה",
+      "avg_cost": 117.37,
+      "realized_pnl": -2.25
+    },
     {
       "type": "BUY",
       "timestamp": "2026-11-03T03:00:26.291915+00:00",
@@ -765,9 +775,9 @@
   ],
   "benchmark": {
     "symbol": "SPY",
-    "value": 438.62,
+    "value": 445.86,
     "contributed": 450.0,
-    "change_pct": -0.0253,
+    "change_pct": -0.0092,
     "start_date": "2026-10-09"
   }
 }

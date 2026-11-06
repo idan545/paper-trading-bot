@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 256.0929587423602,
+  "cash": 268.67484019170104,
   "commission_rate": 0.0,
   "min_commission": 0.0,
   "positions": {
@@ -11,14 +11,6 @@
       "currency": "USD",
       "stop": 493.8111355832695,
       "target": 580.9915998661756
-    },
-    "NICE": {
-      "symbol": "NICE",
-      "quantity": 0.1264,
-      "avg_price": 117.36865255737304,
-      "currency": "USD",
-      "stop": 105.50645762566978,
-      "target": 141.09304242077957
     },
     "TEVA": {
       "symbol": "TEVA",
@@ -495,6 +487,24 @@
       "target": 51.01991152144706,
       "avg_cost": 0.0,
       "realized_pnl": 0.0
+    },
+    {
+      "timestamp": "2026-11-06T01:43:11.509698+00:00",
+      "symbol": "NICE",
+      "side": "SELL",
+      "quantity": 0.1264,
+      "price": 99.54020133972169,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 268.67484019170104,
+      "cash_before": 256.0929587423602,
+      "total": 12.581881449340823,
+      "usd_ils": 3.2051000595092773,
+      "reason": "stop",
+      "stop": 0.0,
+      "target": 0.0,
+      "avg_cost": 117.36865255737304,
+      "realized_pnl": -2.2535162339111308
     }
   ],
   "meta": {
