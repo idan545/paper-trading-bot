@@ -1,15 +1,15 @@
 {
-  "as_of": "2026-11-06T01:43:11+00:00",
+  "as_of": "2026-11-07T01:03:53+00:00",
   "base_currency": "USD",
-  "usd_ils": 3.2051,
-  "total_value": 462.68,
-  "cash": 268.67,
-  "invested": 194.0,
-  "day_change": 0.74,
-  "day_change_pct": 0.0016,
-  "total_change_pct": 0.0282,
-  "num_positions": 4,
-  "num_trades": 26,
+  "usd_ils": 3.2005,
+  "total_value": 455.79,
+  "cash": 317.3,
+  "invested": 138.49,
+  "day_change": -6.89,
+  "day_change_pct": -0.0149,
+  "total_change_pct": 0.0129,
+  "num_positions": 3,
+  "num_trades": 27,
   "positions": [
     {
       "symbol": "TEVA",
@@ -17,27 +17,13 @@
       "is_tase": false,
       "quantity": 1.4609,
       "avg_price": 41.19,
-      "current_price": 41.85,
-      "unrealized_pnl": 0.96,
-      "unrealized_pnl_pct": 0.016,
-      "value_base": 61.14,
+      "current_price": 41.78,
+      "unrealized_pnl": 0.86,
+      "unrealized_pnl_pct": 0.0143,
+      "value_base": 61.04,
       "cost_base": 60.18,
       "stop": 38.1,
       "target": 47.37
-    },
-    {
-      "symbol": "ESLT",
-      "currency": "USD",
-      "is_tase": false,
-      "quantity": 0.0747,
-      "avg_price": 742.84,
-      "current_price": 703.46,
-      "unrealized_pnl": -2.94,
-      "unrealized_pnl_pct": -0.053,
-      "value_base": 52.55,
-      "cost_base": 55.49,
-      "stop": 680.95,
-      "target": 866.63
     },
     {
       "symbol": "GLBE",
@@ -45,10 +31,10 @@
       "is_tase": false,
       "quantity": 1.1493,
       "avg_price": 43.0,
-      "current_price": 44.93,
-      "unrealized_pnl": 2.22,
-      "unrealized_pnl_pct": 0.0448,
-      "value_base": 51.64,
+      "current_price": 43.33,
+      "unrealized_pnl": 0.38,
+      "unrealized_pnl_pct": 0.0076,
+      "value_base": 49.8,
       "cost_base": 49.42,
       "stop": 38.99,
       "target": 51.02
@@ -59,16 +45,24 @@
       "is_tase": false,
       "quantity": 0.0516,
       "avg_price": 522.87,
-      "current_price": 555.8,
-      "unrealized_pnl": 1.7,
-      "unrealized_pnl_pct": 0.063,
-      "value_base": 28.68,
+      "current_price": 535.93,
+      "unrealized_pnl": 0.67,
+      "unrealized_pnl_pct": 0.025,
+      "value_base": 27.65,
       "cost_base": 26.98,
       "stop": 493.81,
       "target": 580.99
     }
   ],
   "recent_trades": [
+    {
+      "timestamp": "2026-11-07T01:03:53.662628+00:00",
+      "symbol": "ESLT",
+      "side": "SELL",
+      "quantity": 0.0747,
+      "price": 650.98,
+      "currency": "USD"
+    },
     {
       "timestamp": "2026-11-06T01:43:11.509698+00:00",
       "symbol": "NICE",
@@ -155,14 +149,6 @@
       "side": "SELL",
       "quantity": 0.311,
       "price": 247.88,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-10-22T00:08:06.456153+00:00",
-      "symbol": "V",
-      "side": "SELL",
-      "quantity": 0.0799,
-      "price": 406.37,
       "currency": "USD"
     }
   ],
@@ -280,18 +266,42 @@
       "value": 462.68,
       "contributed": 450.0,
       "bench": 445.86
+    },
+    {
+      "date": "2026-11-07",
+      "value": 455.79,
+      "contributed": 450.0,
+      "bench": 426.2
     }
   ],
   "starting_cash": 150.0,
   "deposited": 300.0,
   "contributed": 450.0,
-  "profit": 12.68,
+  "profit": 5.79,
   "num_deposits": 1,
   "next_deposit": {
     "date": "2026-11-10",
     "amount": 300.0
   },
   "activity": [
+    {
+      "type": "SELL",
+      "timestamp": "2026-11-07T01:03:53.662628+00:00",
+      "symbol": "ESLT",
+      "quantity": 0.0747,
+      "price": 650.98,
+      "currency": "USD",
+      "total": 48.63,
+      "commission": 0.0,
+      "cash_before": 268.67,
+      "cash_after": 317.3,
+      "usd_ils": 3.2005,
+      "usd_ils_estimated": false,
+      "reason": "stop",
+      "reason_text": "stop-loss: המחיר ירד לרמת ההגנה",
+      "avg_cost": 742.84,
+      "realized_pnl": -6.86
+    },
     {
       "type": "SELL",
       "timestamp": "2026-11-06T01:43:11.509698+00:00",
@@ -775,9 +785,9 @@
   ],
   "benchmark": {
     "symbol": "SPY",
-    "value": 445.86,
+    "value": 426.2,
     "contributed": 450.0,
-    "change_pct": -0.0092,
+    "change_pct": -0.0529,
     "start_date": "2026-10-09"
   }
 }

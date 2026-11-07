@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 268.67484019170104,
+  "cash": 317.3033705809192,
   "commission_rate": 0.0,
   "min_commission": 0.0,
   "positions": {
@@ -19,14 +19,6 @@
       "currency": "USD",
       "stop": 38.10289845815743,
       "target": 47.36595258777449
-    },
-    "ESLT": {
-      "symbol": "ESLT",
-      "quantity": 0.0747,
-      "avg_price": 742.8412056884765,
-      "currency": "USD",
-      "stop": 680.9455549587378,
-      "target": 866.6325071479539
     },
     "GLBE": {
       "symbol": "GLBE",
@@ -505,6 +497,24 @@
       "target": 0.0,
       "avg_cost": 117.36865255737304,
       "realized_pnl": -2.2535162339111308
+    },
+    {
+      "timestamp": "2026-11-07T01:03:53.662628+00:00",
+      "symbol": "ESLT",
+      "side": "SELL",
+      "quantity": 0.0747,
+      "price": 650.9843425598145,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 317.3033705809192,
+      "cash_before": 268.67484019170104,
+      "total": 48.62853038921815,
+      "usd_ils": 3.200540065765381,
+      "reason": "stop",
+      "stop": 0.0,
+      "target": 0.0,
+      "avg_cost": 742.8412056884765,
+      "realized_pnl": -6.861707675711051
     }
   ],
   "meta": {
