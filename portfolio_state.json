@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 317.3033705809192,
+  "cash": 143.80115823791988,
   "commission_rate": 0.0,
   "min_commission": 0.0,
   "positions": {
@@ -27,6 +27,38 @@
       "currency": "USD",
       "stop": 38.99227855228764,
       "target": 51.01991152144706
+    },
+    "AMZN": {
+      "symbol": "AMZN",
+      "quantity": 0.312,
+      "avg_price": 267.0634576721191,
+      "currency": "USD",
+      "stop": 242.86827480090002,
+      "target": 315.4538234145573
+    },
+    "JPM": {
+      "symbol": "JPM",
+      "quantity": 0.3719,
+      "avg_price": 342.25102656555174,
+      "currency": "USD",
+      "stop": 321.9508271644668,
+      "target": 382.85142536772173
+    },
+    "V": {
+      "symbol": "V",
+      "quantity": 0.327,
+      "avg_price": 422.37108366394034,
+      "currency": "USD",
+      "stop": 399.28691413930136,
+      "target": 468.5394227132184
+    },
+    "WMT": {
+      "symbol": "WMT",
+      "quantity": 0.9925,
+      "avg_price": 125.72283366394042,
+      "currency": "USD",
+      "stop": 118.11758593785008,
+      "target": 140.93332911612112
     }
   },
   "trades": [
@@ -515,6 +547,78 @@
       "target": 0.0,
       "avg_cost": 742.8412056884765,
       "realized_pnl": -6.861707675711051
+    },
+    {
+      "timestamp": "2026-11-10T03:43:49.400703+00:00",
+      "symbol": "AMZN",
+      "side": "BUY",
+      "quantity": 0.312,
+      "price": 267.0634576721191,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 533.979571787218,
+      "cash_before": 617.3033705809191,
+      "total": 83.32379879370116,
+      "usd_ils": 3.1545000076293945,
+      "reason": "signal",
+      "stop": 242.86827480090002,
+      "target": 315.4538234145573,
+      "avg_cost": 0.0,
+      "realized_pnl": 0.0
+    },
+    {
+      "timestamp": "2026-11-10T03:43:49.413524+00:00",
+      "symbol": "JPM",
+      "side": "BUY",
+      "quantity": 0.3719,
+      "price": 342.25102656555174,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 406.6964150074893,
+      "cash_before": 533.979571787218,
+      "total": 127.2831567797287,
+      "usd_ils": 3.1545000076293945,
+      "reason": "signal",
+      "stop": 321.9508271644668,
+      "target": 382.85142536772173,
+      "avg_cost": 0.0,
+      "realized_pnl": 0.0
+    },
+    {
+      "timestamp": "2026-11-10T03:43:49.417224+00:00",
+      "symbol": "V",
+      "side": "BUY",
+      "quantity": 0.327,
+      "price": 422.3710836639404,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 268.58107064938076,
+      "cash_before": 406.6964150074893,
+      "total": 138.1153443581085,
+      "usd_ils": 3.1545000076293945,
+      "reason": "signal",
+      "stop": 399.28691413930136,
+      "target": 468.5394227132184,
+      "avg_cost": 0.0,
+      "realized_pnl": 0.0
+    },
+    {
+      "timestamp": "2026-11-10T03:43:49.420955+00:00",
+      "symbol": "WMT",
+      "side": "BUY",
+      "quantity": 0.9925,
+      "price": 125.72283366394042,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 143.80115823791988,
+      "cash_before": 268.58107064938076,
+      "total": 124.77991241146087,
+      "usd_ils": 3.1545000076293945,
+      "reason": "signal",
+      "stop": 118.11758593785008,
+      "target": 140.93332911612112,
+      "avg_cost": 0.0,
+      "realized_pnl": 0.0
     }
   ],
   "meta": {
@@ -523,9 +627,10 @@
       "start_price": 773.9299926757812,
       "start_value": 150.0,
       "start_date": "2026-10-09",
-      "shares": 0.5814479400703576,
+      "shares": 0.9800183993921602,
       "invested_months": [
-        "2026-10"
+        "2026-10",
+        "2026-11"
       ]
     },
     "start_date": "2026-10-09",
@@ -538,6 +643,16 @@
         "cash_before": 2.9969893698326047,
         "cash_after": 302.9969893698326,
         "usd_ils": 3.0599000453948975,
+        "note": "הפרשה חודשית מהמשכורת"
+      },
+      {
+        "month": "2026-11",
+        "date": "2026-11-10",
+        "credited_at": "2026-11-10T03:43:49.383775+00:00",
+        "amount": 300.0,
+        "cash_before": 317.3033705809192,
+        "cash_after": 617.3033705809191,
+        "usd_ils": 3.1545000076293945,
         "note": "הפרשה חודשית מהמשכורת"
       }
     ]
