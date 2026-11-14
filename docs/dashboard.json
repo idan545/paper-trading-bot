@@ -1,15 +1,15 @@
 {
-  "as_of": "2026-11-13T02:01:55+00:00",
+  "as_of": "2026-11-14T01:37:24+00:00",
   "base_currency": "USD",
-  "usd_ils": 3.1923,
-  "total_value": 757.01,
-  "cash": 143.8,
-  "invested": 613.21,
-  "day_change": 0.84,
-  "day_change_pct": 0.0011,
-  "total_change_pct": 0.0093,
-  "num_positions": 7,
-  "num_trades": 31,
+  "usd_ils": 3.1918,
+  "total_value": 761.26,
+  "cash": 12.91,
+  "invested": 748.34,
+  "day_change": 4.25,
+  "day_change_pct": 0.0056,
+  "total_change_pct": 0.015,
+  "num_positions": 8,
+  "num_trades": 32,
   "positions": [
     {
       "symbol": "V",
@@ -17,13 +17,27 @@
       "is_tase": false,
       "quantity": 0.327,
       "avg_price": 422.37,
-      "current_price": 425.55,
-      "unrealized_pnl": 1.04,
-      "unrealized_pnl_pct": 0.0075,
-      "value_base": 139.15,
+      "current_price": 425.76,
+      "unrealized_pnl": 1.11,
+      "unrealized_pnl_pct": 0.008,
+      "value_base": 139.22,
       "cost_base": 138.12,
       "stop": 399.29,
       "target": 468.54
+    },
+    {
+      "symbol": "AAPL",
+      "currency": "USD",
+      "is_tase": false,
+      "quantity": 0.3672,
+      "avg_price": 356.45,
+      "current_price": 356.27,
+      "unrealized_pnl": -0.07,
+      "unrealized_pnl_pct": -0.0005,
+      "value_base": 130.82,
+      "cost_base": 130.89,
+      "stop": 335.92,
+      "target": 397.51
     },
     {
       "symbol": "JPM",
@@ -31,10 +45,10 @@
       "is_tase": false,
       "quantity": 0.3719,
       "avg_price": 342.25,
-      "current_price": 343.39,
-      "unrealized_pnl": 0.42,
-      "unrealized_pnl_pct": 0.0033,
-      "value_base": 127.71,
+      "current_price": 346.19,
+      "unrealized_pnl": 1.46,
+      "unrealized_pnl_pct": 0.0115,
+      "value_base": 128.75,
       "cost_base": 127.28,
       "stop": 321.95,
       "target": 382.85
@@ -45,10 +59,10 @@
       "is_tase": false,
       "quantity": 0.9925,
       "avg_price": 125.72,
-      "current_price": 125.67,
-      "unrealized_pnl": -0.05,
-      "unrealized_pnl_pct": -0.0004,
-      "value_base": 124.73,
+      "current_price": 128.09,
+      "unrealized_pnl": 2.35,
+      "unrealized_pnl_pct": 0.0188,
+      "value_base": 127.13,
       "cost_base": 124.78,
       "stop": 118.12,
       "target": 140.93
@@ -59,10 +73,10 @@
       "is_tase": false,
       "quantity": 0.312,
       "avg_price": 267.06,
-      "current_price": 266.17,
-      "unrealized_pnl": -0.28,
-      "unrealized_pnl_pct": -0.0033,
-      "value_base": 83.05,
+      "current_price": 266.66,
+      "unrealized_pnl": -0.13,
+      "unrealized_pnl_pct": -0.0015,
+      "value_base": 83.2,
       "cost_base": 83.32,
       "stop": 242.87,
       "target": 315.45
@@ -73,10 +87,10 @@
       "is_tase": false,
       "quantity": 1.4609,
       "avg_price": 41.19,
-      "current_price": 43.24,
-      "unrealized_pnl": 2.99,
-      "unrealized_pnl_pct": 0.0498,
-      "value_base": 63.17,
+      "current_price": 44.5,
+      "unrealized_pnl": 4.83,
+      "unrealized_pnl_pct": 0.0803,
+      "value_base": 65.01,
       "cost_base": 60.18,
       "stop": 38.1,
       "target": 47.37
@@ -87,10 +101,10 @@
       "is_tase": false,
       "quantity": 1.1493,
       "avg_price": 43.0,
-      "current_price": 42.21,
-      "unrealized_pnl": -0.91,
-      "unrealized_pnl_pct": -0.0184,
-      "value_base": 48.51,
+      "current_price": 41.05,
+      "unrealized_pnl": -2.24,
+      "unrealized_pnl_pct": -0.0454,
+      "value_base": 47.18,
       "cost_base": 49.42,
       "stop": 38.99,
       "target": 51.02
@@ -101,16 +115,24 @@
       "is_tase": false,
       "quantity": 0.0516,
       "avg_price": 522.87,
-      "current_price": 521.13,
-      "unrealized_pnl": -0.09,
-      "unrealized_pnl_pct": -0.0033,
-      "value_base": 26.89,
+      "current_price": 523.88,
+      "unrealized_pnl": 0.05,
+      "unrealized_pnl_pct": 0.0019,
+      "value_base": 27.03,
       "cost_base": 26.98,
       "stop": 493.81,
       "target": 580.99
     }
   ],
   "recent_trades": [
+    {
+      "timestamp": "2026-11-14T01:37:24.184103+00:00",
+      "symbol": "AAPL",
+      "side": "BUY",
+      "quantity": 0.3672,
+      "price": 356.45,
+      "currency": "USD"
+    },
     {
       "timestamp": "2026-11-10T03:43:49.420955+00:00",
       "symbol": "WMT",
@@ -197,14 +219,6 @@
       "side": "SELL",
       "quantity": 0.0939,
       "price": 1032.84,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-11-03T03:00:26.276898+00:00",
-      "symbol": "WMT",
-      "side": "SELL",
-      "quantity": 0.7976,
-      "price": 124.04,
       "currency": "USD"
     }
   ],
@@ -352,18 +366,42 @@
       "value": 757.01,
       "contributed": 750.0,
       "bench": 744.63
+    },
+    {
+      "date": "2026-11-14",
+      "value": 761.26,
+      "contributed": 750.0,
+      "bench": 739.3
     }
   ],
   "starting_cash": 150.0,
   "deposited": 600.0,
   "contributed": 750.0,
-  "profit": 7.01,
+  "profit": 11.26,
   "num_deposits": 2,
   "next_deposit": {
     "date": "2026-12-10",
     "amount": 300.0
   },
   "activity": [
+    {
+      "type": "BUY",
+      "timestamp": "2026-11-14T01:37:24.184103+00:00",
+      "symbol": "AAPL",
+      "quantity": 0.3672,
+      "price": 356.45,
+      "currency": "USD",
+      "total": 130.89,
+      "commission": 0.0,
+      "cash_before": 143.8,
+      "cash_after": 12.91,
+      "usd_ils": 3.1918,
+      "usd_ils_estimated": false,
+      "reason": "signal",
+      "reason_text": "איתות של האסטרטגיה",
+      "stop": 335.92,
+      "target": 397.51
+    },
     {
       "type": "BUY",
       "timestamp": "2026-11-10T03:43:49.420955+00:00",
@@ -949,9 +987,9 @@
   ],
   "benchmark": {
     "symbol": "SPY",
-    "value": 744.63,
+    "value": 739.3,
     "contributed": 750.0,
-    "change_pct": -0.0072,
+    "change_pct": -0.0143,
     "start_date": "2026-10-09"
   }
 }
