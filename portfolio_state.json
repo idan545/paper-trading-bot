@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 12.91340710211665,
+  "cash": 135.56417186384914,
   "commission_rate": 0.0,
   "min_commission": 0.0,
   "positions": {
@@ -35,14 +35,6 @@
       "currency": "USD",
       "stop": 242.86827480090002,
       "target": 315.4538234145573
-    },
-    "JPM": {
-      "symbol": "JPM",
-      "quantity": 0.3719,
-      "avg_price": 342.25102656555174,
-      "currency": "USD",
-      "stop": 321.9508271644668,
-      "target": 382.85142536772173
     },
     "V": {
       "symbol": "V",
@@ -645,6 +637,24 @@
       "target": 397.50623010802195,
       "avg_cost": 0.0,
       "realized_pnl": 0.0
+    },
+    {
+      "timestamp": "2026-11-18T03:03:39.213176+00:00",
+      "symbol": "JPM",
+      "side": "SELL",
+      "quantity": 0.3719,
+      "price": 329.7950114593506,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 135.56417186384914,
+      "cash_before": 12.91340710211665,
+      "total": 122.65076476173247,
+      "usd_ils": 3.2525999546051025,
+      "reason": "signal",
+      "stop": 0.0,
+      "target": 0.0,
+      "avg_cost": 342.25102656555174,
+      "realized_pnl": -4.632392017996213
     }
   ],
   "meta": {
