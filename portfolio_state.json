@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 135.56417186384914,
+  "cash": 179.20025835479345,
   "commission_rate": 0.0,
   "min_commission": 0.0,
   "positions": {
@@ -11,22 +11,6 @@
       "currency": "USD",
       "stop": 493.8111355832695,
       "target": 580.9915998661756
-    },
-    "TEVA": {
-      "symbol": "TEVA",
-      "quantity": 1.4609,
-      "avg_price": 41.19058316802978,
-      "currency": "USD",
-      "stop": 38.10289845815743,
-      "target": 47.36595258777449
-    },
-    "GLBE": {
-      "symbol": "GLBE",
-      "quantity": 1.1493,
-      "avg_price": 43.00148954200744,
-      "currency": "USD",
-      "stop": 38.99227855228764,
-      "target": 51.01991152144706
     },
     "AMZN": {
       "symbol": "AMZN",
@@ -59,6 +43,14 @@
       "currency": "USD",
       "stop": 335.91907095825707,
       "target": 397.50623010802195
+    },
+    "AVGO": {
+      "symbol": "AVGO",
+      "quantity": 0.1701,
+      "avg_price": 354.2270127868652,
+      "currency": "USD",
+      "stop": 310.3027857855675,
+      "target": 442.0754667894606
     }
   },
   "trades": [
@@ -655,6 +647,60 @@
       "target": 0.0,
       "avg_cost": 342.25102656555174,
       "realized_pnl": -4.632392017996213
+    },
+    {
+      "timestamp": "2026-11-19T02:43:56.513801+00:00",
+      "symbol": "AVGO",
+      "side": "BUY",
+      "quantity": 0.1701,
+      "price": 354.2270127868652,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 75.31015698880337,
+      "cash_before": 135.56417186384914,
+      "total": 60.25401487504577,
+      "usd_ils": 3.2737998962402344,
+      "reason": "signal",
+      "stop": 310.3027857855675,
+      "target": 442.0754667894606,
+      "avg_cost": 0.0,
+      "realized_pnl": 0.0
+    },
+    {
+      "timestamp": "2026-11-19T02:43:56.525043+00:00",
+      "symbol": "TEVA",
+      "side": "SELL",
+      "quantity": 1.4609,
+      "price": 42.20888454246521,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 136.9731164168908,
+      "cash_before": 75.31015698880337,
+      "total": 61.66295942808743,
+      "usd_ils": 3.2737998962402344,
+      "reason": "signal",
+      "stop": 0.0,
+      "target": 0.0,
+      "avg_cost": 41.19058316802978,
+      "realized_pnl": 1.4876364779127216
+    },
+    {
+      "timestamp": "2026-11-19T02:43:56.532200+00:00",
+      "symbol": "GLBE",
+      "side": "SELL",
+      "quantity": 1.1493,
+      "price": 36.74161832237244,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 179.20025835479345,
+      "cash_before": 136.9731164168908,
+      "total": 42.227141937902644,
+      "usd_ils": 3.2737998962402344,
+      "reason": "stop",
+      "stop": 0.0,
+      "target": 0.0,
+      "avg_cost": 43.00148954200744,
+      "realized_pnl": -7.194469992726508
     }
   ],
   "meta": {
