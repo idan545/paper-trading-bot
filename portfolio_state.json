@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 179.20025835479345,
+  "cash": 161.59505304110942,
   "commission_rate": 0.0,
   "min_commission": 0.0,
   "positions": {
@@ -36,14 +36,6 @@
       "stop": 118.11758593785008,
       "target": 140.93332911612112
     },
-    "AAPL": {
-      "symbol": "AAPL",
-      "quantity": 0.3672,
-      "avg_price": 356.4481240081787,
-      "currency": "USD",
-      "stop": 335.91907095825707,
-      "target": 397.50623010802195
-    },
     "AVGO": {
       "symbol": "AVGO",
       "quantity": 0.1701,
@@ -51,6 +43,14 @@
       "currency": "USD",
       "stop": 310.3027857855675,
       "target": 442.0754667894606
+    },
+    "COST": {
+      "symbol": "COST",
+      "quantity": 0.1332,
+      "avg_price": 1094.3768710327147,
+      "currency": "USD",
+      "stop": 1048.5200692846179,
+      "target": 1186.0904745289083
     }
   },
   "trades": [
@@ -701,6 +701,42 @@
       "target": 0.0,
       "avg_cost": 43.00148954200744,
       "realized_pnl": -7.194469992726508
+    },
+    {
+      "timestamp": "2026-11-20T02:30:18.023281+00:00",
+      "symbol": "AAPL",
+      "side": "SELL",
+      "quantity": 0.3672,
+      "price": 349.0353864593506,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 307.36605226266704,
+      "cash_before": 179.20025835479345,
+      "total": 128.16579390787356,
+      "usd_ils": 3.3166000843048096,
+      "reason": "signal",
+      "stop": 0.0,
+      "target": 0.0,
+      "avg_cost": 356.4481240081787,
+      "realized_pnl": -2.721957227929675
+    },
+    {
+      "timestamp": "2026-11-20T02:30:18.048541+00:00",
+      "symbol": "COST",
+      "side": "BUY",
+      "quantity": 0.1332,
+      "price": 1094.3768710327147,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 161.59505304110942,
+      "cash_before": 307.36605226266704,
+      "total": 145.77099922155762,
+      "usd_ils": 3.3166000843048096,
+      "reason": "signal",
+      "stop": 1048.5200692846179,
+      "target": 1186.0904745289083,
+      "avg_cost": 0.0,
+      "realized_pnl": 0.0
     }
   ],
   "meta": {

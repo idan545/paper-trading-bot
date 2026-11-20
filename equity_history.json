@@ -166,5 +166,11 @@
     "value": 740.79,
     "contributed": 750.0,
     "bench": 715.61
+  },
+  {
+    "date": "2026-11-20",
+    "value": 728.9,
+    "contributed": 750.0,
+    "bench": 701.57
   }
 ]

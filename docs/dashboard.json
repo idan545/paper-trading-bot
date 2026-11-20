@@ -1,43 +1,43 @@
 {
-  "as_of": "2026-11-19T02:43:56+00:00",
+  "as_of": "2026-11-20T02:30:18+00:00",
   "base_currency": "USD",
-  "usd_ils": 3.2738,
-  "total_value": 740.79,
-  "cash": 179.2,
-  "invested": 561.59,
-  "day_change": -1.44,
-  "day_change_pct": -0.0019,
-  "total_change_pct": -0.0123,
+  "usd_ils": 3.3166,
+  "total_value": 728.9,
+  "cash": 161.6,
+  "invested": 567.31,
+  "day_change": -11.89,
+  "day_change_pct": -0.016,
+  "total_change_pct": -0.0281,
   "num_positions": 6,
-  "num_trades": 36,
+  "num_trades": 38,
   "positions": [
+    {
+      "symbol": "COST",
+      "currency": "USD",
+      "is_tase": false,
+      "quantity": 0.1332,
+      "avg_price": 1094.38,
+      "current_price": 1093.83,
+      "unrealized_pnl": -0.07,
+      "unrealized_pnl_pct": -0.0005,
+      "value_base": 145.7,
+      "cost_base": 145.77,
+      "stop": 1048.52,
+      "target": 1186.09
+    },
     {
       "symbol": "V",
       "currency": "USD",
       "is_tase": false,
       "quantity": 0.327,
       "avg_price": 422.37,
-      "current_price": 415.22,
-      "unrealized_pnl": -2.34,
-      "unrealized_pnl_pct": -0.0169,
-      "value_base": 135.78,
+      "current_price": 402.25,
+      "unrealized_pnl": -6.58,
+      "unrealized_pnl_pct": -0.0476,
+      "value_base": 131.54,
       "cost_base": 138.12,
       "stop": 399.29,
       "target": 468.54
-    },
-    {
-      "symbol": "AAPL",
-      "currency": "USD",
-      "is_tase": false,
-      "quantity": 0.3672,
-      "avg_price": 356.45,
-      "current_price": 352.45,
-      "unrealized_pnl": -1.47,
-      "unrealized_pnl_pct": -0.0112,
-      "value_base": 129.42,
-      "cost_base": 130.89,
-      "stop": 335.92,
-      "target": 397.51
     },
     {
       "symbol": "WMT",
@@ -45,10 +45,10 @@
       "is_tase": false,
       "quantity": 0.9925,
       "avg_price": 125.72,
-      "current_price": 127.36,
-      "unrealized_pnl": 1.62,
-      "unrealized_pnl_pct": 0.013,
-      "value_base": 126.4,
+      "current_price": 126.04,
+      "unrealized_pnl": 0.31,
+      "unrealized_pnl_pct": 0.0025,
+      "value_base": 125.09,
       "cost_base": 124.78,
       "stop": 118.12,
       "target": 140.93
@@ -59,10 +59,10 @@
       "is_tase": false,
       "quantity": 0.312,
       "avg_price": 267.06,
-      "current_price": 267.74,
-      "unrealized_pnl": 0.21,
-      "unrealized_pnl_pct": 0.0025,
-      "value_base": 83.53,
+      "current_price": 257.37,
+      "unrealized_pnl": -3.02,
+      "unrealized_pnl_pct": -0.0363,
+      "value_base": 80.3,
       "cost_base": 83.32,
       "stop": 242.87,
       "target": 315.45
@@ -73,10 +73,10 @@
       "is_tase": false,
       "quantity": 0.1701,
       "avg_price": 354.23,
-      "current_price": 354.05,
-      "unrealized_pnl": -0.03,
-      "unrealized_pnl_pct": -0.0005,
-      "value_base": 60.22,
+      "current_price": 346.65,
+      "unrealized_pnl": -1.29,
+      "unrealized_pnl_pct": -0.0214,
+      "value_base": 58.97,
       "cost_base": 60.25,
       "stop": 310.3,
       "target": 442.08
@@ -87,16 +87,32 @@
       "is_tase": false,
       "quantity": 0.0516,
       "avg_price": 522.87,
-      "current_price": 508.29,
-      "unrealized_pnl": -0.75,
-      "unrealized_pnl_pct": -0.0279,
-      "value_base": 26.23,
+      "current_price": 498.3,
+      "unrealized_pnl": -1.27,
+      "unrealized_pnl_pct": -0.047,
+      "value_base": 25.71,
       "cost_base": 26.98,
       "stop": 493.81,
       "target": 580.99
     }
   ],
   "recent_trades": [
+    {
+      "timestamp": "2026-11-20T02:30:18.048541+00:00",
+      "symbol": "COST",
+      "side": "BUY",
+      "quantity": 0.1332,
+      "price": 1094.38,
+      "currency": "USD"
+    },
+    {
+      "timestamp": "2026-11-20T02:30:18.023281+00:00",
+      "symbol": "AAPL",
+      "side": "SELL",
+      "quantity": 0.3672,
+      "price": 349.04,
+      "currency": "USD"
+    },
     {
       "timestamp": "2026-11-19T02:43:56.532200+00:00",
       "symbol": "GLBE",
@@ -175,22 +191,6 @@
       "side": "SELL",
       "quantity": 0.0747,
       "price": 650.98,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-11-06T01:43:11.509698+00:00",
-      "symbol": "NICE",
-      "side": "SELL",
-      "quantity": 0.1264,
-      "price": 99.54,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-11-03T03:00:26.291915+00:00",
-      "symbol": "GLBE",
-      "side": "BUY",
-      "quantity": 1.1493,
-      "price": 43.0,
       "currency": "USD"
     }
   ],
@@ -362,18 +362,60 @@
       "value": 740.79,
       "contributed": 750.0,
       "bench": 715.61
+    },
+    {
+      "date": "2026-11-20",
+      "value": 728.9,
+      "contributed": 750.0,
+      "bench": 701.57
     }
   ],
   "starting_cash": 150.0,
   "deposited": 600.0,
   "contributed": 750.0,
-  "profit": -9.21,
+  "profit": -21.1,
   "num_deposits": 2,
   "next_deposit": {
     "date": "2026-12-10",
     "amount": 300.0
   },
   "activity": [
+    {
+      "type": "BUY",
+      "timestamp": "2026-11-20T02:30:18.048541+00:00",
+      "symbol": "COST",
+      "quantity": 0.1332,
+      "price": 1094.38,
+      "currency": "USD",
+      "total": 145.77,
+      "commission": 0.0,
+      "cash_before": 307.37,
+      "cash_after": 161.6,
+      "usd_ils": 3.3166,
+      "usd_ils_estimated": false,
+      "reason": "signal",
+      "reason_text": "איתות של האסטרטגיה",
+      "stop": 1048.52,
+      "target": 1186.09
+    },
+    {
+      "type": "SELL",
+      "timestamp": "2026-11-20T02:30:18.023281+00:00",
+      "symbol": "AAPL",
+      "quantity": 0.3672,
+      "price": 349.04,
+      "currency": "USD",
+      "total": 128.17,
+      "commission": 0.0,
+      "cash_before": 179.2,
+      "cash_after": 307.37,
+      "usd_ils": 3.3166,
+      "usd_ils_estimated": false,
+      "reason": "signal",
+      "reason_text": "איתות של האסטרטגיה",
+      "avg_cost": 356.45,
+      "realized_pnl": -2.72
+    },
     {
       "type": "SELL",
       "timestamp": "2026-11-19T02:43:56.532200+00:00",
@@ -1049,9 +1091,9 @@
   ],
   "benchmark": {
     "symbol": "SPY",
-    "value": 715.61,
+    "value": 701.57,
     "contributed": 750.0,
-    "change_pct": -0.0459,
+    "change_pct": -0.0646,
     "start_date": "2026-10-09"
   }
 }
