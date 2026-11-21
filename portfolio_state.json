@@ -1,25 +1,9 @@
 {
   "base_currency": "USD",
-  "cash": 161.59505304110942,
+  "cash": 316.7847490196628,
   "commission_rate": 0.0,
   "min_commission": 0.0,
   "positions": {
-    "MSFT": {
-      "symbol": "MSFT",
-      "quantity": 0.0516,
-      "avg_price": 522.8712903442382,
-      "currency": "USD",
-      "stop": 493.8111355832695,
-      "target": 580.9915998661756
-    },
-    "AMZN": {
-      "symbol": "AMZN",
-      "quantity": 0.312,
-      "avg_price": 267.0634576721191,
-      "currency": "USD",
-      "stop": 242.86827480090002,
-      "target": 315.4538234145573
-    },
     "V": {
       "symbol": "V",
       "quantity": 0.327,
@@ -35,14 +19,6 @@
       "currency": "USD",
       "stop": 118.11758593785008,
       "target": 140.93332911612112
-    },
-    "AVGO": {
-      "symbol": "AVGO",
-      "quantity": 0.1701,
-      "avg_price": 354.2270127868652,
-      "currency": "USD",
-      "stop": 310.3027857855675,
-      "target": 442.0754667894606
     },
     "COST": {
       "symbol": "COST",
@@ -737,6 +713,60 @@
       "target": 1186.0904745289083,
       "avg_cost": 0.0,
       "realized_pnl": 0.0
+    },
+    {
+      "timestamp": "2026-11-21T02:42:04.990750+00:00",
+      "symbol": "MSFT",
+      "side": "SELL",
+      "quantity": 0.0516,
+      "price": 493.49312023925785,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 187.05929804545514,
+      "cash_before": 161.59505304110942,
+      "total": 25.464245004345706,
+      "usd_ils": 3.298180103302002,
+      "reason": "stop",
+      "stop": 0.0,
+      "target": 0.0,
+      "avg_cost": 522.8712903442382,
+      "realized_pnl": -1.5159135774169872
+    },
+    {
+      "timestamp": "2026-11-21T02:42:05.000373+00:00",
+      "symbol": "AMZN",
+      "side": "SELL",
+      "quantity": 0.312,
+      "price": 246.69659732055666,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 264.02863640946885,
+      "cash_before": 187.05929804545514,
+      "total": 76.96933836401368,
+      "usd_ils": 3.298180103302002,
+      "reason": "signal",
+      "stop": 0.0,
+      "target": 0.0,
+      "avg_cost": 267.0634576721191,
+      "realized_pnl": -6.354460429687485
+    },
+    {
+      "timestamp": "2026-11-21T02:42:05.007188+00:00",
+      "symbol": "AVGO",
+      "side": "SELL",
+      "quantity": 0.1701,
+      "price": 310.1476343926747,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 316.7847490196628,
+      "cash_before": 264.02863640946885,
+      "total": 52.756112610193966,
+      "usd_ils": 3.298180103302002,
+      "reason": "stop",
+      "stop": 0.0,
+      "target": 0.0,
+      "avg_cost": 354.2270127868652,
+      "realized_pnl": -7.497902264851802
     }
   ],
   "meta": {

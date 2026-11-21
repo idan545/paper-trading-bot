@@ -1,15 +1,15 @@
 {
-  "as_of": "2026-11-20T02:30:18+00:00",
+  "as_of": "2026-11-21T02:42:05+00:00",
   "base_currency": "USD",
-  "usd_ils": 3.3166,
-  "total_value": 728.9,
-  "cash": 161.6,
-  "invested": 567.31,
-  "day_change": -11.89,
-  "day_change_pct": -0.016,
-  "total_change_pct": -0.0281,
-  "num_positions": 6,
-  "num_trades": 38,
+  "usd_ils": 3.2982,
+  "total_value": 721.99,
+  "cash": 316.78,
+  "invested": 405.21,
+  "day_change": -6.91,
+  "day_change_pct": -0.0095,
+  "total_change_pct": -0.0373,
+  "num_positions": 3,
+  "num_trades": 41,
   "positions": [
     {
       "symbol": "COST",
@@ -17,10 +17,10 @@
       "is_tase": false,
       "quantity": 0.1332,
       "avg_price": 1094.38,
-      "current_price": 1093.83,
-      "unrealized_pnl": -0.07,
-      "unrealized_pnl_pct": -0.0005,
-      "value_base": 145.7,
+      "current_price": 1102.15,
+      "unrealized_pnl": 1.04,
+      "unrealized_pnl_pct": 0.0071,
+      "value_base": 146.81,
       "cost_base": 145.77,
       "stop": 1048.52,
       "target": 1186.09
@@ -31,10 +31,10 @@
       "is_tase": false,
       "quantity": 0.327,
       "avg_price": 422.37,
-      "current_price": 402.25,
-      "unrealized_pnl": -6.58,
-      "unrealized_pnl_pct": -0.0476,
-      "value_base": 131.54,
+      "current_price": 401.87,
+      "unrealized_pnl": -6.7,
+      "unrealized_pnl_pct": -0.0485,
+      "value_base": 131.41,
       "cost_base": 138.12,
       "stop": 399.29,
       "target": 468.54
@@ -45,58 +45,40 @@
       "is_tase": false,
       "quantity": 0.9925,
       "avg_price": 125.72,
-      "current_price": 126.04,
-      "unrealized_pnl": 0.31,
-      "unrealized_pnl_pct": 0.0025,
-      "value_base": 125.09,
+      "current_price": 127.95,
+      "unrealized_pnl": 2.21,
+      "unrealized_pnl_pct": 0.0177,
+      "value_base": 126.99,
       "cost_base": 124.78,
       "stop": 118.12,
       "target": 140.93
-    },
-    {
-      "symbol": "AMZN",
-      "currency": "USD",
-      "is_tase": false,
-      "quantity": 0.312,
-      "avg_price": 267.06,
-      "current_price": 257.37,
-      "unrealized_pnl": -3.02,
-      "unrealized_pnl_pct": -0.0363,
-      "value_base": 80.3,
-      "cost_base": 83.32,
-      "stop": 242.87,
-      "target": 315.45
-    },
-    {
-      "symbol": "AVGO",
-      "currency": "USD",
-      "is_tase": false,
-      "quantity": 0.1701,
-      "avg_price": 354.23,
-      "current_price": 346.65,
-      "unrealized_pnl": -1.29,
-      "unrealized_pnl_pct": -0.0214,
-      "value_base": 58.97,
-      "cost_base": 60.25,
-      "stop": 310.3,
-      "target": 442.08
-    },
-    {
-      "symbol": "MSFT",
-      "currency": "USD",
-      "is_tase": false,
-      "quantity": 0.0516,
-      "avg_price": 522.87,
-      "current_price": 498.3,
-      "unrealized_pnl": -1.27,
-      "unrealized_pnl_pct": -0.047,
-      "value_base": 25.71,
-      "cost_base": 26.98,
-      "stop": 493.81,
-      "target": 580.99
     }
   ],
   "recent_trades": [
+    {
+      "timestamp": "2026-11-21T02:42:05.007188+00:00",
+      "symbol": "AVGO",
+      "side": "SELL",
+      "quantity": 0.1701,
+      "price": 310.15,
+      "currency": "USD"
+    },
+    {
+      "timestamp": "2026-11-21T02:42:05.000373+00:00",
+      "symbol": "AMZN",
+      "side": "SELL",
+      "quantity": 0.312,
+      "price": 246.7,
+      "currency": "USD"
+    },
+    {
+      "timestamp": "2026-11-21T02:42:04.990750+00:00",
+      "symbol": "MSFT",
+      "side": "SELL",
+      "quantity": 0.0516,
+      "price": 493.49,
+      "currency": "USD"
+    },
     {
       "timestamp": "2026-11-20T02:30:18.048541+00:00",
       "symbol": "COST",
@@ -167,30 +149,6 @@
       "side": "BUY",
       "quantity": 0.327,
       "price": 422.37,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-11-10T03:43:49.413524+00:00",
-      "symbol": "JPM",
-      "side": "BUY",
-      "quantity": 0.3719,
-      "price": 342.25,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-11-10T03:43:49.400703+00:00",
-      "symbol": "AMZN",
-      "side": "BUY",
-      "quantity": 0.312,
-      "price": 267.06,
-      "currency": "USD"
-    },
-    {
-      "timestamp": "2026-11-07T01:03:53.662628+00:00",
-      "symbol": "ESLT",
-      "side": "SELL",
-      "quantity": 0.0747,
-      "price": 650.98,
       "currency": "USD"
     }
   ],
@@ -368,18 +326,78 @@
       "value": 728.9,
       "contributed": 750.0,
       "bench": 701.57
+    },
+    {
+      "date": "2026-11-21",
+      "value": 721.99,
+      "contributed": 750.0,
+      "bench": 676.03
     }
   ],
   "starting_cash": 150.0,
   "deposited": 600.0,
   "contributed": 750.0,
-  "profit": -21.1,
+  "profit": -28.01,
   "num_deposits": 2,
   "next_deposit": {
     "date": "2026-12-10",
     "amount": 300.0
   },
   "activity": [
+    {
+      "type": "SELL",
+      "timestamp": "2026-11-21T02:42:05.007188+00:00",
+      "symbol": "AVGO",
+      "quantity": 0.1701,
+      "price": 310.15,
+      "currency": "USD",
+      "total": 52.76,
+      "commission": 0.0,
+      "cash_before": 264.03,
+      "cash_after": 316.78,
+      "usd_ils": 3.2982,
+      "usd_ils_estimated": false,
+      "reason": "stop",
+      "reason_text": "stop-loss: המחיר ירד לרמת ההגנה",
+      "avg_cost": 354.23,
+      "realized_pnl": -7.5
+    },
+    {
+      "type": "SELL",
+      "timestamp": "2026-11-21T02:42:05.000373+00:00",
+      "symbol": "AMZN",
+      "quantity": 0.312,
+      "price": 246.7,
+      "currency": "USD",
+      "total": 76.97,
+      "commission": 0.0,
+      "cash_before": 187.06,
+      "cash_after": 264.03,
+      "usd_ils": 3.2982,
+      "usd_ils_estimated": false,
+      "reason": "signal",
+      "reason_text": "איתות של האסטרטגיה",
+      "avg_cost": 267.06,
+      "realized_pnl": -6.35
+    },
+    {
+      "type": "SELL",
+      "timestamp": "2026-11-21T02:42:04.990750+00:00",
+      "symbol": "MSFT",
+      "quantity": 0.0516,
+      "price": 493.49,
+      "currency": "USD",
+      "total": 25.46,
+      "commission": 0.0,
+      "cash_before": 161.6,
+      "cash_after": 187.06,
+      "usd_ils": 3.2982,
+      "usd_ils_estimated": false,
+      "reason": "stop",
+      "reason_text": "stop-loss: המחיר ירד לרמת ההגנה",
+      "avg_cost": 522.87,
+      "realized_pnl": -1.52
+    },
     {
       "type": "BUY",
       "timestamp": "2026-11-20T02:30:18.048541+00:00",
@@ -1091,9 +1109,9 @@
   ],
   "benchmark": {
     "symbol": "SPY",
-    "value": 701.57,
+    "value": 676.03,
     "contributed": 750.0,
-    "change_pct": -0.0646,
+    "change_pct": -0.0986,
     "start_date": "2026-10-09"
   }
 }
