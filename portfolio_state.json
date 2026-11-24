@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 316.7847490196628,
+  "cash": 462.9532447641208,
   "commission_rate": 0.0,
   "min_commission": 0.0,
   "positions": {
@@ -19,14 +19,6 @@
       "currency": "USD",
       "stop": 118.11758593785008,
       "target": 140.93332911612112
-    },
-    "COST": {
-      "symbol": "COST",
-      "quantity": 0.1332,
-      "avg_price": 1094.3768710327147,
-      "currency": "USD",
-      "stop": 1048.5200692846179,
-      "target": 1186.0904745289083
     }
   },
   "trades": [
@@ -767,6 +759,24 @@
       "target": 0.0,
       "avg_cost": 354.2270127868652,
       "realized_pnl": -7.497902264851802
+    },
+    {
+      "timestamp": "2026-11-24T05:27:01.625685+00:00",
+      "symbol": "COST",
+      "side": "SELL",
+      "quantity": 0.1332,
+      "price": 1097.3610791625977,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 462.9532447641208,
+      "cash_before": 316.7847490196628,
+      "total": 146.16849574445803,
+      "usd_ils": 3.2978999614715576,
+      "reason": "signal",
+      "stop": 0.0,
+      "target": 0.0,
+      "avg_cost": 1094.3768710327147,
+      "realized_pnl": 0.397496522900412
     }
   ],
   "meta": {
