@@ -1,13 +1,13 @@
 {
-  "as_of": "2026-11-24T05:27:01+00:00",
+  "as_of": "2026-11-25T04:29:46+00:00",
   "base_currency": "USD",
-  "usd_ils": 3.2979,
-  "total_value": 725.44,
+  "usd_ils": 3.3427,
+  "total_value": 730.56,
   "cash": 462.95,
-  "invested": 262.48,
-  "day_change": 3.45,
-  "day_change_pct": 0.0048,
-  "total_change_pct": -0.0328,
+  "invested": 267.6,
+  "day_change": 5.12,
+  "day_change_pct": 0.0071,
+  "total_change_pct": -0.0259,
   "num_positions": 2,
   "num_trades": 42,
   "positions": [
@@ -17,10 +17,10 @@
       "is_tase": false,
       "quantity": 0.327,
       "avg_price": 422.37,
-      "current_price": 409.4,
-      "unrealized_pnl": -4.24,
-      "unrealized_pnl_pct": -0.0307,
-      "value_base": 133.87,
+      "current_price": 416.78,
+      "unrealized_pnl": -1.83,
+      "unrealized_pnl_pct": -0.0132,
+      "value_base": 136.29,
       "cost_base": 138.12,
       "stop": 399.29,
       "target": 468.54
@@ -31,10 +31,10 @@
       "is_tase": false,
       "quantity": 0.9925,
       "avg_price": 125.72,
-      "current_price": 129.58,
-      "unrealized_pnl": 3.83,
-      "unrealized_pnl_pct": 0.0307,
-      "value_base": 128.61,
+      "current_price": 132.31,
+      "unrealized_pnl": 6.54,
+      "unrealized_pnl_pct": 0.0524,
+      "value_base": 131.32,
       "cost_base": 124.78,
       "stop": 118.12,
       "target": 140.93
@@ -324,12 +324,18 @@
       "value": 725.44,
       "contributed": 750.0,
       "bench": 707.86
+    },
+    {
+      "date": "2026-11-25",
+      "value": 730.56,
+      "contributed": 750.0,
+      "bench": 704.42
     }
   ],
   "starting_cash": 150.0,
   "deposited": 600.0,
   "contributed": 750.0,
-  "profit": -24.56,
+  "profit": -19.44,
   "num_deposits": 2,
   "next_deposit": {
     "date": "2026-12-10",
@@ -1119,9 +1125,9 @@
   ],
   "benchmark": {
     "symbol": "SPY",
-    "value": 707.86,
+    "value": 704.42,
     "contributed": 750.0,
-    "change_pct": -0.0562,
+    "change_pct": -0.0608,
     "start_date": "2026-10-09"
   }
 }
