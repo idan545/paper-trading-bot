@@ -1,6 +1,6 @@
 {
   "base_currency": "USD",
-  "cash": 462.9532447641208,
+  "cash": 336.3970832919651,
   "commission_rate": 0.0,
   "min_commission": 0.0,
   "positions": {
@@ -19,6 +19,14 @@
       "currency": "USD",
       "stop": 118.11758593785008,
       "target": 140.93332911612112
+    },
+    "AAPL": {
+      "symbol": "AAPL",
+      "quantity": 0.3528,
+      "avg_price": 358.7192785491943,
+      "currency": "USD",
+      "stop": 338.1469635962018,
+      "target": 399.86390845517934
     }
   },
   "trades": [
@@ -777,6 +785,24 @@
       "target": 0.0,
       "avg_cost": 1094.3768710327147,
       "realized_pnl": 0.397496522900412
+    },
+    {
+      "timestamp": "2026-11-28T03:26:52.972659+00:00",
+      "symbol": "AAPL",
+      "side": "BUY",
+      "quantity": 0.3528,
+      "price": 358.7192785491943,
+      "currency": "USD",
+      "commission": 0.0,
+      "cash_after": 336.3970832919651,
+      "cash_before": 462.9532447641208,
+      "total": 126.55616147215575,
+      "usd_ils": 3.311800003051758,
+      "reason": "signal",
+      "stop": 338.1469635962018,
+      "target": 399.86390845517934,
+      "avg_cost": 0.0,
+      "realized_pnl": 0.0
     }
   ],
   "meta": {
